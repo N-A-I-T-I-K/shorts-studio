@@ -1,5 +1,5 @@
 {
- "totalSec": 46.48,
+ "totalSec": 36.14,
  "theme": "ember_ascent",
  "music": "music_hype.mp3",
  "sfx": "whoosh.mp3",
@@ -8,6 +8,7 @@
   "pop": "pop.mp3",
   "click": "click.mp3"
  },
+ "narration": "voice/narration.mp3",
  "scenes": [
   {
    "year": "NOW",
@@ -18,69 +19,68 @@
    "stat": "1957",
    "statLabel": "FIRST SPARK",
    "photo_query": "rocket launch fire night",
-   "start": 0.0,
-   "dur": 4.388,
-   "audio": "voice/scene0.mp3",
+   "start": 0.047,
+   "dur": 3.555,
    "words": [
     {
      "text": "What",
-     "start": 0.095458,
-     "end": 0.265916
+     "start": 0.047,
+     "end": 0.16
     },
     {
      "text": "if",
-     "start": 0.288625,
-     "end": 0.379541
+     "start": 0.172,
+     "end": 0.262
     },
     {
      "text": "I",
-     "start": 0.390916,
-     "end": 0.459082
+     "start": 0.263,
+     "end": 0.353
     },
     {
      "text": "told",
-     "start": 0.470458,
-     "end": 0.709083
+     "start": 0.365,
+     "end": 0.694
     },
     {
      "text": "you",
-     "start": 0.731833,
-     "end": 0.834124
+     "start": 0.694,
+     "end": 0.808
     },
     {
      "text": "one",
-     "start": 0.856833,
-     "end": 1.0386659999999999
+     "start": 0.819,
+     "end": 1.058
     },
     {
      "text": "fireball",
-     "start": 1.061375,
-     "end": 1.57275
+     "start": 1.058,
+     "end": 1.569
     },
     {
      "text": "started",
-     "start": 1.595458,
-     "end": 1.936374
+     "start": 1.626,
+     "end": 1.978
     },
     {
      "text": "the",
-     "start": 1.959083,
-     "end": 2.027249
+     "start": 1.978,
+     "end": 2.012
     },
     {
      "text": "entire",
-     "start": 2.038625,
-     "end": 2.4363330000000003
+     "start": 2.024,
+     "end": 2.478
     },
     {
      "text": "space",
-     "start": 2.459083,
-     "end": 2.743166
+     "start": 2.49,
+     "end": 2.831
     },
     {
      "text": "age",
-     "start": 2.765916,
-     "end": 3.0954569999999997
+     "start": 2.842,
+     "end": 3.262
     }
    ],
    "photo": "assets/rocket_fire/photo0.jpg"
@@ -93,64 +93,63 @@
    "stat": "1",
    "statLabel": "HUMAN IN ORBIT",
    "photo_query": "spacecraft orbit earth",
-   "start": 4.388,
-   "dur": 6.452,
-   "audio": "voice/scene1.mp3",
+   "start": 3.602,
+   "dur": 4.432,
    "words": [
     {
      "text": "One",
-     "start": 0.095458,
-     "end": 0.356833
+     "start": 3.602,
+     "end": 3.841
     },
     {
      "text": "man",
-     "start": 0.379541,
-     "end": 0.640916
+     "start": 3.852,
+     "end": 4.114
     },
     {
      "text": "rode",
-     "start": 0.663625,
-     "end": 0.8113330000000001
+     "start": 4.125,
+     "end": 4.295
     },
     {
      "text": "a",
-     "start": 0.822708,
-     "end": 0.856791
+     "start": 4.307,
+     "end": 4.341
     },
     {
      "text": "rocket",
-     "start": 0.879541,
-     "end": 1.209082
+     "start": 4.341,
+     "end": 4.773
     },
     {
      "text": "above",
-     "start": 1.231833,
-     "end": 1.5159159999999998
+     "start": 4.83,
+     "end": 5.057
     },
     {
      "text": "Earth",
-     "start": 1.538625,
-     "end": 1.8567909999999999
+     "start": 5.068,
+     "end": 5.42
     },
     {
      "text": "One",
-     "start": 2.659083,
-     "end": 3.0681659999999997
+     "start": 5.761,
+     "end": 6.091
     },
     {
      "text": "orbit",
-     "start": 3.090916,
-     "end": 3.556832
+     "start": 6.102,
+     "end": 6.557
     },
     {
      "text": "One",
-     "start": 4.340916,
-     "end": 4.624999
+     "start": 6.898,
+     "end": 7.114
     },
     {
      "text": "story",
-     "start": 4.647708,
-     "end": 5.124999
+     "start": 7.125,
+     "end": 7.636
     }
    ],
    "photo": "assets/rocket_fire/photo1.jpg"
@@ -163,79 +162,78 @@
    "stat": "8 DAYS",
    "statLabel": "MOON ROUND TRIP",
    "photo_query": "apollo moon landing",
-   "start": 10.84,
-   "dur": 5.564,
-   "audio": "voice/scene2.mp3",
+   "start": 8.034,
+   "dur": 4.25,
    "words": [
     {
      "text": "Fire",
-     "start": 0.095458,
-     "end": 0.447749
+     "start": 8.034,
+     "end": 8.284
     },
     {
      "text": "that",
-     "start": 0.470458,
-     "end": 0.595458
+     "start": 8.295,
+     "end": 8.443
     },
     {
      "text": "carried",
-     "start": 0.618166,
-     "end": 0.913624
+     "start": 8.455,
+     "end": 8.83
     },
     {
      "text": "three",
-     "start": 0.936375,
-     "end": 1.129541
+     "start": 8.841,
+     "end": 9.068
     },
     {
      "text": "people",
-     "start": 1.152291,
-     "end": 1.4818319999999998
+     "start": 9.08,
+     "end": 9.398
     },
     {
      "text": "to",
-     "start": 1.504541,
-     "end": 1.595457
+     "start": 9.409,
+     "end": 9.5
     },
     {
      "text": "the",
-     "start": 1.606833,
-     "end": 1.7091239999999999
+     "start": 9.511,
+     "end": 9.591
     },
     {
      "text": "Moon",
-     "start": 1.720458,
-     "end": 1.9590830000000001
+     "start": 9.602,
+     "end": 9.955
     },
     {
      "text": "and",
-     "start": 1.970458,
-     "end": 2.061374
+     "start": 10.045,
+     "end": 10.17
     },
     {
      "text": "back",
-     "start": 2.084083,
-     "end": 2.4363740000000003
+     "start": 10.17,
+     "end": 10.58
     },
     {
      "text": "Eight",
-     "start": 3.227291,
-     "end": 3.4545820000000003
+     "start": 10.92,
+     "end": 11.114
     },
     {
      "text": "days",
-     "start": 3.465916,
-     "end": 3.704541
+     "start": 11.114,
+     "end": 11.341
     },
     {
      "text": "of",
-     "start": 3.727291,
-     "end": 3.818207
+     "start": 11.352,
+     "end": 11.409
     },
     {
      "text": "fire",
-     "start": 3.840916,
-     "end": 4.272749
+     "start": 11.42,
+     "end": 11.841
     }
    ],
    "photo": "assets/rocket_fire/photo2.jpg"
@@ -248,69 +246,68 @@
    "stat": "2 MIN",
    "statLabel": "BOOSTER BURN",
    "photo_query": "space shuttle booster launch",
-   "start": 16.404,
-   "dur": 6.02,
-   "audio": "voice/scene3.mp3",
+   "start": 12.284,
+   "dur": 4.921,
    "words": [
     {
      "text": "Fire",
-     "start": 0.095458,
-     "end": 0.493166
+     "start": 12.284,
+     "end": 12.534
     },
     {
      "text": "that",
-     "start": 0.515916,
-     "end": 0.674999
+     "start": 12.545,
+     "end": 12.705
     },
     {
      "text": "returned",
-     "start": 0.697708,
-     "end": 1.288624
+     "start": 12.705,
+     "end": 13.227
     },
     {
      "text": "Two",
-     "start": 2.068166,
-     "end": 2.227249
+     "start": 13.602,
+     "end": 13.784
     },
     {
      "text": "boosters",
-     "start": 2.238625,
-     "end": 2.6022499999999997
+     "start": 13.795,
+     "end": 14.205
     },
     {
      "text": "burned",
-     "start": 2.613625,
-     "end": 2.920458
+     "start": 14.216,
+     "end": 14.591
     },
     {
      "text": "then",
-     "start": 3.090916,
-     "end": 3.238624
+     "start": 14.773,
+     "end": 14.955
     },
     {
      "text": "fell",
-     "start": 3.261375,
-     "end": 3.465916
+     "start": 14.955,
+     "end": 15.193
     },
     {
      "text": "away",
-     "start": 3.477291,
-     "end": 3.7954570000000003
+     "start": 15.205,
+     "end": 15.591
     },
     {
      "text": "over",
-     "start": 3.965916,
-     "end": 4.249999
+     "start": 15.739,
+     "end": 16.148
     },
     {
      "text": "and",
-     "start": 4.261375,
-     "end": 4.352291
+     "start": 16.25,
+     "end": 16.375
     },
     {
      "text": "over",
-     "start": 4.375,
-     "end": 4.693166
+     "start": 16.386,
+     "end": 16.739
     }
    ],
    "photo": "assets/rocket_fire/photo3.jpg"
@@ -323,84 +320,83 @@
    "stat": "2008",
    "statLabel": "PRIVATE ORBIT",
    "photo_query": "falcon 9 rocket launch",
-   "start": 22.424,
-   "dur": 6.332,
-   "audio": "voice/scene4.mp3",
+   "start": 17.205,
+   "dur": 5.113,
    "words": [
     {
      "text": "Fire",
-     "start": 0.095458,
-     "end": 0.470458
+     "start": 17.205,
+     "end": 17.466
     },
     {
      "text": "that",
-     "start": 0.493166,
-     "end": 0.652249
+     "start": 17.466,
+     "end": 17.625
     },
     {
      "text": "broke",
-     "start": 0.663625,
-     "end": 0.890916
+     "start": 17.636,
+     "end": 17.886
     },
     {
      "text": "free",
-     "start": 0.902291,
-     "end": 1.2659159999999998
+     "start": 17.898,
+     "end": 18.273
     },
     {
      "text": "Small",
-     "start": 2.045458,
-     "end": 2.431833
+     "start": 18.614,
+     "end": 19.057
     },
     {
      "text": "rocket",
-     "start": 2.454541,
-     "end": 2.772707
+     "start": 19.068,
+     "end": 19.409
     },
     {
      "text": "reached",
-     "start": 2.784083,
-     "end": 3.034083
+     "start": 19.42,
+     "end": 19.682
     },
     {
      "text": "orbit",
-     "start": 3.056833,
-     "end": 3.3295410000000003
+     "start": 19.693,
+     "end": 20.023
     },
     {
      "text": "for",
-     "start": 3.352291,
-     "end": 3.465916
+     "start": 20.034,
+     "end": 20.125
     },
     {
      "text": "the",
-     "start": 3.477291,
-     "end": 3.5795820000000003
+     "start": 20.136,
+     "end": 20.216
     },
     {
      "text": "first",
-     "start": 3.590916,
-     "end": 3.852291
+     "start": 20.227,
+     "end": 20.534
     },
     {
      "text": "time",
-     "start": 3.875,
-     "end": 4.113625
+     "start": 20.545,
+     "end": 20.932
     },
     {
      "text": "without",
-     "start": 4.125,
-     "end": 4.409083
+     "start": 21.182,
+     "end": 21.443
     },
     {
      "text": "a",
-     "start": 4.431833,
-     "end": 4.488666
+     "start": 21.443,
+     "end": 21.477
     },
     {
      "text": "government",
-     "start": 4.5,
-     "end": 5.011375
+     "start": 21.477,
+     "end": 21.966
     }
    ],
    "photo": "assets/rocket_fire/photo4.jpg"
@@ -413,69 +409,68 @@
    "stat": "2015",
    "statLabel": "FIRST LANDING",
    "photo_query": "rocket booster landing",
-   "start": 28.756,
-   "dur": 5.372,
-   "audio": "voice/scene5.mp3",
+   "start": 22.318,
+   "dur": 3.955,
    "words": [
     {
      "text": "Booster",
-     "start": 0.095458,
-     "end": 0.493166
+     "start": 22.318,
+     "end": 22.682
     },
     {
      "text": "that",
-     "start": 0.515916,
-     "end": 0.674999
+     "start": 22.693,
+     "end": 22.898
     },
     {
      "text": "landed",
-     "start": 0.686375,
-     "end": 1.038666
+     "start": 22.909,
+     "end": 23.341
     },
     {
      "text": "on",
-     "start": 1.061375,
-     "end": 1.175
+     "start": 23.352,
+     "end": 23.477
     },
     {
      "text": "its",
-     "start": 1.197708,
-     "end": 1.345416
+     "start": 23.489,
+     "end": 23.591
     },
     {
      "text": "own",
-     "start": 1.356833,
-     "end": 1.5386659999999999
+     "start": 23.602,
+     "end": 23.784
     },
     {
      "text": "fire",
-     "start": 1.561375,
-     "end": 2.027291
+     "start": 23.795,
+     "end": 24.193
     },
     {
      "text": "The",
-     "start": 2.806833,
-     "end": 2.9432080000000003
+     "start": 24.545,
+     "end": 24.602
     },
     {
      "text": "rocket",
-     "start": 2.965916,
-     "end": 3.284082
+     "start": 24.602,
+     "end": 25.045
     },
     {
      "text": "that",
-     "start": 3.306833,
-     "end": 3.4432080000000003
+     "start": 25.057,
+     "end": 25.205
     },
     {
      "text": "came",
-     "start": 3.465916,
-     "end": 3.681832
+     "start": 25.216,
+     "end": 25.432
     },
     {
      "text": "back",
-     "start": 3.693166,
-     "end": 4.068166
+     "start": 25.443,
+     "end": 25.92
     }
    ],
    "photo": "assets/rocket_fire/photo5.jpg"
@@ -488,74 +483,73 @@
    "stat": "TALLEST",
    "statLabel": "ROCKET EVER",
    "photo_query": "starship rocket launch",
-   "start": 34.128,
-   "dur": 6.02,
-   "audio": "voice/scene6.mp3",
+   "start": 26.273,
+   "dur": 4.988,
    "words": [
     {
      "text": "The",
-     "start": 0.095458,
-     "end": 0.220458
+     "start": 26.273,
+     "end": 26.341
     },
     {
      "text": "tallest",
-     "start": 0.243166,
-     "end": 0.618166
+     "start": 26.341,
+     "end": 26.841
     },
     {
      "text": "rocket",
-     "start": 0.640916,
-     "end": 0.936374
+     "start": 26.852,
+     "end": 27.159
     },
     {
      "text": "ever",
-     "start": 0.959083,
-     "end": 1.186374
+     "start": 27.216,
+     "end": 27.489
     },
     {
      "text": "on",
-     "start": 1.356833,
-     "end": 1.436374
+     "start": 27.727,
+     "end": 27.807
     },
     {
      "text": "the",
-     "start": 1.447708,
-     "end": 1.549999
+     "start": 27.818,
+     "end": 27.909
     },
     {
      "text": "biggest",
-     "start": 1.572708,
-     "end": 1.9022489999999999
+     "start": 27.966,
+     "end": 28.42
     },
     {
      "text": "fire",
-     "start": 1.925,
-     "end": 2.254541
+     "start": 28.432,
+     "end": 28.886
     },
     {
      "text": "ever",
-     "start": 2.265916,
-     "end": 2.4704569999999997
+     "start": 29.023,
+     "end": 29.216
     },
     {
      "text": "built",
-     "start": 2.493166,
-     "end": 2.811332
+     "start": 29.216,
+     "end": 29.58
     },
     {
      "text": "Still",
-     "start": 3.602291,
-     "end": 3.965916
+     "start": 29.92,
+     "end": 30.148
     },
     {
      "text": "being",
-     "start": 3.977291,
-     "end": 4.215916
+     "start": 30.159,
+     "end": 30.364
     },
     {
      "text": "tested",
-     "start": 4.238625,
-     "end": 4.704541
+     "start": 30.375,
+     "end": 30.864
     }
    ],
    "photo": "assets/rocket_fire/photo6.jpg"
@@ -568,89 +562,88 @@
    "stat": "NEXT",
    "statLabel": "YOUR LAUNCH",
    "photo_query": "starfield deep space",
-   "start": 40.148,
-   "dur": 6.332,
-   "audio": "voice/scene7.mp3",
+   "start": 31.261,
+   "dur": 4.883,
    "words": [
     {
      "text": "From",
-     "start": 0.095458,
-     "end": 0.311374
+     "start": 31.261,
+     "end": 31.443
     },
     {
      "text": "one",
-     "start": 0.322708,
-     "end": 0.493166
+     "start": 31.455,
+     "end": 31.648
     },
     {
      "text": "metal",
-     "start": 0.515916,
-     "end": 0.7772910000000001
+     "start": 31.659,
+     "end": 31.841
     },
     {
      "text": "sphere",
-     "start": 0.788625,
-     "end": 1.0386250000000001
+     "start": 31.852,
+     "end": 32.182
     },
     {
      "text": "to",
-     "start": 1.05,
-     "end": 1.1295410000000001
+     "start": 32.193,
+     "end": 32.295
     },
     {
      "text": "rockets",
-     "start": 1.152291,
-     "end": 1.549999
+     "start": 32.295,
+     "end": 32.807
     },
     {
      "text": "that",
-     "start": 1.561375,
-     "end": 1.686375
+     "start": 32.818,
+     "end": 32.977
     },
     {
      "text": "fly",
-     "start": 1.709083,
-     "end": 1.924999
+     "start": 32.989,
+     "end": 33.273
     },
     {
      "text": "themselves",
-     "start": 1.936375,
-     "end": 2.379541
+     "start": 33.284,
+     "end": 33.716
     },
     {
      "text": "home",
-     "start": 2.402291,
-     "end": 2.731832
+     "start": 33.727,
+     "end": 34.102
     },
     {
      "text": "Which",
-     "start": 3.522708,
-     "end": 3.772708
+     "start": 34.432,
+     "end": 34.636
     },
     {
      "text": "launch",
-     "start": 3.795458,
-     "end": 4.056833
+     "start": 34.648,
+     "end": 34.955
     },
     {
      "text": "will",
-     "start": 4.068166,
-     "end": 4.181791
+     "start": 34.966,
+     "end": 35.057
     },
     {
      "text": "you",
-     "start": 4.193166,
-     "end": 4.306791
+     "start": 35.068,
+     "end": 35.136
     },
     {
      "text": "watch",
-     "start": 4.329541,
-     "end": 4.590916
+     "start": 35.148,
+     "end": 35.386
     },
     {
      "text": "next",
-     "start": 4.602291,
-     "end": 5.022749
+     "start": 35.398,
+     "end": 35.818
     }
    ],
    "photo": "assets/rocket_fire/photo7.jpg"

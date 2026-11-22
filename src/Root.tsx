@@ -2,6 +2,7 @@ import React from 'react';
 import {Composition, staticFile} from 'remotion';
 import {Short, ShortProps} from './Short';
 import {Story, StoryProps} from './Story';
+import {StoryFlow} from './StoryFlow';
 
 const FPS = 30;
 
@@ -38,6 +39,22 @@ export const RemotionRoot: React.FC = () => (
         return {
           durationInFrames: Math.round(data.totalSec * FPS),
           props: {...props, scenes: data.scenes, music: data.music ?? null, sfx: data.sfx ?? null, sfxPack: data.sfxPack ?? null, theme: data.theme ?? null},
+        };
+      }}
+    />
+    <Composition
+      id="StoryFlow"
+      component={StoryFlow}
+      width={1080}
+      height={1920}
+      fps={FPS}
+      durationInFrames={FPS * 10}
+      defaultProps={{scenes: []} as StoryProps}
+      calculateMetadata={async ({props}: {props: StoryProps}) => {
+        const data = await fetch(staticFile('story.json')).then((r) => r.json());
+        return {
+          durationInFrames: Math.round(data.totalSec * FPS),
+          props: {...props, scenes: data.scenes, music: data.music ?? null, sfx: data.sfx ?? null, sfxPack: data.sfxPack ?? null, theme: data.theme ?? null, narration: data.narration ?? null},
         };
       }}
     />

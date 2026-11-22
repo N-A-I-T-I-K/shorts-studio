@@ -35,8 +35,8 @@ jobs:
       - name: Build story
         run: python tools/build_story.py tools/${{ matrix.script }}.json
 
-      - name: Render Story
-        run: npx remotion render Story out/${{ matrix.script }}.mp4 --gl=swangle --concurrency=4
+      - name: Render continuous StoryFlow
+        run: npx remotion render StoryFlow out/${{ matrix.script }}.mp4 --gl=swangle --concurrency=4
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4

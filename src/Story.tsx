@@ -29,7 +29,7 @@ export type Scene = {
   text: string;
   start: number;
   dur: number;
-  audio: string;
+  audio?: string;
   words: Word[];
   photo?: string | null;
   hook?: string | null;
@@ -38,11 +38,11 @@ export type Scene = {
 };
 
 export type SfxPack = {impact?: string | null; pop?: string | null; click?: string | null};
-export type StoryProps = {scenes: Scene[]; music?: string | null; sfx?: string | null; sfxPack?: SfxPack | null; theme?: string | null};
+export type StoryProps = {scenes: Scene[]; music?: string | null; sfx?: string | null; sfxPack?: SfxPack | null; theme?: string | null; narration?: string | null};
 
 const T = 12; // transition length in frames
 
-const KineticTitle: React.FC<{text: string; lf: number; accent: string; font: string}> = ({text, lf, accent, font}) => {
+export const KineticTitle: React.FC<{text: string; lf: number; accent: string; font: string}> = ({text, lf, accent, font}) => {
   const {fps} = useVideoConfig();
   const chars = [...text.toUpperCase()];
   return (
@@ -77,7 +77,7 @@ const KineticTitle: React.FC<{text: string; lf: number; accent: string; font: st
   );
 };
 
-const Timeline: React.FC<{years: string[]; index: number; lf: number; accent: string; font: string}> = ({years, index, lf, accent, font}) => {
+export const Timeline: React.FC<{years: string[]; index: number; lf: number; accent: string; font: string}> = ({years, index, lf, accent, font}) => {
   const n = years.length;
   const x0 = 90;
   const x1 = 990;
@@ -132,7 +132,7 @@ const Cue: React.FC<{at: number; src?: string | null; vol?: number}> = ({at, src
     </Sequence>
   ) : null;
 
-const Hook: React.FC<{text: string; lf: number; accent: string; font: string}> = ({text, lf, accent, font}) => {
+export const Hook: React.FC<{text: string; lf: number; accent: string; font: string}> = ({text, lf, accent, font}) => {
   const {fps} = useVideoConfig();
   const sp = spring({frame: lf, fps, config: {damping: 10, stiffness: 200}});
   const out = interpolate(lf, [62, 76], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
@@ -163,7 +163,7 @@ const Hook: React.FC<{text: string; lf: number; accent: string; font: string}> =
   );
 };
 
-const Stat: React.FC<{text: string; label?: string | null; lf: number; accent: string; glow: string; font: string}> = ({text, label, lf, accent, glow, font}) => {
+export const Stat: React.FC<{text: string; label?: string | null; lf: number; accent: string; glow: string; font: string}> = ({text, label, lf, accent, glow, font}) => {
   const {fps} = useVideoConfig();
   const start = 34;
   const g = lf - start;
@@ -303,7 +303,7 @@ const SceneView: React.FC<{
       <Vignette />
       <Sequence from={shift}>
         <Captions words={scene.words} accent={theme.accent} font={theme.font} />
-        <Audio src={staticFile(scene.audio)} />
+        {scene.audio ? <Audio src={staticFile(scene.audio)} /> : null}
       </Sequence>
       {scene.stat ? (
         <>
