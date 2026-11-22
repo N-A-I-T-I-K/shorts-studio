@@ -49,3 +49,22 @@ jobs:
         with:
           name: ${{ matrix.script }}-video
           path: out/${{ matrix.script }}.mp4
+
+  package:
+    needs: render
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download all videos
+        uses: actions/download-artifact@v4
+        with:
+          path: videos
+          merge-multiple: true
+
+      - name: Create single zip
+        run: zip -r all-shorts.zip videos
+
+      - name: Upload combined zip
+        uses: actions/upload-artifact@v4
+        with:
+          name: all-shorts
+          path: all-shorts.zip
