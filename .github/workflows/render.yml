@@ -1,0 +1,36 @@
+name: Render Shorts
+
+on:
+  workflow_dispatch:
+    inputs:
+      video_name:
+        description: 'Video name (without extension)'
+        required: false
+        default: 'rocket_fire'
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    concurrency: 4
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build story
+        run: python tools\build_story.py tools\script_${{ github.event.inputs.video_name || 'rocket_fire' }}.json
+
+      - name: Render Story
+        run: npx remotion render Story out/${{ github.event.inputs.video_name || 'rocket_fire' }}.mp4 --gl=swangle --concurrency=4
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ github.event.inputs.video_name || 'rocket_fire' }}-video
+          path: out/${{ github.event.inputs.video_name || 'rocket_fire' }}.mp4
