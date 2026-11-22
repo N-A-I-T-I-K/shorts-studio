@@ -83,11 +83,19 @@ const FlowScene: React.FC<{
   durF: number;
   theme: Theme;
   total: number;
-}> = ({scene, index, lf, durF, theme, total}) => {
-  const fadeIn = interpolate(lf, [0, 14], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
-  const fadeOut = interpolate(lf, [durF - 16, durF], [1, 0.15], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  dateEnd: number;
+  statAt: number;
+}> = ({scene, index, lf, durF, theme, total, dateEnd, statAt}) => {
+  const fadeIn = interpolate(lf, [0, 12], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const fadeOut = interpolate(lf, [durF - 14, durF], [1, 0.15], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   const op = Math.min(fadeIn, fadeOut);
   const drift = interpolate(lf, [0, durF], [0, -26]);
+  // The date is announced, then it clears the screen so the visual can breathe.
+  const dateOp = interpolate(lf, [dateEnd, dateEnd + 12], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const datePop = interpolate(lf, [0, 9], [0.62, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  // The picture rises in right after the date, in time with the story.
+  const visualOp = interpolate(lf, [dateEnd - 4, dateEnd + 16], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const visualY = interpolate(lf, [dateEnd - 4, dateEnd + 20], [90, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   const isCar = CAR_TYPES.includes(scene.device);
   const isNet3 = NET3D_TYPES.includes(scene.device);
   const isGta = GTA_TYPES.includes(scene.device);
@@ -104,6 +112,8 @@ const FlowScene: React.FC<{
           textAlign: 'center',
           fontFamily: theme.font,
           color: '#fff',
+          opacity: dateOp,
+          transform: `scale(${datePop})`,
         }}
       >
         <div
@@ -133,7 +143,8 @@ const FlowScene: React.FC<{
           right: 0,
           display: 'flex',
           justifyContent: 'center',
-          transform: 'scale(0.85)',
+          opacity: visualOp,
+          transform: `translateY(${visualY}px) scale(0.85)`,
         }}
       >
         {isGta ? (
@@ -153,13 +164,13 @@ const FlowScene: React.FC<{
         <>
           <CardFrame lf={lf} theme={theme} />
           <Sparkles lf={lf} theme={theme} />
-          <Stat text={scene.stat} label={scene.statLabel} lf={lf} accent={theme.accent} glow={theme.glow} font={theme.font} />
+          <Stat text={scene.stat} label={scene.statLabel} lf={lf} accent={theme.accent} glow={theme.glow} font={theme.font} at={statAt} />
         </>
       ) : null}
       {index === 0 && scene.hook ? <Hook text={scene.hook} lf={lf} accent={theme.accent} font={theme.font} /> : null}
 
       {scene.stat ? (
-        <Sequence from={34}>
+        <Sequence from={statAt}>
           <Audio src={staticFile('impact.mp3')} volume={0.8} />
         </Sequence>
       ) : null}
@@ -238,6 +249,10 @@ export const StoryFlow: React.FC<StoryProps> = ({scenes, music, sfx, sfxPack, na
       {scenes.map((sc, i) => {
         const from = starts[i];
         const to = i < scenes.length - 1 ? starts[i + 1] : durationInFrames;
+        // Narrator says the date first; hold the date card for that word, then clear it.
+        const first = (sc.words ?? [])[0];
+        const raw = first ? (first.end - sc.start) * fps + 8 : 30;
+        const dateEnd = Math.round(Math.max(22, Math.min(44, raw)));
         return (
           <Sequence key={i} from={from} durationInFrames={Math.max(1, to - from)}>
             <FlowScene
@@ -247,6 +262,8 @@ export const StoryFlow: React.FC<StoryProps> = ({scenes, music, sfx, sfxPack, na
               durF={Math.max(1, to - from)}
               theme={theme}
               total={total}
+              dateEnd={dateEnd}
+              statAt={dateEnd + 8}
             />
           </Sequence>
         );

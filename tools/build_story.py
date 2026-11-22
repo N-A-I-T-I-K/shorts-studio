@@ -2,7 +2,7 @@ import asyncio, json, os, subprocess, sys
 import edge_tts
 
 script_path = "tools/script.json"
-VOICE = "en-US-AvaMultilingualNeural"
+VOICE = "en-US-AndrewMultilingualNeural"
 for a in sys.argv[1:]:
     if a.endswith(".json"):
         script_path = a
@@ -61,8 +61,8 @@ async def main():
     try:
         words = await make_narration(VOICE)
     except Exception as e:
-        print(f"voice {VOICE} failed ({e}); using en-US-AndrewNeural instead")
-        words = await make_narration("en-US-AndrewNeural")
+        print(f"voice {VOICE} failed ({e}); using en-US-GuyNeural instead")
+        words = await make_narration("en-US-GuyNeural")
 
     total = duration(NARRATION)
     out = []

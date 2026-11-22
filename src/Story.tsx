@@ -163,9 +163,9 @@ export const Hook: React.FC<{text: string; lf: number; accent: string; font: str
   );
 };
 
-export const Stat: React.FC<{text: string; label?: string | null; lf: number; accent: string; glow: string; font: string}> = ({text, label, lf, accent, glow, font}) => {
+export const Stat: React.FC<{text: string; label?: string | null; lf: number; accent: string; glow: string; font: string; at?: number}> = ({text, label, lf, accent, glow, font, at = 34}) => {
   const {fps} = useVideoConfig();
-  const start = 34;
+  const start = at;
   const g = lf - start;
   if (g < 0) return null;
   const sp = spring({frame: g, fps, config: {damping: 9, stiffness: 220, mass: 0.8}});

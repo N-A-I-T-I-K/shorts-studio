@@ -1,5 +1,5 @@
 {
- "totalSec": 36.14,
+ "totalSec": 52.63,
  "theme": "ember_ascent",
  "music": "music_hype.mp3",
  "sfx": "whoosh.mp3",
@@ -12,638 +12,758 @@
  "scenes": [
   {
    "year": "NOW",
-   "title": "One Fire",
+   "title": "The Spark",
    "device": "online",
-   "text": "What if I told you one fireball started the entire space age?",
-   "hook": "ONE FIREBALL STARTED EVERYTHING",
+   "text": "Forget the rockets. One tiny flame is the reason you can look up at the stars tonight.",
+   "hook": "ONE FLAME CHANGED EVERYTHING",
    "stat": "1957",
    "statLabel": "FIRST SPARK",
    "photo_query": "rocket launch fire night",
-   "start": 0.047,
-   "dur": 3.555,
+   "start": 0.104,
+   "dur": 5.035,
    "words": [
     {
-     "text": "What",
-     "start": 0.047,
-     "end": 0.16
-    },
-    {
-     "text": "if",
-     "start": 0.172,
-     "end": 0.262
-    },
-    {
-     "text": "I",
-     "start": 0.263,
-     "end": 0.353
-    },
-    {
-     "text": "told",
-     "start": 0.365,
-     "end": 0.694
-    },
-    {
-     "text": "you",
-     "start": 0.694,
-     "end": 0.808
-    },
-    {
-     "text": "one",
-     "start": 0.819,
-     "end": 1.058
-    },
-    {
-     "text": "fireball",
-     "start": 1.058,
-     "end": 1.569
-    },
-    {
-     "text": "started",
-     "start": 1.626,
-     "end": 1.978
+     "text": "Forget",
+     "start": 0.104,
+     "end": 0.301
     },
     {
      "text": "the",
-     "start": 1.978,
-     "end": 2.012
+     "start": 0.312,
+     "end": 0.37
     },
     {
-     "text": "entire",
-     "start": 2.024,
-     "end": 2.478
+     "text": "rockets",
+     "start": 0.382,
+     "end": 0.995
     },
     {
-     "text": "space",
-     "start": 2.49,
-     "end": 2.831
+     "text": "One",
+     "start": 1.377,
+     "end": 1.597
     },
     {
-     "text": "age",
-     "start": 2.842,
-     "end": 3.262
+     "text": "tiny",
+     "start": 1.597,
+     "end": 1.91
+    },
+    {
+     "text": "flame",
+     "start": 1.91,
+     "end": 2.396
+    },
+    {
+     "text": "is",
+     "start": 2.627,
+     "end": 2.708
+    },
+    {
+     "text": "the",
+     "start": 2.708,
+     "end": 2.789
+    },
+    {
+     "text": "reason",
+     "start": 2.789,
+     "end": 3.194
+    },
+    {
+     "text": "you",
+     "start": 3.357,
+     "end": 3.449
+    },
+    {
+     "text": "can",
+     "start": 3.461,
+     "end": 3.576
+    },
+    {
+     "text": "look",
+     "start": 3.588,
+     "end": 3.75
+    },
+    {
+     "text": "up",
+     "start": 3.762,
+     "end": 3.9
+    },
+    {
+     "text": "at",
+     "start": 3.912,
+     "end": 3.958
+    },
+    {
+     "text": "the",
+     "start": 3.97,
+     "end": 4.028
+    },
+    {
+     "text": "stars",
+     "start": 4.039,
+     "end": 4.375
+    },
+    {
+     "text": "tonight",
+     "start": 4.375,
+     "end": 4.757
     }
    ],
    "photo": "assets/rocket_fire/photo0.jpg"
   },
   {
    "year": "1961",
-   "title": "Human Fire",
+   "title": "First Human",
    "device": "jump3d",
-   "text": "One man rode a rocket above Earth. One orbit. One story.",
+   "text": "1961. Then came the first human. Gagarin squeezed into a metal ball and vanished above the sky.",
    "stat": "1",
    "statLabel": "HUMAN IN ORBIT",
    "photo_query": "spacecraft orbit earth",
-   "start": 3.602,
-   "dur": 4.432,
+   "start": 5.139,
+   "dur": 7.454,
    "words": [
     {
-     "text": "One",
-     "start": 3.602,
-     "end": 3.841
+     "text": "1961",
+     "start": 5.139,
+     "end": 6.146
     },
     {
-     "text": "man",
-     "start": 3.852,
-     "end": 4.114
+     "text": "Then",
+     "start": 6.678,
+     "end": 6.956
     },
     {
-     "text": "rode",
-     "start": 4.125,
-     "end": 4.295
+     "text": "came",
+     "start": 6.968,
+     "end": 7.164
+    },
+    {
+     "text": "the",
+     "start": 7.164,
+     "end": 7.234
+    },
+    {
+     "text": "first",
+     "start": 7.234,
+     "end": 7.627
+    },
+    {
+     "text": "human",
+     "start": 7.639,
+     "end": 7.94
+    },
+    {
+     "text": "Gagarin",
+     "start": 8.322,
+     "end": 8.796
+    },
+    {
+     "text": "squeezed",
+     "start": 8.796,
+     "end": 9.398
+    },
+    {
+     "text": "into",
+     "start": 9.398,
+     "end": 9.583
     },
     {
      "text": "a",
-     "start": 4.307,
-     "end": 4.341
+     "start": 9.583,
+     "end": 9.618
     },
     {
-     "text": "rocket",
-     "start": 4.341,
-     "end": 4.773
+     "text": "metal",
+     "start": 9.618,
+     "end": 9.954
+    },
+    {
+     "text": "ball",
+     "start": 9.954,
+     "end": 10.336
+    },
+    {
+     "text": "and",
+     "start": 10.579,
+     "end": 10.706
+    },
+    {
+     "text": "vanished",
+     "start": 10.718,
+     "end": 11.273
     },
     {
      "text": "above",
-     "start": 4.83,
-     "end": 5.057
+     "start": 11.343,
+     "end": 11.69
     },
     {
-     "text": "Earth",
-     "start": 5.068,
-     "end": 5.42
+     "text": "the",
+     "start": 11.69,
+     "end": 11.736
     },
     {
-     "text": "One",
-     "start": 5.761,
-     "end": 6.091
-    },
-    {
-     "text": "orbit",
-     "start": 6.102,
-     "end": 6.557
-    },
-    {
-     "text": "One",
-     "start": 6.898,
-     "end": 7.114
-    },
-    {
-     "text": "story",
-     "start": 7.125,
-     "end": 7.636
+     "text": "sky",
+     "start": 11.748,
+     "end": 12.234
     }
    ],
    "photo": "assets/rocket_fire/photo1.jpg"
   },
   {
    "year": "1969",
-   "title": "Moon Fire",
-   "device": "online",
-   "text": "Fire that carried three people to the Moon and back. Eight days of fire.",
-   "stat": "8 DAYS",
-   "statLabel": "MOON ROUND TRIP",
+   "title": "Moon Landing",
+   "device": "globe3d",
+   "text": "1969. Eight years later, three astronauts aimed for the Moon. Half the planet held its breath.",
+   "stat": "3",
+   "statLabel": "ASTRONAUTS",
    "photo_query": "apollo moon landing",
-   "start": 8.034,
-   "dur": 4.25,
+   "start": 12.593,
+   "dur": 6.886,
    "words": [
     {
-     "text": "Fire",
-     "start": 8.034,
-     "end": 8.284
-    },
-    {
-     "text": "that",
-     "start": 8.295,
-     "end": 8.443
-    },
-    {
-     "text": "carried",
-     "start": 8.455,
-     "end": 8.83
-    },
-    {
-     "text": "three",
-     "start": 8.841,
-     "end": 9.068
-    },
-    {
-     "text": "people",
-     "start": 9.08,
-     "end": 9.398
-    },
-    {
-     "text": "to",
-     "start": 9.409,
-     "end": 9.5
-    },
-    {
-     "text": "the",
-     "start": 9.511,
-     "end": 9.591
-    },
-    {
-     "text": "Moon",
-     "start": 9.602,
-     "end": 9.955
-    },
-    {
-     "text": "and",
-     "start": 10.045,
-     "end": 10.17
-    },
-    {
-     "text": "back",
-     "start": 10.17,
-     "end": 10.58
+     "text": "1969",
+     "start": 12.593,
+     "end": 13.6
     },
     {
      "text": "Eight",
-     "start": 10.92,
-     "end": 11.114
+     "start": 14.132,
+     "end": 14.271
     },
     {
-     "text": "days",
-     "start": 11.114,
-     "end": 11.341
+     "text": "years",
+     "start": 14.282,
+     "end": 14.549
     },
     {
-     "text": "of",
-     "start": 11.352,
-     "end": 11.409
+     "text": "later",
+     "start": 14.549,
+     "end": 14.942
     },
     {
-     "text": "fire",
-     "start": 11.42,
-     "end": 11.841
+     "text": "three",
+     "start": 15.15,
+     "end": 15.544
+    },
+    {
+     "text": "astronauts",
+     "start": 15.637,
+     "end": 16.377
+    },
+    {
+     "text": "aimed",
+     "start": 16.493,
+     "end": 16.725
+    },
+    {
+     "text": "for",
+     "start": 16.736,
+     "end": 16.829
+    },
+    {
+     "text": "the",
+     "start": 16.829,
+     "end": 16.875
+    },
+    {
+     "text": "Moon",
+     "start": 16.887,
+     "end": 17.187
+    },
+    {
+     "text": "Half",
+     "start": 17.569,
+     "end": 17.743
+    },
+    {
+     "text": "the",
+     "start": 17.743,
+     "end": 17.824
+    },
+    {
+     "text": "planet",
+     "start": 17.836,
+     "end": 18.206
+    },
+    {
+     "text": "held",
+     "start": 18.218,
+     "end": 18.403
+    },
+    {
+     "text": "its",
+     "start": 18.414,
+     "end": 18.495
+    },
+    {
+     "text": "breath",
+     "start": 18.507,
+     "end": 19.109
     }
    ],
    "photo": "assets/rocket_fire/photo2.jpg"
   },
   {
    "year": "1981",
-   "title": "Reusable Fire",
+   "title": "The Return",
    "device": "bars3d",
-   "text": "Fire that returned. Two boosters burned, then fell away, over and over.",
+   "text": "1981. But those rockets burned away and died. So engineers built one that could fly back.",
    "stat": "2 MIN",
    "statLabel": "BOOSTER BURN",
    "photo_query": "space shuttle booster launch",
-   "start": 12.284,
-   "dur": 4.921,
+   "start": 19.479,
+   "dur": 6.343,
    "words": [
     {
-     "text": "Fire",
-     "start": 12.284,
-     "end": 12.534
+     "text": "1981",
+     "start": 19.479,
+     "end": 20.336
     },
     {
-     "text": "that",
-     "start": 12.545,
-     "end": 12.705
+     "text": "But",
+     "start": 20.799,
+     "end": 20.926
     },
     {
-     "text": "returned",
-     "start": 12.705,
-     "end": 13.227
+     "text": "those",
+     "start": 20.926,
+     "end": 21.134
     },
     {
-     "text": "Two",
-     "start": 13.602,
-     "end": 13.784
-    },
-    {
-     "text": "boosters",
-     "start": 13.795,
-     "end": 14.205
+     "text": "rockets",
+     "start": 21.134,
+     "end": 21.481
     },
     {
      "text": "burned",
-     "start": 14.216,
-     "end": 14.591
-    },
-    {
-     "text": "then",
-     "start": 14.773,
-     "end": 14.955
-    },
-    {
-     "text": "fell",
-     "start": 14.955,
-     "end": 15.193
+     "start": 21.482,
+     "end": 21.713
     },
     {
      "text": "away",
-     "start": 15.205,
-     "end": 15.591
-    },
-    {
-     "text": "over",
-     "start": 15.739,
-     "end": 16.148
+     "start": 21.713,
+     "end": 22.106
     },
     {
      "text": "and",
-     "start": 16.25,
-     "end": 16.375
+     "start": 22.107,
+     "end": 22.188
     },
     {
-     "text": "over",
-     "start": 16.386,
-     "end": 16.739
+     "text": "died",
+     "start": 22.199,
+     "end": 22.674
+    },
+    {
+     "text": "So",
+     "start": 23.044,
+     "end": 23.183
+    },
+    {
+     "text": "engineers",
+     "start": 23.183,
+     "end": 23.681
+    },
+    {
+     "text": "built",
+     "start": 23.692,
+     "end": 23.947
+    },
+    {
+     "text": "one",
+     "start": 23.947,
+     "end": 24.282
+    },
+    {
+     "text": "that",
+     "start": 24.491,
+     "end": 24.583
+    },
+    {
+     "text": "could",
+     "start": 24.583,
+     "end": 24.687
+    },
+    {
+     "text": "fly",
+     "start": 24.699,
+     "end": 24.977
+    },
+    {
+     "text": "back",
+     "start": 24.977,
+     "end": 25.451
     }
    ],
    "photo": "assets/rocket_fire/photo3.jpg"
   },
   {
    "year": "2008",
-   "title": "Private Fire",
+   "title": "Private Orbit",
    "device": "network3d",
-   "text": "Fire that broke free. Small rocket reached orbit for the first time without a government.",
+   "text": "2008. Then a company nobody believed in did the impossible. Private metal finally reached orbit.",
    "stat": "2008",
-   "statLabel": "PRIVATE ORBIT",
+   "statLabel": "FIRST PRIVATE",
    "photo_query": "falcon 9 rocket launch",
-   "start": 17.205,
-   "dur": 5.113,
+   "start": 25.822,
+   "dur": 6.794,
    "words": [
     {
-     "text": "Fire",
-     "start": 17.205,
-     "end": 17.466
+     "text": "2008",
+     "start": 25.822,
+     "end": 26.655
     },
     {
-     "text": "that",
-     "start": 17.466,
-     "end": 17.625
-    },
-    {
-     "text": "broke",
-     "start": 17.636,
-     "end": 17.886
-    },
-    {
-     "text": "free",
-     "start": 17.898,
-     "end": 18.273
-    },
-    {
-     "text": "Small",
-     "start": 18.614,
-     "end": 19.057
-    },
-    {
-     "text": "rocket",
-     "start": 19.068,
-     "end": 19.409
-    },
-    {
-     "text": "reached",
-     "start": 19.42,
-     "end": 19.682
-    },
-    {
-     "text": "orbit",
-     "start": 19.693,
-     "end": 20.023
-    },
-    {
-     "text": "for",
-     "start": 20.034,
-     "end": 20.125
-    },
-    {
-     "text": "the",
-     "start": 20.136,
-     "end": 20.216
-    },
-    {
-     "text": "first",
-     "start": 20.227,
-     "end": 20.534
-    },
-    {
-     "text": "time",
-     "start": 20.545,
-     "end": 20.932
-    },
-    {
-     "text": "without",
-     "start": 21.182,
-     "end": 21.443
+     "text": "Then",
+     "start": 27.164,
+     "end": 27.257
     },
     {
      "text": "a",
-     "start": 21.443,
-     "end": 21.477
+     "start": 27.257,
+     "end": 27.303
     },
     {
-     "text": "government",
-     "start": 21.477,
-     "end": 21.966
+     "text": "company",
+     "start": 27.303,
+     "end": 27.616
+    },
+    {
+     "text": "nobody",
+     "start": 27.616,
+     "end": 28.021
+    },
+    {
+     "text": "believed",
+     "start": 28.021,
+     "end": 28.553
+    },
+    {
+     "text": "in",
+     "start": 28.565,
+     "end": 28.681
+    },
+    {
+     "text": "did",
+     "start": 28.692,
+     "end": 28.877
+    },
+    {
+     "text": "the",
+     "start": 28.877,
+     "end": 28.924
+    },
+    {
+     "text": "impossible",
+     "start": 28.924,
+     "end": 29.722
+    },
+    {
+     "text": "Private",
+     "start": 30.093,
+     "end": 30.428
+    },
+    {
+     "text": "metal",
+     "start": 30.428,
+     "end": 30.799
+    },
+    {
+     "text": "finally",
+     "start": 30.81,
+     "end": 31.308
+    },
+    {
+     "text": "reached",
+     "start": 31.308,
+     "end": 31.794
+    },
+    {
+     "text": "orbit",
+     "start": 31.863,
+     "end": 32.245
     }
    ],
    "photo": "assets/rocket_fire/photo4.jpg"
   },
   {
    "year": "2015",
-   "title": "Fire Comes Home",
+   "title": "Perfect Landing",
    "device": "topdown",
-   "text": "Booster that landed on its own fire. The rocket that came back.",
+   "text": "2015. And then the impossible happened twice. A booster fell from the sky and stood back up.",
    "stat": "2015",
    "statLabel": "FIRST LANDING",
    "photo_query": "rocket booster landing",
-   "start": 22.318,
-   "dur": 3.955,
+   "start": 32.616,
+   "dur": 6.933,
    "words": [
     {
-     "text": "Booster",
-     "start": 22.318,
-     "end": 22.682
+     "text": "2015",
+     "start": 32.616,
+     "end": 33.657
     },
     {
-     "text": "that",
-     "start": 22.693,
-     "end": 22.898
+     "text": "And",
+     "start": 34.097,
+     "end": 34.225
     },
     {
-     "text": "landed",
-     "start": 22.909,
-     "end": 23.341
+     "text": "then",
+     "start": 34.225,
+     "end": 34.41
     },
     {
-     "text": "on",
-     "start": 23.352,
-     "end": 23.477
+     "text": "the",
+     "start": 34.41,
+     "end": 34.456
     },
     {
-     "text": "its",
-     "start": 23.489,
-     "end": 23.591
+     "text": "impossible",
+     "start": 34.456,
+     "end": 35.116
     },
     {
-     "text": "own",
-     "start": 23.602,
-     "end": 23.784
+     "text": "happened",
+     "start": 35.127,
+     "end": 35.428
     },
     {
-     "text": "fire",
-     "start": 23.795,
-     "end": 24.193
+     "text": "twice",
+     "start": 35.428,
+     "end": 36.1
     },
     {
-     "text": "The",
-     "start": 24.545,
-     "end": 24.602
+     "text": "A",
+     "start": 36.47,
+     "end": 36.528
     },
     {
-     "text": "rocket",
-     "start": 24.602,
-     "end": 25.045
+     "text": "booster",
+     "start": 36.528,
+     "end": 36.898
     },
     {
-     "text": "that",
-     "start": 25.057,
-     "end": 25.205
+     "text": "fell",
+     "start": 36.898,
+     "end": 37.153
     },
     {
-     "text": "came",
-     "start": 25.216,
-     "end": 25.432
+     "text": "from",
+     "start": 37.153,
+     "end": 37.257
+    },
+    {
+     "text": "the",
+     "start": 37.269,
+     "end": 37.326
+    },
+    {
+     "text": "sky",
+     "start": 37.326,
+     "end": 37.859
+    },
+    {
+     "text": "and",
+     "start": 38.009,
+     "end": 38.206
+    },
+    {
+     "text": "stood",
+     "start": 38.414,
+     "end": 38.704
     },
     {
      "text": "back",
-     "start": 25.443,
-     "end": 25.92
+     "start": 38.704,
+     "end": 38.958
+    },
+    {
+     "text": "up",
+     "start": 38.97,
+     "end": 39.178
     }
    ],
    "photo": "assets/rocket_fire/photo5.jpg"
   },
   {
    "year": "2022",
-   "title": "Biggest Fire",
-   "device": "bars3d",
-   "text": "The tallest rocket ever, on the biggest fire ever built. Still being tested.",
+   "title": "The Giant",
+   "device": "citynight",
+   "text": "2022. Now the tallest machine ever built screams toward the stars, chasing a record untouched.",
    "stat": "TALLEST",
-   "statLabel": "ROCKET EVER",
+   "statLabel": "EVER BUILT",
    "photo_query": "starship rocket launch",
-   "start": 26.273,
-   "dur": 4.988,
+   "start": 39.549,
+   "dur": 7.106,
    "words": [
     {
-     "text": "The",
-     "start": 26.273,
-     "end": 26.341
+     "text": "2022",
+     "start": 39.549,
+     "end": 40.336
     },
     {
-     "text": "tallest",
-     "start": 26.341,
-     "end": 26.841
-    },
-    {
-     "text": "rocket",
-     "start": 26.852,
-     "end": 27.159
-    },
-    {
-     "text": "ever",
-     "start": 27.216,
-     "end": 27.489
-    },
-    {
-     "text": "on",
-     "start": 27.727,
-     "end": 27.807
+     "text": "Now",
+     "start": 40.822,
+     "end": 41.007
     },
     {
      "text": "the",
-     "start": 27.818,
-     "end": 27.909
+     "start": 41.007,
+     "end": 41.1
     },
     {
-     "text": "biggest",
-     "start": 27.966,
-     "end": 28.42
+     "text": "tallest",
+     "start": 41.1,
+     "end": 41.539
     },
     {
-     "text": "fire",
-     "start": 28.432,
-     "end": 28.886
+     "text": "machine",
+     "start": 41.551,
+     "end": 42.037
     },
     {
      "text": "ever",
-     "start": 29.023,
-     "end": 29.216
+     "start": 42.222,
+     "end": 42.465
     },
     {
      "text": "built",
-     "start": 29.216,
-     "end": 29.58
+     "start": 42.465,
+     "end": 42.685
     },
     {
-     "text": "Still",
-     "start": 29.92,
-     "end": 30.148
+     "text": "screams",
+     "start": 42.685,
+     "end": 43.368
     },
     {
-     "text": "being",
-     "start": 30.159,
-     "end": 30.364
+     "text": "toward",
+     "start": 43.38,
+     "end": 43.646
     },
     {
-     "text": "tested",
-     "start": 30.375,
-     "end": 30.864
+     "text": "the",
+     "start": 43.646,
+     "end": 43.704
+    },
+    {
+     "text": "stars",
+     "start": 43.704,
+     "end": 44.271
+    },
+    {
+     "text": "chasing",
+     "start": 44.502,
+     "end": 44.907
+    },
+    {
+     "text": "a",
+     "start": 44.907,
+     "end": 44.965
+    },
+    {
+     "text": "record",
+     "start": 44.965,
+     "end": 45.44
+    },
+    {
+     "text": "untouched",
+     "start": 45.544,
+     "end": 46.262
     }
    ],
    "photo": "assets/rocket_fire/photo6.jpg"
   },
   {
    "year": "NEXT",
-   "title": "Your Fire",
+   "title": "What's Next?",
    "device": "online",
-   "text": "From one metal sphere to rockets that fly themselves home. Which launch will you watch next?",
+   "text": "From one fragile spark to machines that fly themselves home. Which launch will you be watching?",
    "stat": "NEXT",
    "statLabel": "YOUR LAUNCH",
    "photo_query": "starfield deep space",
-   "start": 31.261,
-   "dur": 4.883,
+   "start": 46.655,
+   "dur": 5.977,
    "words": [
     {
      "text": "From",
-     "start": 31.261,
-     "end": 31.443
+     "start": 46.655,
+     "end": 46.817
     },
     {
      "text": "one",
-     "start": 31.455,
-     "end": 31.648
+     "start": 46.829,
+     "end": 47.06
     },
     {
-     "text": "metal",
-     "start": 31.659,
-     "end": 31.841
+     "text": "fragile",
+     "start": 47.072,
+     "end": 47.616
     },
     {
-     "text": "sphere",
-     "start": 31.852,
-     "end": 32.182
+     "text": "spark",
+     "start": 47.812,
+     "end": 48.299
     },
     {
      "text": "to",
-     "start": 32.193,
-     "end": 32.295
+     "start": 48.449,
+     "end": 48.553
     },
     {
-     "text": "rockets",
-     "start": 32.295,
-     "end": 32.807
+     "text": "machines",
+     "start": 48.553,
+     "end": 49.225
     },
     {
      "text": "that",
-     "start": 32.818,
-     "end": 32.977
+     "start": 49.525,
+     "end": 49.653
     },
     {
      "text": "fly",
-     "start": 32.989,
-     "end": 33.273
+     "start": 49.664,
+     "end": 50.093
     },
     {
      "text": "themselves",
-     "start": 33.284,
-     "end": 33.716
+     "start": 50.093,
+     "end": 50.521
     },
     {
      "text": "home",
-     "start": 33.727,
-     "end": 34.102
+     "start": 50.532,
+     "end": 50.868
     },
     {
      "text": "Which",
-     "start": 34.432,
-     "end": 34.636
+     "start": 51.238,
+     "end": 51.366
     },
     {
      "text": "launch",
-     "start": 34.648,
-     "end": 34.955
+     "start": 51.366,
+     "end": 51.597
     },
     {
      "text": "will",
-     "start": 34.966,
-     "end": 35.057
+     "start": 51.597,
+     "end": 51.678
     },
     {
      "text": "you",
-     "start": 35.068,
-     "end": 35.136
+     "start": 51.678,
+     "end": 51.736
     },
     {
-     "text": "watch",
-     "start": 35.148,
-     "end": 35.386
+     "text": "be",
+     "start": 51.748,
+     "end": 51.84
     },
     {
-     "text": "next",
-     "start": 35.398,
-     "end": 35.818
+     "text": "watching",
+     "start": 51.852,
+     "end": 52.292
     }
    ],
    "photo": "assets/rocket_fire/photo7.jpg"
