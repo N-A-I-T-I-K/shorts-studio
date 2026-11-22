@@ -11,16 +11,7 @@ jobs:
       max-parallel: 20
       matrix:
         script:
-          - script_sleep
-          - script_mars
-          - script_volcanoes
-          - script_dinosaurs
-          - script_music
-          - script_color
-          - script_germs
-          - script_electricity
-          - script_trees
-          - script_laughter
+          - script_rocket_fire
     steps:
       - uses: actions/checkout@v4
 
@@ -37,6 +28,9 @@ jobs:
 
       - name: Install ffmpeg
         run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Fetch background images
+        run: python tools/fetch_assets.py tools/${{ matrix.script }}.json
 
       - name: Build story
         run: python tools/build_story.py tools/${{ matrix.script }}.json

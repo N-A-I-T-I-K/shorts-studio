@@ -1,5 +1,5 @@
 import React from 'react';
-import {AbsoluteFill, interpolate, random, useCurrentFrame, useVideoConfig} from 'remotion';
+import {AbsoluteFill, interpolate, random, useVideoConfig} from 'remotion';
 
 export const SpeedLines: React.FC<{lf: number; n?: number}> = ({lf, n = 22}) => (
   <AbsoluteFill style={{pointerEvents: 'none'}}>
@@ -188,7 +188,6 @@ export const Particles: React.FC<{lf: number; seed: number; color?: string; coun
 };
 
 export const GlowOrbs: React.FC<{lf: number; seed: number}> = ({lf, seed}) => {
-  const {fps} = useVideoConfig();
   return (
     <AbsoluteFill style={{pointerEvents: 'none'}}>
       {Array.from({length: 6}).map((_, i) => {

@@ -3,13 +3,69 @@
   "rate": "+8%",
   "pitch": "+0Hz",
   "scenes": [
-    {"year":"8.6M","title":"Lightning","device":"online","text":"Lightning strikes Earth roughly eight million times a day, lighting the planet again and again.","hook":"8 MILLION STRIKES A DAY","stat":"8.6M","statLabel":"STRIKES A DAY"},
-    {"year":"HOT","title":"Record Heat","device":"bars3d","text":"The hottest temperature ever recorded on Earth reached fifty six degrees Celsius in the shade.","stat":"56°C","statLabel":"HOTTEST EVER"},
-    {"year":"COLD","title":"Deep Freeze","device":"graph","text":"The coldest place on Earth drops below minus eighty nine degrees, cold enough to freeze breath." ,"stat":"-89°C","statLabel":"COLDEST EVER"},
-    {"year":"RAIN","title":"Wettest","device":"network3d","text":"Some places get nearly twelve meters of rain a year, enough to drown a house in weeks."},
-    {"year":"WIND","title":"Fastest","device":"web3d","text":"The fastest winds on Earth can race faster than a racing car, reshaping everything in their path."},
-    {"year":"SNOW","title":"Unique","device":"packets3d","text":"No two snowflakes are alike because each one grows through its own tiny path of temperature and chance."},
-    {"year":"SKY","title":"Why Blue","device":"globe3d","text":"The sky is blue because air scatters blue light more than other colors, painting our daytime world."},
-    {"year":"?","title":"Your Turn","device":"online","text":"Weather shapes every single day of your life. What is the wildest weather you have ever seen?"}
-  ]
+    {
+      "year": "8.6M",
+      "title": "Lightning",
+      "device": "online",
+      "text": "Lightning strikes Earth roughly eight million times a day, lighting the planet again and again.",
+      "hook": "8 MILLION STRIKES A DAY",
+      "stat": "8.6M",
+      "statLabel": "STRIKES A DAY",
+      "photo_query": "lightning storm night"
+    },
+    {
+      "year": "HOT",
+      "title": "Record Heat",
+      "device": "bars3d",
+      "text": "The hottest temperature ever recorded on Earth reached fifty six degrees Celsius in the shade.",
+      "stat": "56°C",
+      "statLabel": "HOTTEST EVER",
+      "photo_query": "desert heat haze"
+    },
+    {
+      "year": "COLD",
+      "title": "Deep Freeze",
+      "device": "graph",
+      "text": "The coldest place on Earth drops below minus eighty nine degrees, cold enough to freeze breath.",
+      "stat": "-89°C",
+      "statLabel": "COLDEST EVER",
+      "photo_query": "snowy mountain forest"
+    },
+    {
+      "year": "RAIN",
+      "title": "Wettest",
+      "device": "network3d",
+      "text": "Some places get nearly twelve meters of rain a year, enough to drown a house in weeks.",
+      "photo_query": "rainforest rainfall"
+    },
+    {
+      "year": "WIND",
+      "title": "Fastest",
+      "device": "web3d",
+      "text": "The fastest winds on Earth can race faster than a racing car, reshaping everything in their path.",
+      "photo_query": "wind storm trees"
+    },
+    {
+      "year": "SNOW",
+      "title": "Unique",
+      "device": "packets3d",
+      "text": "No two snowflakes are alike because each one grows through its own tiny path of temperature and chance.",
+      "photo_query": "snowflake macro"
+    },
+    {
+      "year": "SKY",
+      "title": "Why Blue",
+      "device": "globe3d",
+      "text": "The sky is blue because air scatters blue light more than other colors, painting our daytime world.",
+      "photo_query": "blue sky clouds"
+    },
+    {
+      "year": "?",
+      "title": "Your Turn",
+      "device": "online",
+      "text": "Weather shapes every single day of your life. What is the wildest weather you have ever seen?",
+      "photo_query": "dramatic storm clouds"
+    }
+  ],
+  "theme": "storm_front"
 }

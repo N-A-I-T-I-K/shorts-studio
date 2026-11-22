@@ -6,7 +6,9 @@ import json, os, sys, time, urllib.parse, urllib.request
 script = sys.argv[1] if len(sys.argv) > 1 else "tools/script.json"
 _d = json.load(open(script, encoding="utf8"))
 scenes = _d["scenes"] if isinstance(_d, dict) else _d
-os.makedirs("public/assets", exist_ok=True)
+slug = os.path.splitext(os.path.basename(script))[0].replace("script_", "")
+asset_dir = f"public/assets/{slug}"
+os.makedirs(asset_dir, exist_ok=True)
 os.makedirs("out", exist_ok=True)
 HEADERS = {"User-Agent": "ShortsStudio/1.0 (personal video project)"}
 LICENSES = "cc0,pdm,by"
@@ -28,7 +30,7 @@ for i, sc in enumerate(scenes):
     q = sc.get("photo_query")
     if not q:
         continue
-    dest = f"public/assets/photo{i}.jpg"
+    dest = f"{asset_dir}/photo{i}.jpg"
     if os.path.exists(dest):
         print(f"scene {i + 1}: photo already there, skipping")
         continue
@@ -51,7 +53,7 @@ for i, sc in enumerate(scenes):
             continue
         with open(dest, "wb") as f:
             f.write(img)
-        with open(f"public/assets/photo{i}.txt", "w", encoding="utf8") as f:
+        with open(f"{asset_dir}/photo{i}.txt", "w", encoding="utf8") as f:
             f.write(credit_line(res))
         saved = True
         print(f"scene {i + 1}: saved photo for '{q}'")
@@ -62,7 +64,7 @@ for i, sc in enumerate(scenes):
 
 lines = []
 for i in range(len(scenes)):
-    t = f"public/assets/photo{i}.txt"
+    t = f"{asset_dir}/photo{i}.txt"
     if os.path.exists(t):
         lines.append(f"Scene {i + 1}: " + open(t, encoding="utf8").read())
 with open("out/CREDITS.txt", "w", encoding="utf8") as f:

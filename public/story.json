@@ -1,6 +1,7 @@
 {
- "totalSec": 63.38,
- "music": "music.mp3",
+ "totalSec": 46.48,
+ "theme": "ember_ascent",
+ "music": "music_hype.mp3",
  "sfx": "whoosh.mp3",
  "sfxPack": {
   "impact": "impact.mp3",
@@ -9,837 +10,650 @@
  },
  "scenes": [
   {
-   "year": "2026",
-   "title": "Day one",
-   "device": "gta_vi",
-   "stat": "$3.79B",
-   "statLabel": "IN ONE DAY",
-   "hook": "GTA 6 made $3.8 billion in one day",
-   "text": "Two days ago, GTA 6 launched, and its publisher says it made three point eight billion dollars on day one. Here is how it all started.",
+   "year": "NOW",
+   "title": "One Fire",
+   "device": "online",
+   "text": "What if I told you one fireball started the entire space age?",
+   "hook": "ONE FIREBALL STARTED EVERYTHING",
+   "stat": "1957",
+   "statLabel": "FIRST SPARK",
+   "photo_query": "rocket launch fire night",
    "start": 0.0,
-   "dur": 8.732,
+   "dur": 4.388,
    "audio": "voice/scene0.mp3",
    "words": [
     {
-     "text": "Two",
-     "start": 0.096291,
-     "end": 0.246749
+     "text": "What",
+     "start": 0.095458,
+     "end": 0.265916
     },
     {
-     "text": "days",
-     "start": 0.258333,
-     "end": 0.455083
+     "text": "if",
+     "start": 0.288625,
+     "end": 0.379541
     },
     {
-     "text": "ago",
-     "start": 0.47825,
-     "end": 0.7444580000000001
+     "text": "I",
+     "start": 0.390916,
+     "end": 0.459082
     },
     {
-     "text": "GTA",
-     "start": 0.894916,
-     "end": 1.288416
+     "text": "told",
+     "start": 0.470458,
+     "end": 0.709083
     },
     {
-     "text": "6",
-     "start": 1.311583,
-     "end": 1.554624
-    },
-    {
-     "text": "launched",
-     "start": 1.566208,
-     "end": 1.9249990000000001
-    },
-    {
-     "text": "and",
-     "start": 2.098625,
-     "end": 2.179625
-    },
-    {
-     "text": "its",
-     "start": 2.202791,
-     "end": 2.330124
-    },
-    {
-     "text": "publisher",
-     "start": 2.341666,
-     "end": 2.781499
-    },
-    {
-     "text": "says",
-     "start": 2.804625,
-     "end": 2.97825
-    },
-    {
-     "text": "it",
-     "start": 3.001375,
-     "end": 3.082375
-    },
-    {
-     "text": "made",
-     "start": 3.105541,
-     "end": 3.267582
-    },
-    {
-     "text": "three",
-     "start": 3.279166,
-     "end": 3.464332
-    },
-    {
-     "text": "point",
-     "start": 3.4875,
-     "end": 3.719
-    },
-    {
-     "text": "eight",
-     "start": 3.742125,
-     "end": 3.892583
-    },
-    {
-     "text": "billion",
-     "start": 3.904166,
-     "end": 4.216666
-    },
-    {
-     "text": "dollars",
-     "start": 4.239833,
-     "end": 4.598624
-    },
-    {
-     "text": "on",
-     "start": 4.62175,
-     "end": 4.725916
-    },
-    {
-     "text": "day",
-     "start": 4.7375,
-     "end": 4.8763749999999995
+     "text": "you",
+     "start": 0.731833,
+     "end": 0.834124
     },
     {
      "text": "one",
-     "start": 4.899541,
-     "end": 5.235207
+     "start": 0.856833,
+     "end": 1.0386659999999999
     },
     {
-     "text": "Here",
-     "start": 6.05325,
-     "end": 6.307875
-    },
-    {
-     "text": "is",
-     "start": 6.319458,
-     "end": 6.435208
-    },
-    {
-     "text": "how",
-     "start": 6.458333,
-     "end": 6.631958
-    },
-    {
-     "text": "it",
-     "start": 6.655083,
-     "end": 6.724541
-    },
-    {
-     "text": "all",
-     "start": 6.747666,
-     "end": 6.921291
+     "text": "fireball",
+     "start": 1.061375,
+     "end": 1.57275
     },
     {
      "text": "started",
-     "start": 6.944458,
-     "end": 7.407416
-    }
-   ],
-   "photo": null
-  },
-  {
-   "year": "1997",
-   "title": "The beginning",
-   "device": "gta3",
-   "text": "In 1997, a Scottish studio called DMA Design released the first GTA. Top down, with simple graphics.",
-   "start": 8.732,
-   "dur": 8.612,
-   "audio": "voice/scene1.mp3",
-   "words": [
-    {
-     "text": "In 1997",
-     "start": 0.096291,
-     "end": 1.2652489999999998
-    },
-    {
-     "text": "a",
-     "start": 1.450458,
-     "end": 1.508333
-    },
-    {
-     "text": "Scottish",
-     "start": 1.5315,
-     "end": 1.8902910000000002
-    },
-    {
-     "text": "studio",
-     "start": 1.913416,
-     "end": 2.318499
-    },
-    {
-     "text": "called",
-     "start": 2.341666,
-     "end": 2.573166
-    },
-    {
-     "text": "DMA",
-     "start": 2.596291,
-     "end": 2.989791
-    },
-    {
-     "text": "Design",
-     "start": 3.012958,
-     "end": 3.371749
-    },
-    {
-     "text": "released",
-     "start": 3.383333,
-     "end": 3.684249
+     "start": 1.595458,
+     "end": 1.936374
     },
     {
      "text": "the",
-     "start": 3.707416,
-     "end": 3.7999989999999997
-    },
-    {
-     "text": "first",
-     "start": 3.811583,
-     "end": 4.089374
-    },
-    {
-     "text": "GTA",
-     "start": 4.1125,
-     "end": 4.656499999999999
-    },
-    {
-     "text": "Top",
-     "start": 5.462958,
-     "end": 5.729166
-    },
-    {
-     "text": "down",
-     "start": 5.74075,
-     "end": 6.018541
-    },
-    {
-     "text": "with",
-     "start": 6.215291,
-     "end": 6.354165999999999
-    },
-    {
-     "text": "simple",
-     "start": 6.377333,
-     "end": 6.712999
-    },
-    {
-     "text": "graphics",
-     "start": 6.724541,
-     "end": 7.280082
-    }
-   ],
-   "photo": null
-  },
-  {
-   "year": "2001",
-   "title": "Jumping into 3D",
-   "device": "gta3",
-   "text": "In 2001, GTA 3 jumped into full 3D, and created an open world design that many games copy today.",
-   "start": 17.344,
-   "dur": 7.484,
-   "audio": "voice/scene2.mp3",
-   "words": [
-    {
-     "text": "In 2001",
-     "start": 0.096291,
-     "end": 0.9759159000000001
-    },
-    {
-     "text": "GTA",
-     "start": 1.137958,
-     "end": 1.543041
-    },
-    {
-     "text": "3",
-     "start": 1.566208,
-     "end": 1.809249
-    },
-    {
-     "text": "jumped",
-     "start": 1.832416,
-     "end": 2.098624
-    },
-    {
-     "text": "into",
-     "start": 2.12175,
-     "end": 2.272208
-    },
-    {
-     "text": "full",
-     "start": 2.295375,
-     "end": 2.503708
-    },
-    {
-     "text": "3D",
-     "start": 2.526833,
-     "end": 2.9897909
-    },
-    {
-     "text": "and",
-     "start": 3.256,
-     "end": 3.3717499999999996
-    },
-    {
-     "text": "created",
-     "start": 3.394916,
-     "end": 3.788416
-    },
-    {
-     "text": "an",
-     "start": 3.811583,
-     "end": 3.892583
-    },
-    {
-     "text": "open",
-     "start": 3.91575,
-     "end": 4.181958
-    },
-    {
-     "text": "world",
-     "start": 4.1935,
-     "end": 4.425
-    },
-    {
-     "text": "design",
-     "start": 4.448166,
-     "end": 4.818541
-    },
-    {
-     "text": "that",
-     "start": 4.841666,
-     "end": 4.968999
-    },
-    {
-     "text": "many",
-     "start": 4.980541,
-     "end": 5.200457
-    },
-    {
-     "text": "games",
-     "start": 5.223625,
-     "end": 5.501416
-    },
-    {
-     "text": "copy",
-     "start": 5.524541,
-     "end": 5.790749
-    },
-    {
-     "text": "today",
-     "start": 5.813875,
-     "end": 6.149541
-    }
-   ],
-   "photo": null
-  },
-  {
-   "year": "2002",
-   "title": "Neon and states",
-   "device": "gta_vc",
-   "text": "Vice City brought neon Miami in 2002. San Andreas followed in 2004 with an entire state to explore.",
-   "start": 24.828,
-   "dur": 8.324,
-   "audio": "voice/scene3.mp3",
-   "words": [
-    {
-     "text": "Vice",
-     "start": 0.096291,
-     "end": 0.362499
-    },
-    {
-     "text": "City",
-     "start": 0.385666,
-     "end": 0.628707
-    },
-    {
-     "text": "brought",
-     "start": 0.651833,
-     "end": 0.883333
-    },
-    {
-     "text": "neon",
-     "start": 0.9065,
-     "end": 1.184291
-    },
-    {
-     "text": "Miami",
-     "start": 1.207416,
-     "end": 1.635666
-    },
-    {
-     "text": "in 2002",
-     "start": 1.658791,
-     "end": 2.561541
-    },
-    {
-     "text": "San",
-     "start": 3.379625,
-     "end": 3.680541
-    },
-    {
-     "text": "Andreas",
-     "start": 3.703708,
-     "end": 4.143541
-    },
-    {
-     "text": "followed",
-     "start": 4.166666,
-     "end": 4.479166
-    },
-    {
-     "text": "in 2004",
-     "start": 4.502333,
-     "end": 5.405083
-    },
-    {
-     "text": "with",
-     "start": 5.42825,
-     "end": 5.555583
-    },
-    {
-     "text": "an",
-     "start": 5.578708,
-     "end": 5.648166
+     "start": 1.959083,
+     "end": 2.027249
     },
     {
      "text": "entire",
-     "start": 5.659708,
-     "end": 6.030083
+     "start": 2.038625,
+     "end": 2.4363330000000003
     },
     {
-     "text": "state",
-     "start": 6.05325,
-     "end": 6.28475
+     "text": "space",
+     "start": 2.459083,
+     "end": 2.743166
     },
     {
-     "text": "to",
-     "start": 6.307875,
-     "end": 6.400458
-    },
-    {
-     "text": "explore",
-     "start": 6.412041,
-     "end": 6.990749
+     "text": "age",
+     "start": 2.765916,
+     "end": 3.0954569999999997
     }
    ],
-   "photo": null
+   "photo": "assets/rocket_fire/photo0.jpg"
   },
   {
-   "year": "2008",
-   "title": "A darker city",
-   "device": "gta_iv",
-   "text": "In 2008, GTA 4 brought a darker, more realistic Liberty City, and broke sales records.",
-   "start": 33.152,
-   "dur": 6.596,
-   "audio": "voice/scene4.mp3",
+   "year": "1961",
+   "title": "Human Fire",
+   "device": "jump3d",
+   "text": "One man rode a rocket above Earth. One orbit. One story.",
+   "stat": "1",
+   "statLabel": "HUMAN IN ORBIT",
+   "photo_query": "spacecraft orbit earth",
+   "start": 4.388,
+   "dur": 6.452,
+   "audio": "voice/scene1.mp3",
    "words": [
     {
-     "text": "In 2008",
-     "start": 0.096291,
-     "end": 0.894916
+     "text": "One",
+     "start": 0.095458,
+     "end": 0.356833
     },
     {
-     "text": "GTA",
-     "start": 1.056958,
-     "end": 1.473624
+     "text": "man",
+     "start": 0.379541,
+     "end": 0.640916
     },
     {
-     "text": "4",
-     "start": 1.49675,
-     "end": 1.762958
-    },
-    {
-     "text": "brought",
-     "start": 1.786125,
-     "end": 1.971291
+     "text": "rode",
+     "start": 0.663625,
+     "end": 0.8113330000000001
     },
     {
      "text": "a",
-     "start": 1.994458,
-     "end": 2.052333
+     "start": 0.822708,
+     "end": 0.856791
     },
     {
-     "text": "darker",
-     "start": 2.075458,
-     "end": 2.434249
+     "text": "rocket",
+     "start": 0.879541,
+     "end": 1.209082
     },
     {
-     "text": "more",
-     "start": 2.596291,
-     "end": 2.758332
+     "text": "above",
+     "start": 1.231833,
+     "end": 1.5159159999999998
     },
     {
-     "text": "realistic",
-     "start": 2.769916,
-     "end": 3.279166
+     "text": "Earth",
+     "start": 1.538625,
+     "end": 1.8567909999999999
     },
     {
-     "text": "Liberty",
-     "start": 3.29075,
-     "end": 3.60325
+     "text": "One",
+     "start": 2.659083,
+     "end": 3.0681659999999997
     },
     {
-     "text": "City",
-     "start": 3.626375,
-     "end": 3.973583
+     "text": "orbit",
+     "start": 3.090916,
+     "end": 3.556832
     },
     {
-     "text": "and",
-     "start": 4.124083,
-     "end": 4.251416
+     "text": "One",
+     "start": 4.340916,
+     "end": 4.624999
     },
     {
-     "text": "broke",
-     "start": 4.274541,
-     "end": 4.482874
-    },
-    {
-     "text": "sales",
-     "start": 4.494458,
-     "end": 4.795374
-    },
-    {
-     "text": "records",
-     "start": 4.8185,
-     "end": 5.281458000000001
+     "text": "story",
+     "start": 4.647708,
+     "end": 5.124999
     }
    ],
-   "photo": null
+   "photo": "assets/rocket_fire/photo1.jpg"
   },
   {
-   "year": "2013",
-   "title": "GTA 5",
-   "device": "gta_v",
-   "stat": "$800M",
-   "statLabel": "ON DAY ONE",
-   "text": "In 2013, GTA 5 earned eight hundred million dollars on day one, and a billion in three days.",
-   "start": 39.748,
-   "dur": 6.596,
-   "audio": "voice/scene5.mp3",
+   "year": "1969",
+   "title": "Moon Fire",
+   "device": "online",
+   "text": "Fire that carried three people to the Moon and back. Eight days of fire.",
+   "stat": "8 DAYS",
+   "statLabel": "MOON ROUND TRIP",
+   "photo_query": "apollo moon landing",
+   "start": 10.84,
+   "dur": 5.564,
+   "audio": "voice/scene2.mp3",
    "words": [
     {
-     "text": "In 2013",
-     "start": 0.096291,
-     "end": 1.149541
-    },
-    {
-     "text": "GTA",
-     "start": 1.3,
-     "end": 1.681958
-    },
-    {
-     "text": "5",
-     "start": 1.705083,
-     "end": 2.017583
-    },
-    {
-     "text": "earned",
-     "start": 2.04075,
-     "end": 2.202791
-    },
-    {
-     "text": "eight",
-     "start": 2.225916,
-     "end": 2.3416659999999996
-    },
-    {
-     "text": "hundred",
-     "start": 2.364833,
-     "end": 2.642624
-    },
-    {
-     "text": "million",
-     "start": 2.654166,
-     "end": 2.943499
-    },
-    {
-     "text": "dollars",
-     "start": 2.966666,
-     "end": 3.313874
-    },
-    {
-     "text": "on",
-     "start": 3.337041,
-     "end": 3.4412070000000003
-    },
-    {
-     "text": "day",
-     "start": 3.464333,
-     "end": 3.591666
-    },
-    {
-     "text": "one",
-     "start": 3.614833,
-     "end": 3.892624
-    },
-    {
-     "text": "and",
-     "start": 4.066208,
-     "end": 4.158791
-    },
-    {
-     "text": "a",
-     "start": 4.181958,
-     "end": 4.239833
-    },
-    {
-     "text": "billion",
-     "start": 4.262958,
-     "end": 4.575458
-    },
-    {
-     "text": "in",
-     "start": 4.587041,
-     "end": 4.6680410000000006
-    },
-    {
-     "text": "three",
-     "start": 4.691208,
-     "end": 4.887957999999999
-    },
-    {
-     "text": "days",
-     "start": 4.899541,
-     "end": 5.281499
-    }
-   ],
-   "photo": null
-  },
-  {
-   "year": "200M",
-   "title": "Still selling",
-   "device": "gta_v",
-   "stat": "200M+",
-   "statLabel": "COPIES SOLD",
-   "text": "With GTA Online, it kept selling for over a decade, passing two hundred million copies.",
-   "start": 46.344,
-   "dur": 6.068,
-   "audio": "voice/scene6.mp3",
-   "words": [
-    {
-     "text": "With",
-     "start": 0.096291,
-     "end": 0.269916
-    },
-    {
-     "text": "GTA",
-     "start": 0.2815,
-     "end": 0.744458
-    },
-    {
-     "text": "Online",
-     "start": 0.767583,
-     "end": 1.195833
-    },
-    {
-     "text": "it",
-     "start": 1.41575,
-     "end": 1.5083330000000001
-    },
-    {
-     "text": "kept",
-     "start": 1.5315,
-     "end": 1.716666
-    },
-    {
-     "text": "selling",
-     "start": 1.72825,
-     "end": 2.029166
-    },
-    {
-     "text": "for",
-     "start": 2.052333,
-     "end": 2.214374
-    },
-    {
-     "text": "over",
-     "start": 2.2375,
-     "end": 2.457416
-    },
-    {
-     "text": "a",
-     "start": 2.469,
-     "end": 2.526875
-    },
-    {
-     "text": "decade",
-     "start": 2.538416,
-     "end": 2.908791
-    },
-    {
-     "text": "passing",
-     "start": 3.05925,
-     "end": 3.383333
-    },
-    {
-     "text": "two",
-     "start": 3.4065,
-     "end": 3.5685409999999997
-    },
-    {
-     "text": "hundred",
-     "start": 3.591666,
-     "end": 3.915749
-    },
-    {
-     "text": "million",
-     "start": 3.927333,
-     "end": 4.239833
-    },
-    {
-     "text": "copies",
-     "start": 4.262958,
-     "end": 4.737499000000001
-    }
-   ],
-   "photo": null
-  },
-  {
-   "year": "NOW",
-   "title": "GTA 6 is here",
-   "device": "gta_vi",
-   "text": "Now GTA 6 has smashed that record, with three point seven nine billion dollars, the publisher says. Which GTA was your favourite? Comment below.",
-   "start": 52.412,
-   "dur": 10.964,
-   "audio": "voice/scene7.mp3",
-   "words": [
-    {
-     "text": "Now",
-     "start": 0.096291,
-     "end": 0.350916
-    },
-    {
-     "text": "GTA",
-     "start": 0.3625,
-     "end": 0.779166
-    },
-    {
-     "text": "6",
-     "start": 0.802333,
-     "end": 1.103249
-    },
-    {
-     "text": "has",
-     "start": 1.114833,
-     "end": 1.253708
-    },
-    {
-     "text": "smashed",
-     "start": 1.276833,
-     "end": 1.6009160000000002
+     "text": "Fire",
+     "start": 0.095458,
+     "end": 0.447749
     },
     {
      "text": "that",
-     "start": 1.624083,
-     "end": 1.774541
+     "start": 0.470458,
+     "end": 0.595458
     },
     {
-     "text": "record",
-     "start": 1.786125,
-     "end": 2.110208
-    },
-    {
-     "text": "with",
-     "start": 2.330083,
-     "end": 2.480541
+     "text": "carried",
+     "start": 0.618166,
+     "end": 0.913624
     },
     {
      "text": "three",
-     "start": 2.503708,
-     "end": 2.7004580000000002
+     "start": 0.936375,
+     "end": 1.129541
     },
     {
-     "text": "point",
-     "start": 2.712041,
-     "end": 2.943541
+     "text": "people",
+     "start": 1.152291,
+     "end": 1.4818319999999998
     },
     {
-     "text": "seven",
-     "start": 2.955083,
-     "end": 3.255999
-    },
-    {
-     "text": "nine",
-     "start": 3.279166,
-     "end": 3.4759160000000002
-    },
-    {
-     "text": "billion",
-     "start": 3.499083,
-     "end": 3.799999
-    },
-    {
-     "text": "dollars",
-     "start": 3.823166,
-     "end": 4.216666
+     "text": "to",
+     "start": 1.504541,
+     "end": 1.595457
     },
     {
      "text": "the",
-     "start": 4.378708,
-     "end": 4.482874
+     "start": 1.606833,
+     "end": 1.7091239999999999
     },
     {
-     "text": "publisher",
-     "start": 4.506,
-     "end": 4.9342500000000005
+     "text": "Moon",
+     "start": 1.720458,
+     "end": 1.9590830000000001
     },
     {
-     "text": "says",
-     "start": 4.957416,
-     "end": 5.316207
+     "text": "and",
+     "start": 1.970458,
+     "end": 2.061374
+    },
+    {
+     "text": "back",
+     "start": 2.084083,
+     "end": 2.4363740000000003
+    },
+    {
+     "text": "Eight",
+     "start": 3.227291,
+     "end": 3.4545820000000003
+    },
+    {
+     "text": "days",
+     "start": 3.465916,
+     "end": 3.704541
+    },
+    {
+     "text": "of",
+     "start": 3.727291,
+     "end": 3.818207
+    },
+    {
+     "text": "fire",
+     "start": 3.840916,
+     "end": 4.272749
+    }
+   ],
+   "photo": "assets/rocket_fire/photo2.jpg"
+  },
+  {
+   "year": "1981",
+   "title": "Reusable Fire",
+   "device": "bars3d",
+   "text": "Fire that returned. Two boosters burned, then fell away, over and over.",
+   "stat": "2 MIN",
+   "statLabel": "BOOSTER BURN",
+   "photo_query": "space shuttle booster launch",
+   "start": 16.404,
+   "dur": 6.02,
+   "audio": "voice/scene3.mp3",
+   "words": [
+    {
+     "text": "Fire",
+     "start": 0.095458,
+     "end": 0.493166
+    },
+    {
+     "text": "that",
+     "start": 0.515916,
+     "end": 0.674999
+    },
+    {
+     "text": "returned",
+     "start": 0.697708,
+     "end": 1.288624
+    },
+    {
+     "text": "Two",
+     "start": 2.068166,
+     "end": 2.227249
+    },
+    {
+     "text": "boosters",
+     "start": 2.238625,
+     "end": 2.6022499999999997
+    },
+    {
+     "text": "burned",
+     "start": 2.613625,
+     "end": 2.920458
+    },
+    {
+     "text": "then",
+     "start": 3.090916,
+     "end": 3.238624
+    },
+    {
+     "text": "fell",
+     "start": 3.261375,
+     "end": 3.465916
+    },
+    {
+     "text": "away",
+     "start": 3.477291,
+     "end": 3.7954570000000003
+    },
+    {
+     "text": "over",
+     "start": 3.965916,
+     "end": 4.249999
+    },
+    {
+     "text": "and",
+     "start": 4.261375,
+     "end": 4.352291
+    },
+    {
+     "text": "over",
+     "start": 4.375,
+     "end": 4.693166
+    }
+   ],
+   "photo": "assets/rocket_fire/photo3.jpg"
+  },
+  {
+   "year": "2008",
+   "title": "Private Fire",
+   "device": "network3d",
+   "text": "Fire that broke free. Small rocket reached orbit for the first time without a government.",
+   "stat": "2008",
+   "statLabel": "PRIVATE ORBIT",
+   "photo_query": "falcon 9 rocket launch",
+   "start": 22.424,
+   "dur": 6.332,
+   "audio": "voice/scene4.mp3",
+   "words": [
+    {
+     "text": "Fire",
+     "start": 0.095458,
+     "end": 0.470458
+    },
+    {
+     "text": "that",
+     "start": 0.493166,
+     "end": 0.652249
+    },
+    {
+     "text": "broke",
+     "start": 0.663625,
+     "end": 0.890916
+    },
+    {
+     "text": "free",
+     "start": 0.902291,
+     "end": 1.2659159999999998
+    },
+    {
+     "text": "Small",
+     "start": 2.045458,
+     "end": 2.431833
+    },
+    {
+     "text": "rocket",
+     "start": 2.454541,
+     "end": 2.772707
+    },
+    {
+     "text": "reached",
+     "start": 2.784083,
+     "end": 3.034083
+    },
+    {
+     "text": "orbit",
+     "start": 3.056833,
+     "end": 3.3295410000000003
+    },
+    {
+     "text": "for",
+     "start": 3.352291,
+     "end": 3.465916
+    },
+    {
+     "text": "the",
+     "start": 3.477291,
+     "end": 3.5795820000000003
+    },
+    {
+     "text": "first",
+     "start": 3.590916,
+     "end": 3.852291
+    },
+    {
+     "text": "time",
+     "start": 3.875,
+     "end": 4.113625
+    },
+    {
+     "text": "without",
+     "start": 4.125,
+     "end": 4.409083
+    },
+    {
+     "text": "a",
+     "start": 4.431833,
+     "end": 4.488666
+    },
+    {
+     "text": "government",
+     "start": 4.5,
+     "end": 5.011375
+    }
+   ],
+   "photo": "assets/rocket_fire/photo4.jpg"
+  },
+  {
+   "year": "2015",
+   "title": "Fire Comes Home",
+   "device": "topdown",
+   "text": "Booster that landed on its own fire. The rocket that came back.",
+   "stat": "2015",
+   "statLabel": "FIRST LANDING",
+   "photo_query": "rocket booster landing",
+   "start": 28.756,
+   "dur": 5.372,
+   "audio": "voice/scene5.mp3",
+   "words": [
+    {
+     "text": "Booster",
+     "start": 0.095458,
+     "end": 0.493166
+    },
+    {
+     "text": "that",
+     "start": 0.515916,
+     "end": 0.674999
+    },
+    {
+     "text": "landed",
+     "start": 0.686375,
+     "end": 1.038666
+    },
+    {
+     "text": "on",
+     "start": 1.061375,
+     "end": 1.175
+    },
+    {
+     "text": "its",
+     "start": 1.197708,
+     "end": 1.345416
+    },
+    {
+     "text": "own",
+     "start": 1.356833,
+     "end": 1.5386659999999999
+    },
+    {
+     "text": "fire",
+     "start": 1.561375,
+     "end": 2.027291
+    },
+    {
+     "text": "The",
+     "start": 2.806833,
+     "end": 2.9432080000000003
+    },
+    {
+     "text": "rocket",
+     "start": 2.965916,
+     "end": 3.284082
+    },
+    {
+     "text": "that",
+     "start": 3.306833,
+     "end": 3.4432080000000003
+    },
+    {
+     "text": "came",
+     "start": 3.465916,
+     "end": 3.681832
+    },
+    {
+     "text": "back",
+     "start": 3.693166,
+     "end": 4.068166
+    }
+   ],
+   "photo": "assets/rocket_fire/photo5.jpg"
+  },
+  {
+   "year": "2022",
+   "title": "Biggest Fire",
+   "device": "bars3d",
+   "text": "The tallest rocket ever, on the biggest fire ever built. Still being tested.",
+   "stat": "TALLEST",
+   "statLabel": "ROCKET EVER",
+   "photo_query": "starship rocket launch",
+   "start": 34.128,
+   "dur": 6.02,
+   "audio": "voice/scene6.mp3",
+   "words": [
+    {
+     "text": "The",
+     "start": 0.095458,
+     "end": 0.220458
+    },
+    {
+     "text": "tallest",
+     "start": 0.243166,
+     "end": 0.618166
+    },
+    {
+     "text": "rocket",
+     "start": 0.640916,
+     "end": 0.936374
+    },
+    {
+     "text": "ever",
+     "start": 0.959083,
+     "end": 1.186374
+    },
+    {
+     "text": "on",
+     "start": 1.356833,
+     "end": 1.436374
+    },
+    {
+     "text": "the",
+     "start": 1.447708,
+     "end": 1.549999
+    },
+    {
+     "text": "biggest",
+     "start": 1.572708,
+     "end": 1.9022489999999999
+    },
+    {
+     "text": "fire",
+     "start": 1.925,
+     "end": 2.254541
+    },
+    {
+     "text": "ever",
+     "start": 2.265916,
+     "end": 2.4704569999999997
+    },
+    {
+     "text": "built",
+     "start": 2.493166,
+     "end": 2.811332
+    },
+    {
+     "text": "Still",
+     "start": 3.602291,
+     "end": 3.965916
+    },
+    {
+     "text": "being",
+     "start": 3.977291,
+     "end": 4.215916
+    },
+    {
+     "text": "tested",
+     "start": 4.238625,
+     "end": 4.704541
+    }
+   ],
+   "photo": "assets/rocket_fire/photo6.jpg"
+  },
+  {
+   "year": "NEXT",
+   "title": "Your Fire",
+   "device": "online",
+   "text": "From one metal sphere to rockets that fly themselves home. Which launch will you watch next?",
+   "stat": "NEXT",
+   "statLabel": "YOUR LAUNCH",
+   "photo_query": "starfield deep space",
+   "start": 40.148,
+   "dur": 6.332,
+   "audio": "voice/scene7.mp3",
+   "words": [
+    {
+     "text": "From",
+     "start": 0.095458,
+     "end": 0.311374
+    },
+    {
+     "text": "one",
+     "start": 0.322708,
+     "end": 0.493166
+    },
+    {
+     "text": "metal",
+     "start": 0.515916,
+     "end": 0.7772910000000001
+    },
+    {
+     "text": "sphere",
+     "start": 0.788625,
+     "end": 1.0386250000000001
+    },
+    {
+     "text": "to",
+     "start": 1.05,
+     "end": 1.1295410000000001
+    },
+    {
+     "text": "rockets",
+     "start": 1.152291,
+     "end": 1.549999
+    },
+    {
+     "text": "that",
+     "start": 1.561375,
+     "end": 1.686375
+    },
+    {
+     "text": "fly",
+     "start": 1.709083,
+     "end": 1.924999
+    },
+    {
+     "text": "themselves",
+     "start": 1.936375,
+     "end": 2.379541
+    },
+    {
+     "text": "home",
+     "start": 2.402291,
+     "end": 2.731832
     },
     {
      "text": "Which",
-     "start": 6.13425,
-     "end": 6.435166
+     "start": 3.522708,
+     "end": 3.772708
     },
     {
-     "text": "GTA",
-     "start": 6.458333,
-     "end": 7.002333
+     "text": "launch",
+     "start": 3.795458,
+     "end": 4.056833
     },
     {
-     "text": "was",
-     "start": 7.013875,
-     "end": 7.175916
+     "text": "will",
+     "start": 4.068166,
+     "end": 4.181791
     },
     {
-     "text": "your",
-     "start": 7.1875,
-     "end": 7.314833
+     "text": "you",
+     "start": 4.193166,
+     "end": 4.306791
     },
     {
-     "text": "favourite",
-     "start": 7.337958,
-     "end": 7.847208
+     "text": "watch",
+     "start": 4.329541,
+     "end": 4.590916
     },
     {
-     "text": "Comment",
-     "start": 8.657416,
-     "end": 9.155082
-    },
-    {
-     "text": "below",
-     "start": 9.166666,
-     "end": 9.652790999999999
+     "text": "next",
+     "start": 4.602291,
+     "end": 5.022749
     }
    ],
-   "photo": null
+   "photo": "assets/rocket_fire/photo7.jpg"
   }
  ]
 }

@@ -1,18 +1,64 @@
-[
-  {"year": "1969", "title": "The first message", "device": "network",
-   "text": "In 1969, scientists sent the first message between two computers. The network was ARPANET, and it crashed after two letters."},
-  {"year": "1971", "title": "The first email", "device": "email",
-   "text": "In 1971, Ray Tomlinson sent the first network email, and chose the at sign for addresses."},
-  {"year": "1983", "title": "Birth of the internet", "device": "packets",
-   "text": "In 1983, ARPANET adopted a shared language called TCP IP. Many call this the birth of the internet."},
-  {"year": "1991", "title": "The World Wide Web", "device": "browser",
-   "text": "In 1991, Tim Berners-Lee opened the first website to the public. The web made the internet easy for everyone."},
-  {"year": "6B", "title": "People online", "device": "graph",
-   "text": "In 2005, about one billion people were online. By 2025, six billion. Almost three quarters of the world."},
-  {"year": "2004", "title": "Social media", "device": "social",
-   "text": "Then social media took off. Facebook in 2004, YouTube in 2005, and Twitter in 2006."},
-  {"year": "2007", "title": "Internet in your pocket", "device": "mobile",
-   "text": "In 2007, the iPhone put the internet in every pocket. Apps and streaming followed."},
-  {"year": "NOW", "title": "What comes next?", "device": "globe",
-   "text": "Today, satellites and AI are changing it again. What comes next? Tell me in the comments."}
-]
+{
+  "voice": "en-US-GuyNeural",
+  "rate": "+8%",
+  "pitch": "+0Hz",
+  "scenes": [
+    {
+      "year": "1969",
+      "title": "The first message",
+      "device": "network",
+      "text": "In 1969, scientists sent the first message between two computers. The network was ARPANET, and it crashed after two letters.",
+      "photo_query": "vintage mainframe computer"
+    },
+    {
+      "year": "1971",
+      "title": "The first email",
+      "device": "email",
+      "text": "In 1971, Ray Tomlinson sent the first network email, and chose the at sign for addresses.",
+      "photo_query": "old computer terminal screen"
+    },
+    {
+      "year": "1983",
+      "title": "Birth of the internet",
+      "device": "packets",
+      "text": "In 1983, ARPANET adopted a shared language called TCP IP. Many call this the birth of the internet.",
+      "photo_query": "network cables server room"
+    },
+    {
+      "year": "1991",
+      "title": "The World Wide Web",
+      "device": "browser",
+      "text": "In 1991, Tim Berners-Lee opened the first website to the public. The web made the internet easy for everyone.",
+      "photo_query": "early web browser computer"
+    },
+    {
+      "year": "6B",
+      "title": "People online",
+      "device": "graph",
+      "text": "In 2005, about one billion people were online. By 2025, six billion. Almost three quarters of the world.",
+      "photo_query": "world map network connections"
+    },
+    {
+      "year": "2004",
+      "title": "Social media",
+      "device": "social",
+      "text": "Then social media took off. Facebook in 2004, YouTube in 2005, and Twitter in 2006.",
+      "photo_query": "social media laptops"
+    },
+    {
+      "year": "2007",
+      "title": "Internet in your pocket",
+      "device": "mobile",
+      "text": "In 2007, the iPhone put the internet in every pocket. Apps and streaming followed.",
+      "photo_query": "smartphone streaming"
+    },
+    {
+      "year": "NOW",
+      "title": "What comes next?",
+      "device": "globe",
+      "text": "Today, satellites and AI are changing it again. What comes next? Tell me in the comments.",
+      "photo_query": "satellite earth from space"
+    }
+  ],
+  "theme": "packet_routes"
+}

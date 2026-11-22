@@ -3,13 +3,69 @@
   "rate": "+8%",
   "pitch": "+0Hz",
   "scenes": [
-    {"year":"DOP","title":"Brain Reward","device":"network3d","text":"Music lights up the same reward centers in your brain as food and pleasure, releasing dopamine when a song hits.","hook":"MUSIC HACKS YOUR BRAIN","stat":"DOPAMINE","statLabel":"BRAIN REWARD"},
-    {"year":"EAR","title":"Stuck Song","device":"web3d","text":"A song stuck in your head is called an earworm, and it happens to nearly everyone, sometimes for hours on end."},
-    {"year":"3SEC","title":"Instant Mood","device":"bars3d","text":"Your brain recognizes a familiar song in a fraction of a second, and your mood can change just as fast.","stat":"0.2S","statLabel":"TO RECOGNIZE"},
-    {"year":"PAIN","title":"Natural Relief","device":"graph","text":"Music can lower pain and stress, which is why doctors use it to calm patients before difficult procedures."},
-    {"year":"MEM","title":"Time Machine","device":"online","text":"Songs tie to memory so strongly that one note can transport you back to a moment you had forgotten.","stat":"1 SONG","statLabel":"MANY MEMORIES"},
-    {"year":"BABY","title":"Born To Hear","device":"social3d","text":"Babies respond to rhythm before they can speak, and a gentle song can calm them faster than words."},
-    {"year":"ANIMAL","title":"Not Just Us","device":"packets3d","text":"Other animals feel rhythm too, and some birds and even rats move in time to a steady beat."},
-    {"year":"?","title":"Your Turn","device":"online","text":"Music shapes how you feel every single day. What song always puts you in a better mood?"}
-  ]
+    {
+      "year": "DOP",
+      "title": "Brain Reward",
+      "device": "network3d",
+      "text": "Music lights up the same reward centers in your brain as food and pleasure, releasing dopamine when a song hits.",
+      "hook": "MUSIC HACKS YOUR BRAIN",
+      "stat": "DOPAMINE",
+      "statLabel": "BRAIN REWARD",
+      "photo_query": "sound waves abstract"
+    },
+    {
+      "year": "EAR",
+      "title": "Stuck Song",
+      "device": "web3d",
+      "text": "A song stuck in your head is called an earworm, and it happens to nearly everyone, sometimes for hours on end.",
+      "photo_query": "headphones neon"
+    },
+    {
+      "year": "3SEC",
+      "title": "Instant Mood",
+      "device": "bars3d",
+      "text": "Your brain recognizes a familiar song in a fraction of a second, and your mood can change just as fast.",
+      "stat": "0.2S",
+      "statLabel": "TO RECOGNIZE",
+      "photo_query": "music equalizer lights"
+    },
+    {
+      "year": "PAIN",
+      "title": "Natural Relief",
+      "device": "graph",
+      "text": "Music can lower pain and stress, which is why doctors use it to calm patients before difficult procedures.",
+      "photo_query": "concert crowd lights"
+    },
+    {
+      "year": "MEM",
+      "title": "Time Machine",
+      "device": "online",
+      "text": "Songs tie to memory so strongly that one note can transport you back to a moment you had forgotten.",
+      "stat": "1 SONG",
+      "statLabel": "MANY MEMORIES",
+      "photo_query": "vinyl record closeup"
+    },
+    {
+      "year": "BABY",
+      "title": "Born To Hear",
+      "device": "social3d",
+      "text": "Babies respond to rhythm before they can speak, and a gentle song can calm them faster than words.",
+      "photo_query": "baby listening music"
+    },
+    {
+      "year": "ANIMAL",
+      "title": "Not Just Us",
+      "device": "packets3d",
+      "text": "Other animals feel rhythm too, and some birds and even rats move in time to a steady beat.",
+      "photo_query": "bird singing branch"
+    },
+    {
+      "year": "?",
+      "title": "Your Turn",
+      "device": "online",
+      "text": "Music shapes how you feel every single day. What song always puts you in a better mood?",
+      "photo_query": "piano keys dark"
+    }
+  ],
+  "theme": "resonant_wave"
 }

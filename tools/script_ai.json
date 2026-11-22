@@ -3,13 +3,69 @@
   "rate": "+8%",
   "pitch": "+0Hz",
   "scenes": [
-    {"year":"2022","title":"AI Arrives","device":"network3d","text":"In twenty twenty two, a chatbot reached a million users in five days. Nothing spread faster before.","hook":"A MILLION USERS IN 5 DAYS","stat":"5 DAYS","statLabel":"1 MILLION USERS"},
-    {"year":"1T","title":"Words","device":"packets3d","text":"These models learned from trillions of words, finding patterns in everything humans have ever written.","stat":"1T+","statLabel":"WORDS LEARNED"},
-    {"year":"NEXT","title":"Predict","device":"web3d","text":"At its heart, AI simply guesses the next most likely word. But guess well enough and it starts to look a lot like real thinking."},
-    {"year":"ART","title":"Creates","device":"online","text":"Now it writes code, draws pictures, and composes music, turning plain words into finished work."},
-    {"year":"100X","title":"Faster","device":"bars3d","text":"Tasks that once took a whole afternoon now take seconds, changing how millions of people work." ,"stat":"100X","statLabel":"FASTER WORK"},
-    {"year":"RISK","title":"Hallucinate","device":"graph","text":"It can sound confident while being completely wrong, so always check the important stuff yourself."},
-    {"year":"JOB","title":"New Work","device":"social3d","text":"AI will not replace you. Someone using AI probably will. The tool rewards the curious."},
-    {"year":"?","title":"Your Turn","device":"online","text":"This is the newest tool in history. What would you build with it if anything were possible?"}
-  ]
+    {
+      "year": "2022",
+      "title": "AI Arrives",
+      "device": "network3d",
+      "text": "In twenty twenty two, a chatbot reached a million users in five days. Nothing spread faster before.",
+      "hook": "A MILLION USERS IN 5 DAYS",
+      "stat": "5 DAYS",
+      "statLabel": "1 MILLION USERS",
+      "photo_query": "AI neural network glowing"
+    },
+    {
+      "year": "1T",
+      "title": "Words",
+      "device": "packets3d",
+      "text": "These models learned from trillions of words, finding patterns in everything humans have ever written.",
+      "stat": "1T+",
+      "statLabel": "WORDS LEARNED",
+      "photo_query": "server room racks"
+    },
+    {
+      "year": "NEXT",
+      "title": "Predict",
+      "device": "web3d",
+      "text": "At its heart, AI simply guesses the next most likely word. But guess well enough and it starts to look a lot like real thinking.",
+      "photo_query": "robot hand"
+    },
+    {
+      "year": "ART",
+      "title": "Creates",
+      "device": "online",
+      "text": "Now it writes code, draws pictures, and composes music, turning plain words into finished work.",
+      "photo_query": "digital art painting"
+    },
+    {
+      "year": "100X",
+      "title": "Faster",
+      "device": "bars3d",
+      "text": "Tasks that once took a whole afternoon now take seconds, changing how millions of people work.",
+      "stat": "100X",
+      "statLabel": "FASTER WORK",
+      "photo_query": "code on screen"
+    },
+    {
+      "year": "RISK",
+      "title": "Hallucinate",
+      "device": "graph",
+      "text": "It can sound confident while being completely wrong, so always check the important stuff yourself.",
+      "photo_query": "robot face"
+    },
+    {
+      "year": "JOB",
+      "title": "New Work",
+      "device": "social3d",
+      "text": "AI will not replace you. Someone using AI probably will. The tool rewards the curious.",
+      "photo_query": "futuristic city tech"
+    },
+    {
+      "year": "?",
+      "title": "Your Turn",
+      "device": "online",
+      "text": "This is the newest tool in history. What would you build with it if anything were possible?",
+      "photo_query": "human and robot together"
+    }
+  ],
+  "theme": "synthetic_dawn"
 }

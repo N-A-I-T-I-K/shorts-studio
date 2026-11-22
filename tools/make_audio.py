@@ -5,8 +5,11 @@ import numpy as np
 
 SR = 44100
 STYLE = sys.argv[2] if len(sys.argv) > 2 else "chill"
+NAME = sys.argv[3] if len(sys.argv) > 3 else STYLE
 HYPE = STYLE == "hype"
-BPM = 128 if HYPE else 112
+DARK = STYLE == "dark"
+BRIGHT = STYLE == "bright"
+BPM = 128 if HYPE else (124 if BRIGHT else (96 if DARK else 112))
 SECS = float(sys.argv[1]) if len(sys.argv) > 1 else 75.0
 rng = np.random.default_rng(7)
 beat = 60.0 / BPM
@@ -97,6 +100,20 @@ prog = [
     (48, [55, 60, 64]),  # C
     (43, [55, 59, 62]),  # G
 ]
+if DARK:
+    prog = [
+        (45, [57, 60, 64]),  # A minor
+        (41, [53, 57, 60]),  # F
+        (38, [50, 53, 57]),  # D minor
+        (40, [52, 56, 59]),  # E
+    ]
+elif BRIGHT:
+    prog = [
+        (48, [55, 60, 64]),  # C
+        (43, [55, 59, 62]),  # G
+        (45, [57, 60, 64]),  # A minor
+        (41, [53, 57, 60]),  # F
+    ]
 bar_beats = 4
 chord_len = 2 * bar_beats * beat
 n_chords = int(SECS / chord_len) + 1
@@ -188,9 +205,10 @@ def click_fx():
 
 
 os.makedirs("public", exist_ok=True)
-outputs = {"music": mix, "whoosh": whoosh(), "impact": impact_fx(), "pop": pop_fx(), "click": click_fx()}
+music_name = "music" if NAME == "chill" else f"music_{NAME}"
+outputs = {music_name: mix, "whoosh": whoosh(), "impact": impact_fx(), "pop": pop_fx(), "click": click_fx()}
 # keep any sound effects you already chose: only music is always remade
-outputs = {k: v for k, v in outputs.items() if k == "music" or not os.path.exists(f"public/{k}.mp3")}
+outputs = {k: v for k, v in outputs.items() if k == music_name or not os.path.exists(f"public/{k}.mp3")}
 for name, data in outputs.items():
     write_wav(f"public/_{name}.wav", data)
 for name in outputs:

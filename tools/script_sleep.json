@@ -3,13 +3,69 @@
   "rate": "+8%",
   "pitch": "+0Hz",
   "scenes": [
-    {"year":"8H","title":"Nightly Reset","device":"globe3d","text":"Every single night your brain runs a cleanup crew, washing away waste while your body lies still.","hook":"YOUR BRAIN CLEANS ITSELF EVERY NIGHT","stat":"8H","statLabel":"SLEEP A NIGHT"},
-    {"year":"90M","title":"Sleep Cycle","device":"bars3d","text":"Sleep moves in cycles of about ninety minutes, passing through light, deep, and dream filled stages.","stat":"90MIN","statLabel":"ONE CYCLE"},
-    {"year":"DEEP","title":"Repair Mode","device":"network3d","text":"Deep sleep is when your body repairs tissue and your immune system grows stronger for tomorrow."},
-    {"year":"REM","title":"Dream Time","device":"web3d","text":"During REM sleep your brain is almost as active as when awake, but your body cannot move."},
-    {"year":"MEM","title":"Memory Sort","device":"graph","text":"Sleep helps your brain decide what to remember, keeping the useful parts and discarding the rest."},
-    {"year":"2DAY","title":"No Sleep","device":"citynight","text":"Skip a whole night and your focus, mood, and reaction time all start to fall apart very quickly."},
-    {"year":"7-9","title":"Best Amount","device":"bars3d","text":"Most adults need around seven to nine hours, and the quality matters just as much as the number." ,"stat":"7-9","statLabel":"HOURS NEEDED"},
-    {"year":"?","title":"Your Turn","device":"online","text":"Sleep is the most powerful reset you own. What is the one thing that always ruins yours?"}
-  ]
+    {
+      "year": "8H",
+      "title": "Nightly Reset",
+      "device": "globe3d",
+      "text": "Every single night your brain runs a cleanup crew, washing away waste while your body lies still.",
+      "hook": "YOUR BRAIN CLEANS ITSELF EVERY NIGHT",
+      "stat": "8H",
+      "statLabel": "SLEEP A NIGHT",
+      "photo_query": "person sleeping night"
+    },
+    {
+      "year": "90M",
+      "title": "Sleep Cycle",
+      "device": "bars3d",
+      "text": "Sleep moves in cycles of about ninety minutes, passing through light, deep, and dream filled stages.",
+      "stat": "90MIN",
+      "statLabel": "ONE CYCLE",
+      "photo_query": "sleep cycle brain waves"
+    },
+    {
+      "year": "DEEP",
+      "title": "Repair Mode",
+      "device": "network3d",
+      "text": "Deep sleep is when your body repairs tissue and your immune system grows stronger for tomorrow.",
+      "photo_query": "bedroom moonlight"
+    },
+    {
+      "year": "REM",
+      "title": "Dream Time",
+      "device": "web3d",
+      "text": "During REM sleep your brain is almost as active as when awake, but your body cannot move.",
+      "photo_query": "dream abstract night"
+    },
+    {
+      "year": "MEM",
+      "title": "Memory Sort",
+      "device": "graph",
+      "text": "Sleep helps your brain decide what to remember, keeping the useful parts and discarding the rest.",
+      "photo_query": "brain neurons night"
+    },
+    {
+      "year": "2DAY",
+      "title": "No Sleep",
+      "device": "citynight",
+      "text": "Skip a whole night and your focus, mood, and reaction time all start to fall apart very quickly.",
+      "photo_query": "tired person morning"
+    },
+    {
+      "year": "7-9",
+      "title": "Best Amount",
+      "device": "bars3d",
+      "text": "Most adults need around seven to nine hours, and the quality matters just as much as the number.",
+      "stat": "7-9",
+      "statLabel": "HOURS NEEDED",
+      "photo_query": "bed clock night"
+    },
+    {
+      "year": "?",
+      "title": "Your Turn",
+      "device": "online",
+      "text": "Sleep is the most powerful reset you own. What is the one thing that always ruins yours?",
+      "photo_query": "peaceful night sky"
+    }
+  ],
+  "theme": "nocturnal_reset"
 }

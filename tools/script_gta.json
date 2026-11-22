@@ -10,31 +10,36 @@
       "stat": "$3.79B",
       "statLabel": "IN ONE DAY",
       "hook": "GTA 6 made $3.8 billion in one day",
-      "text": "Two days ago, GTA 6 launched, and its publisher says it made three point eight billion dollars on day one. Here is how it all started."
+      "text": "Two days ago, GTA 6 launched, and its publisher says it made three point eight billion dollars on day one. Here is how it all started.",
+      "photo_query": "neon city night lights"
     },
     {
       "year": "1997",
       "title": "The beginning",
       "device": "gta3",
-      "text": "In 1997, a Scottish studio called DMA Design released the first GTA. Top down, with simple graphics."
+      "text": "In 1997, a Scottish studio called DMA Design released the first GTA. Top down, with simple graphics.",
+      "photo_query": "retro arcade cabinet"
     },
     {
       "year": "2001",
       "title": "Jumping into 3D",
       "device": "gta3",
-      "text": "In 2001, GTA 3 jumped into full 3D, and created an open world design that many games copy today."
+      "text": "In 2001, GTA 3 jumped into full 3D, and created an open world design that many games copy today.",
+      "photo_query": "open world city videogame"
     },
     {
       "year": "2002",
       "title": "Neon and states",
       "device": "gta_vc",
-      "text": "Vice City brought neon Miami in 2002. San Andreas followed in 2004 with an entire state to explore."
+      "text": "Vice City brought neon Miami in 2002. San Andreas followed in 2004 with an entire state to explore.",
+      "photo_query": "neon miami sunset palms"
     },
     {
       "year": "2008",
       "title": "A darker city",
       "device": "gta_iv",
-      "text": "In 2008, GTA 4 brought a darker, more realistic Liberty City, and broke sales records."
+      "text": "In 2008, GTA 4 brought a darker, more realistic Liberty City, and broke sales records.",
+      "photo_query": "dark rainy city street"
     },
     {
       "year": "2013",
@@ -42,7 +47,8 @@
       "device": "gta_v",
       "stat": "$800M",
       "statLabel": "ON DAY ONE",
-      "text": "In 2013, GTA 5 earned eight hundred million dollars on day one, and a billion in three days."
+      "text": "In 2013, GTA 5 earned eight hundred million dollars on day one, and a billion in three days.",
+      "photo_query": "los angeles skyline sunset"
     },
     {
       "year": "200M",
@@ -50,13 +56,16 @@
       "device": "gta_v",
       "stat": "200M+",
       "statLabel": "COPIES SOLD",
-      "text": "With GTA Online, it kept selling for over a decade, passing two hundred million copies."
+      "text": "With GTA Online, it kept selling for over a decade, passing two hundred million copies.",
+      "photo_query": "game controller neon"
     },
     {
       "year": "NOW",
       "title": "GTA 6 is here",
       "device": "gta_vi",
-      "text": "Now GTA 6 has smashed that record, with three point seven nine billion dollars, the publisher says. Which GTA was your favourite? Comment below."
+      "text": "Now GTA 6 has smashed that record, with three point seven nine billion dollars, the publisher says. Which GTA was your favourite? Comment below.",
+      "photo_query": "futuristic night skyline"
     }
-  ]
+  ],
+  "theme": "neon_underworld"
 }

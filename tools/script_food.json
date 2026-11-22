@@ -3,13 +3,65 @@
   "rate": "+8%",
   "pitch": "+0Hz",
   "scenes": [
-    {"year":"5","title":"Basic Tastes","device":"bars3d","text":"Your tongue detects five basic tastes, but almost all flavor actually comes from your sense of smell.","hook":"FLAVOR IS MOSTLY SMELL","stat":"5","statLabel":"BASIC TASTES"},
-    {"year":"HOT","title":"Chili","device":"graph","text":"Chili is not a taste but pain. Capsaicin tricks your mouth into feeling heat that is not there."},
-    {"year":"CRUNCH","title":"Sound","device":"packets3d","text":"Crisp food tastes better because your brain uses the crunch sound to judge freshness and quality."},
-    {"year":"COLD","title":"Ice Cream","device":"web3d","text":"Cold numbs your taste buds, which is why ice cream needs far more sugar to taste sweet."},
-    {"year":"BREAD","title":"Rising","device":"network3d","text":"Bread rises because yeast eats sugar and releases gas, trapping bubbles inside the soft dough."},
-    {"year":"BROWN","title":"Searing","device":"citynight","text":"The brown crust on meat comes from a chemical reaction creating hundreds of new flavor molecules."},
-    {"year":"SPICE","title":"Memory","device":"social3d","text":"Food tastes tie to memory stronger than almost anything, which is why a smell can take you home."},
-    {"year":"?","title":"Your Turn","device":"online","text":"Every bite is chemistry and memory combined. What food instantly takes you back to childhood?"}
-  ]
+    {
+      "year": "5",
+      "title": "Basic Tastes",
+      "device": "bars3d",
+      "text": "Your tongue detects five basic tastes, but almost all flavor actually comes from your sense of smell.",
+      "hook": "FLAVOR IS MOSTLY SMELL",
+      "stat": "5",
+      "statLabel": "BASIC TASTES",
+      "photo_query": "five taste buds tongue"
+    },
+    {
+      "year": "HOT",
+      "title": "Chili",
+      "device": "graph",
+      "text": "Chili is not a taste but pain. Capsaicin tricks your mouth into feeling heat that is not there.",
+      "photo_query": "red chili peppers"
+    },
+    {
+      "year": "CRUNCH",
+      "title": "Sound",
+      "device": "packets3d",
+      "text": "Crisp food tastes better because your brain uses the crunch sound to judge freshness and quality.",
+      "photo_query": "crispy food closeup"
+    },
+    {
+      "year": "COLD",
+      "title": "Ice Cream",
+      "device": "web3d",
+      "text": "Cold numbs your taste buds, which is why ice cream needs far more sugar to taste sweet.",
+      "photo_query": "ice cream scoop"
+    },
+    {
+      "year": "BREAD",
+      "title": "Rising",
+      "device": "network3d",
+      "text": "Bread rises because yeast eats sugar and releases gas, trapping bubbles inside the soft dough.",
+      "photo_query": "bread rising dough"
+    },
+    {
+      "year": "BROWN",
+      "title": "Searing",
+      "device": "citynight",
+      "text": "The brown crust on meat comes from a chemical reaction creating hundreds of new flavor molecules.",
+      "photo_query": "grilled meat searing"
+    },
+    {
+      "year": "SPICE",
+      "title": "Memory",
+      "device": "social3d",
+      "text": "Food tastes tie to memory stronger than almost anything, which is why a smell can take you home.",
+      "photo_query": "family dinner table"
+    },
+    {
+      "year": "?",
+      "title": "Your Turn",
+      "device": "online",
+      "text": "Every bite is chemistry and memory combined. What food instantly takes you back to childhood?",
+      "photo_query": "childhood kitchen memory"
+    }
+  ],
+  "theme": "flavor_lab"
 }

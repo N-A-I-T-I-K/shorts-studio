@@ -3,13 +3,71 @@
   "rate": "+8%",
   "pitch": "+0Hz",
   "scenes": [
-    {"year":"80%","title":"Last Frontier","device":"globe3d","text":"Eighty percent of our ocean remains unmapped and unseen. The deep is Earth's last frontier.","hook":"80% OF OUR OCEAN IS UNSEEN","stat":"80%","statLabel":"UNSEEN"},
-    {"year":"1872","title":"First Discovery","device":"network","text":"In eighteen seventy two, the Challenger expedition hauled up thousands of species no one had ever seen.","stat":"4700","statLabel":"NEW SPECIES"},
-    {"year":"1960","title":"The Deepest Point","device":"jump3d","text":"In nineteen sixty, two men descended to the deepest point on Earth, nearly eleven kilometers down.","stat":"11KM","statLabel":"DEEPEST DIVE"},
-    {"year":"1977","title":"Life Without Sun","device":"online","text":"Near boiling vents, life thrives without sunlight, feeding on chemicals from inside the planet."},
-    {"year":"2012","title":"Giant Squids","device":"web3d","text":"Giant squids, dismissed as sailor legends for centuries, finally turned out to be very real and truly enormous creatures."},
-    {"year":"NOW","title":"New Species","device":"network3d","text":"A single deep dive can reveal more new species than a whole year on land.","stat":"1 DIVE","statLabel":"MANY FINDS"},
-    {"year":"MARS","title":"Better Maps","device":"topdown","text":"We actually have far better detailed maps of Mars than of the ocean floor directly beneath our own feet."},
-    {"year":"?","title":"Your Question","device":"globe3d","text":"The deep holds answers to life's origins. What do you think is still hiding down there?"}
-  ]
+    {
+      "year": "80%",
+      "title": "Last Frontier",
+      "device": "globe3d",
+      "text": "Eighty percent of our ocean remains unmapped and unseen. The deep is Earth's last frontier.",
+      "hook": "80% OF OUR OCEAN IS UNSEEN",
+      "stat": "80%",
+      "statLabel": "UNSEEN",
+      "photo_query": "deep ocean underwater"
+    },
+    {
+      "year": "1872",
+      "title": "First Discovery",
+      "device": "network",
+      "text": "In eighteen seventy two, the Challenger expedition hauled up thousands of species no one had ever seen.",
+      "stat": "4700",
+      "statLabel": "NEW SPECIES",
+      "photo_query": "research ship at sea"
+    },
+    {
+      "year": "1960",
+      "title": "The Deepest Point",
+      "device": "jump3d",
+      "text": "In nineteen sixty, two men descended to the deepest point on Earth, nearly eleven kilometers down.",
+      "stat": "11KM",
+      "statLabel": "DEEPEST DIVE",
+      "photo_query": "deep sea submersible"
+    },
+    {
+      "year": "1977",
+      "title": "Life Without Sun",
+      "device": "online",
+      "text": "Near boiling vents, life thrives without sunlight, feeding on chemicals from inside the planet.",
+      "photo_query": "hydrothermal vent chimney"
+    },
+    {
+      "year": "2012",
+      "title": "Giant Squids",
+      "device": "web3d",
+      "text": "Giant squids, dismissed as sailor legends for centuries, finally turned out to be very real and truly enormous creatures.",
+      "photo_query": "giant squid"
+    },
+    {
+      "year": "NOW",
+      "title": "New Species",
+      "device": "network3d",
+      "text": "A single deep dive can reveal more new species than a whole year on land.",
+      "stat": "1 DIVE",
+      "statLabel": "MANY FINDS",
+      "photo_query": "underwater coral reef"
+    },
+    {
+      "year": "MARS",
+      "title": "Better Maps",
+      "device": "topdown",
+      "text": "We actually have far better detailed maps of Mars than of the ocean floor directly beneath our own feet.",
+      "photo_query": "ocean floor map"
+    },
+    {
+      "year": "?",
+      "title": "Your Question",
+      "device": "globe3d",
+      "text": "The deep holds answers to life's origins. What do you think is still hiding down there?",
+      "photo_query": "blue planet from space"
+    }
+  ],
+  "theme": "abyssal_blue"
 }

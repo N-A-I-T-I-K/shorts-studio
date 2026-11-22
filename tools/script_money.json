@@ -3,13 +3,69 @@
   "rate": "+8%",
   "pitch": "+0Hz",
   "scenes": [
-    {"year":"1913","title":"Paper Promise","device":"money","text":"A dollar bill is just paper. It only has value because we all agree to believe in it together.","hook":"MONEY IS ONLY PAPER + BELIEF","stat":"$0","statLabel":"INTRINSIC VALUE"},
-    {"year":"1971","title":"Gold Gone","device":"bars3d","text":"In nineteen seventy one, the link between the dollar and gold was cut, and money became pure trust.","stat":"1971","statLabel":"GOLD LINK ENDED"},
-    {"year":"2%","title":"Inflation","device":"graph","text":"Prices creep up a little each year, so the same cash buys less. That quiet drift is inflation.","stat":"2%","statLabel":"A YEAR"},
-    {"year":"100","title":"Purchasing","device":"compact","text":"A hundred dollars does not buy what it did twenty years ago. The number stays, the value shrinks."},
-    {"year":"DEBT","title":"Created","device":"network3d","text":"Most money in the economy is created when banks lend, not when governments print notes."},
-    {"year":"BTC","title":"Digital","device":"web3d","text":"Bitcoin asked a bold question: what if money needed no bank at all, just code and agreement?"},
-    {"year":"NOW","title":"Compound","device":"money","text":"Time in the market beats timing the market. Small steady amounts can grow into something huge."},
-    {"year":"?","title":"Your Turn","device":"online","text":"Money is a game of trust and time. What is the smartest money lesson you learned the hard way?"}
-  ]
+    {
+      "year": "1913",
+      "title": "Paper Promise",
+      "device": "money",
+      "text": "A dollar bill is just paper. It only has value because we all agree to believe in it together.",
+      "hook": "MONEY IS ONLY PAPER + BELIEF",
+      "stat": "$0",
+      "statLabel": "INTRINSIC VALUE",
+      "photo_query": "dollar bill macro"
+    },
+    {
+      "year": "1971",
+      "title": "Gold Gone",
+      "device": "bars3d",
+      "text": "In nineteen seventy one, the link between the dollar and gold was cut, and money became pure trust.",
+      "stat": "1971",
+      "statLabel": "GOLD LINK ENDED",
+      "photo_query": "gold bars vault"
+    },
+    {
+      "year": "2%",
+      "title": "Inflation",
+      "device": "graph",
+      "text": "Prices creep up a little each year, so the same cash buys less. That quiet drift is inflation.",
+      "stat": "2%",
+      "statLabel": "A YEAR",
+      "photo_query": "inflation price tags"
+    },
+    {
+      "year": "100",
+      "title": "Purchasing",
+      "device": "compact",
+      "text": "A hundred dollars does not buy what it did twenty years ago. The number stays, the value shrinks.",
+      "photo_query": "shopping street market"
+    },
+    {
+      "year": "DEBT",
+      "title": "Created",
+      "device": "network3d",
+      "text": "Most money in the economy is created when banks lend, not when governments print notes.",
+      "photo_query": "bank building interior"
+    },
+    {
+      "year": "BTC",
+      "title": "Digital",
+      "device": "web3d",
+      "text": "Bitcoin asked a bold question: what if money needed no bank at all, just code and agreement?",
+      "photo_query": "bitcoin coin"
+    },
+    {
+      "year": "NOW",
+      "title": "Compound",
+      "device": "money",
+      "text": "Time in the market beats timing the market. Small steady amounts can grow into something huge.",
+      "photo_query": "coins stacking growth"
+    },
+    {
+      "year": "?",
+      "title": "Your Turn",
+      "device": "online",
+      "text": "Money is a game of trust and time. What is the smartest money lesson you learned the hard way?",
+      "photo_query": "global currency exchange"
+    }
+  ],
+  "theme": "gilded_ledger"
 }

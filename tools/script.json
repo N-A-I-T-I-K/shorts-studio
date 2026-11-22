@@ -1,18 +1,64 @@
-[
-  {"year": "1973", "title": "The first call", "device": "brick",
-   "text": "In 1973, a man made the first handheld mobile phone call. His phone weighed over a kilogram."},
-  {"year": "1983", "title": "First phone for sale", "device": "brick",
-   "text": "In 1983, the first commercial mobile phone went on sale. It cost almost four thousand dollars, and gave only thirty minutes of talk time."},
-  {"year": "1992", "title": "The first text", "device": "bar",
-   "text": "By the nineties, phones got smaller. In 1992, the first text message was sent. It said, Merry Christmas."},
-  {"year": "2000s", "title": "Games and cameras", "device": "flip",
-   "text": "Then came games like Snake, colour screens, cameras, and stylish flip phones."},
-  {"year": "2007", "title": "The iPhone", "device": "smart",
-   "text": "In 2007, Apple introduced the iPhone. No keyboard, just a touchscreen."},
-  {"year": "2008", "title": "Apps and Android", "device": "smart",
-   "text": "In 2008, app stores and Android phones turned phones into pocket computers."},
-  {"year": "2010s", "title": "Phones replace everything", "device": "smart",
-   "text": "Cameras got better every year, and phones began replacing cameras, maps, music players, and wallets."},
-  {"year": "TODAY", "title": "What is next?", "device": "fold",
-   "text": "Today we have fast five G, foldable screens, and smart assistants. What will your next phone do? Tell me in the comments."}
-]
+{
+  "voice": "en-US-GuyNeural",
+  "rate": "+8%",
+  "pitch": "+0Hz",
+  "scenes": [
+    {
+      "year": "1973",
+      "title": "The first call",
+      "device": "brick",
+      "text": "In 1973, a man made the first handheld mobile phone call. His phone weighed over a kilogram.",
+      "photo_query": "1970s brick mobile phone"
+    },
+    {
+      "year": "1983",
+      "title": "First phone for sale",
+      "device": "brick",
+      "text": "In 1983, the first commercial mobile phone went on sale. It cost almost four thousand dollars, and gave only thirty minutes of talk time.",
+      "photo_query": "1980s cellular car phone"
+    },
+    {
+      "year": "1992",
+      "title": "The first text",
+      "device": "bar",
+      "text": "By the nineties, phones got smaller. In 1992, the first text message was sent. It said, Merry Christmas.",
+      "photo_query": "old mobile phone keypad"
+    },
+    {
+      "year": "2000s",
+      "title": "Games and cameras",
+      "device": "flip",
+      "text": "Then came games like Snake, colour screens, cameras, and stylish flip phones.",
+      "photo_query": "1990s flip phone"
+    },
+    {
+      "year": "2007",
+      "title": "The iPhone",
+      "device": "smart",
+      "text": "In 2007, Apple introduced the iPhone. No keyboard, just a touchscreen.",
+      "photo_query": "2007 smartphone touchscreen"
+    },
+    {
+      "year": "2008",
+      "title": "Apps and Android",
+      "device": "smart",
+      "text": "In 2008, app stores and Android phones turned phones into pocket computers.",
+      "photo_query": "android phone app icons"
+    },
+    {
+      "year": "2010s",
+      "title": "Phones replace everything",
+      "device": "smart",
+      "text": "Cameras got better every year, and phones began replacing cameras, maps, music players, and wallets.",
+      "photo_query": "smartphone camera lens"
+    },
+    {
+      "year": "TODAY",
+      "title": "What is next?",
+      "device": "fold",
+      "text": "Today we have fast five G, foldable screens, and smart assistants. What will your next phone do? Tell me in the comments.",
+      "photo_query": "foldable futuristic phone"
+    }
+  ],
+  "theme": "brick_to_fold"
+}

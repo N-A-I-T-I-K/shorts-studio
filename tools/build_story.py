@@ -21,6 +21,9 @@ if not CLI_VOICE and opts.get("voice"):
     VOICE = opts["voice"]
 RATE = opts.get("rate", "+0%")
 PITCH = opts.get("pitch", "+0Hz")
+SLUG = os.path.splitext(os.path.basename(script_path))[0].replace("script_", "")
+THEME = opts.get("theme") or SLUG
+ASSET_DIR = f"assets/{SLUG}"
 os.makedirs("public/voice", exist_ok=True)
 
 
@@ -61,17 +64,20 @@ async def main():
     for i, sc in enumerate(scenes):
         path, words = await make(i, sc)
         d = duration(path) + 0.5
-        photo = f"assets/photo{i}.jpg" if os.path.exists(f"public/assets/photo{i}.jpg") else None
+        photo = f"{ASSET_DIR}/photo{i}.jpg" if os.path.exists(f"public/{ASSET_DIR}/photo{i}.jpg") else None
         out.append({**sc, "start": round(t, 3), "dur": round(d, 3), "audio": f"voice/scene{i}.mp3", "words": words, "photo": photo})
         t += d
         print("scene", i, "done", round(d, 1), "s")
-    music = "music.mp3" if os.path.exists("public/music.mp3") else None
+    tracks = ["music.mp3", "music_hype.mp3", "music_dark.mp3", "music_bright.mp3"]
+    pick = sum(ord(c) for c in THEME) % len(tracks)
+    ordered = ([opts["music"]] if opts.get("music") else []) + [tracks[pick]] + tracks
+    music = next((m for m in ordered if os.path.exists("public/" + m)), None)
     sfx = "whoosh.mp3" if os.path.exists("public/whoosh.mp3") else None
     pack = {k: (f"{k}.mp3" if os.path.exists(f"public/{k}.mp3") else None) for k in ("impact", "pop", "click")}
     print("voice:", VOICE, RATE, PITCH, "| script:", script_path, "| music:", music, "| whoosh:", sfx, "| extra sfx:", pack)
     print("photos found:", sum(1 for s in out if s["photo"]))
     json.dump(
-        {"totalSec": round(t, 2), "music": music, "sfx": sfx, "sfxPack": pack, "scenes": out},
+        {"totalSec": round(t, 2), "theme": THEME, "music": music, "sfx": sfx, "sfxPack": pack, "scenes": out},
         open("public/story.json", "w", encoding="utf8"),
         ensure_ascii=False,
         indent=1,

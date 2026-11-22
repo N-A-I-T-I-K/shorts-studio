@@ -3,13 +3,71 @@
   "rate": "+8%",
   "pitch": "+0Hz",
   "scenes": [
-    {"year":"13.8B","title":"Big Bang","device":"online","text":"The universe is about thirteen point eight billion years old, and it all began from something tiny.","hook":"13.8 BILLION YEARS AGO","stat":"13.8B","statLabel":"YEARS OLD"},
-    {"year":"4.5B","title":"Earth Forms","device":"globe3d","text":"Earth formed four and a half billion years ago, a molten ball slowly cooling into a home for life.","stat":"4.5B","statLabel":"YEARS AGO"},
-    {"year":"3.8B","title":"First Life","device":"network","text":"Life appeared roughly three point eight billion years ago, starting as simple cells in warm water."},
-    {"year":"6M","title":"Walking","device":"jump3d","text":"Our ancestors stood upright around six million years ago, freeing their hands to change everything." ,"stat":"6M","statLabel":"YEARS AGO"},
-    {"year":"300K","title":"Us","device":"social3d","text":"Modern humans appeared about three hundred thousand years ago, and we spread across the whole planet."},
-    {"year":"10K","title":"Farming","device":"topdown","text":"Farming began only ten thousand years ago, and it changed how we live more than anything before." ,"stat":"10K","statLabel":"YEARS AGO"},
-    {"year":"100Y","title":"Explosion","device":"citynight","text":"In just the last century, we went from horse carts to landing rockets and connecting the world."},
-    {"year":"NOW","title":"Your Slice","device":"online","text":"You are a tiny moment in a huge story. What will you do with the short time you have here?"}
-  ]
+    {
+      "year": "13.8B",
+      "title": "Big Bang",
+      "device": "online",
+      "text": "The universe is about thirteen point eight billion years old, and it all began from something tiny.",
+      "hook": "13.8 BILLION YEARS AGO",
+      "stat": "13.8B",
+      "statLabel": "YEARS OLD",
+      "photo_query": "big bang cosmos"
+    },
+    {
+      "year": "4.5B",
+      "title": "Earth Forms",
+      "device": "globe3d",
+      "text": "Earth formed four and a half billion years ago, a molten ball slowly cooling into a home for life.",
+      "stat": "4.5B",
+      "statLabel": "YEARS AGO",
+      "photo_query": "young earth planet"
+    },
+    {
+      "year": "3.8B",
+      "title": "First Life",
+      "device": "network",
+      "text": "Life appeared roughly three point eight billion years ago, starting as simple cells in warm water.",
+      "photo_query": "primitive life microscope"
+    },
+    {
+      "year": "6M",
+      "title": "Walking",
+      "device": "jump3d",
+      "text": "Our ancestors stood upright around six million years ago, freeing their hands to change everything.",
+      "stat": "6M",
+      "statLabel": "YEARS AGO",
+      "photo_query": "early human silhouette"
+    },
+    {
+      "year": "300K",
+      "title": "Us",
+      "device": "social3d",
+      "text": "Modern humans appeared about three hundred thousand years ago, and we spread across the whole planet.",
+      "photo_query": "ancient humans cave"
+    },
+    {
+      "year": "10K",
+      "title": "Farming",
+      "device": "topdown",
+      "text": "Farming began only ten thousand years ago, and it changed how we live more than anything before.",
+      "stat": "10K",
+      "statLabel": "YEARS AGO",
+      "photo_query": "farm fields aerial"
+    },
+    {
+      "year": "100Y",
+      "title": "Explosion",
+      "device": "citynight",
+      "text": "In just the last century, we went from horse carts to landing rockets and connecting the world.",
+      "photo_query": "city timelapse night"
+    },
+    {
+      "year": "NOW",
+      "title": "Your Slice",
+      "device": "online",
+      "text": "You are a tiny moment in a huge story. What will you do with the short time you have here?",
+      "photo_query": "hourglass sand"
+    }
+  ],
+  "theme": "deep_epoch"
 }

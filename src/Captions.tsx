@@ -5,7 +5,7 @@ export type Word = {text: string; start: number; end: number};
 
 const CHUNK = 3; // words shown at once
 
-export const Captions: React.FC<{words: Word[]}> = ({words}) => {
+export const Captions: React.FC<{words: Word[]; accent?: string; font?: string}> = ({words, accent = '#FFE600', font = 'Montserrat, "Arial Black", Arial, sans-serif'}) => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
   const t = frame / fps;
@@ -47,11 +47,11 @@ export const Captions: React.FC<{words: Word[]}> = ({words}) => {
             <span
               key={idx}
               style={{
-                fontFamily: 'Montserrat, "Arial Black", Arial, sans-serif',
+                fontFamily: font,
                 fontWeight: 900,
                 fontSize: 88,
                 textTransform: 'uppercase',
-                color: active ? '#FFE600' : '#FFFFFF',
+                color: active ? accent : '#FFFFFF',
                 WebkitTextStroke: '10px #000',
                 paintOrder: 'stroke fill',
                 textShadow: '0 6px 0 rgba(0,0,0,0.6)',

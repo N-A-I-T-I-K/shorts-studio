@@ -1,18 +1,64 @@
-[
-  {"year": "1971", "title": "The first chip", "device": "brick",
-   "text": "In 1971, Intel put a whole computer on one chip. The 4004 had about two thousand three hundred transistors."},
-  {"year": "1974", "title": "Eight bits", "device": "bar",
-   "text": "In 1974, the 8080 gave computers eight bits of power, fast enough for early personal machines."},
-  {"year": "1978", "title": "The x86 begins", "device": "compact",
-   "text": "In 1978, Intel launched the 8086, the chip that started the x86 line still used in PCs today."},
-  {"year": "1985", "title": "Thirty two bits", "device": "hybrid",
-   "text": "In 1985, the 386 brought thirty two bits to personal computers, letting them run more software."},
-  {"year": "1993", "title": "Pentium", "device": "ev",
-   "text": "In 1993, Intel introduced the Pentium, a faster chip for a new era of computing."},
-  {"year": "2005", "title": "Many cores", "device": "smart",
-   "text": "By 2005, chips got more than one core, so a computer could do several things at once."},
-  {"year": "2010s", "title": "Phones get powerful", "device": "flip",
-   "text": "In the twenty tens, phone chips caught up to laptop chips, and a pocket computer could edit video."},
-  {"year": "NEXT", "title": "What is coming?", "device": "future",
-   "text": "Now chips train neural networks, and the next step is silicon built for artificial intelligence. Which chip would you pick? Tell me in the comments."}
-]
+{
+  "voice": "en-US-GuyNeural",
+  "rate": "+8%",
+  "pitch": "+0Hz",
+  "scenes": [
+    {
+      "year": "1971",
+      "title": "The first chip",
+      "device": "brick",
+      "text": "In 1971, Intel put a whole computer on one chip. The 4004 had about two thousand three hundred transistors.",
+      "photo_query": "intel 4004 microprocessor"
+    },
+    {
+      "year": "1974",
+      "title": "Eight bits",
+      "device": "bar",
+      "text": "In 1974, the 8080 gave computers eight bits of power, fast enough for early personal machines.",
+      "photo_query": "vintage computer circuit board"
+    },
+    {
+      "year": "1978",
+      "title": "The x86 begins",
+      "device": "compact",
+      "text": "In 1978, Intel launched the 8086, the chip that started the x86 line still used in PCs today.",
+      "photo_query": "intel 8086 processor"
+    },
+    {
+      "year": "1985",
+      "title": "Thirty two bits",
+      "device": "hybrid",
+      "text": "In 1985, the 386 brought thirty two bits to personal computers, letting them run more software.",
+      "photo_query": "1990s computer motherboard"
+    },
+    {
+      "year": "1993",
+      "title": "Pentium",
+      "device": "ev",
+      "text": "In 1993, Intel introduced the Pentium, a faster chip for a new era of computing.",
+      "photo_query": "pentium processor chip"
+    },
+    {
+      "year": "2005",
+      "title": "Many cores",
+      "device": "smart",
+      "text": "By 2005, chips got more than one core, so a computer could do several things at once.",
+      "photo_query": "multicore cpu closeup"
+    },
+    {
+      "year": "2010s",
+      "title": "Phones get powerful",
+      "device": "flip",
+      "text": "In the twenty tens, phone chips caught up to laptop chips, and a pocket computer could edit video.",
+      "photo_query": "smartphone processor chip"
+    },
+    {
+      "year": "NEXT",
+      "title": "What is coming?",
+      "device": "future",
+      "text": "Now chips train neural networks, and the next step is silicon built for artificial intelligence. Which chip would you pick? Tell me in the comments.",
+      "photo_query": "ai accelerator silicon wafer"
+    }
+  ],
+  "theme": "silicon_foundry"
+}

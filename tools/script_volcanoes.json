@@ -3,13 +3,73 @@
   "rate": "+8%",
   "pitch": "+0Hz",
   "scenes": [
-    {"year":"1350","title":"Pressure Cooker","device":"jump3d","text":"Earth holds around thirteen hundred active volcanoes, each one a window into the molten heat deep below our feet.","hook":"EARTH IS A PRESSURE COOKER","stat":"1350","statLabel":"ACTIVE VOLCANES"},
-    {"year":"5400","title":"Molten Core","device":"online","text":"The center of the Earth is hotter than the surface of the sun, reaching around five thousand four hundred degrees.","stat":"5400°C","statLabel":"CORE HEAT"},
-    {"year":"1200","title":"Lava","device":"citynight","text":"Fresh lava can reach twelve hundred degrees, hot enough to melt rock and set trees ablaze on contact.","stat":"1200°C","statLabel":"LAVA HEAT"},
-    {"year":"1815","title":"Year Without Summer","device":"graph","text":"One eruption in eighteen fifteen threw so much ash into the sky that the next year had no summer at all."},
-    {"year":"ASH","title":"Ash Clouds","device":"network3d","text":"Volcanic ash can circle the globe for months, blocking sunlight and changing weather thousands of miles away.","stat":"MONTHS","statLabel":"ASH IN SKY"},
-    {"year":"WYO","title":"Supervolcano","device":"topdown","text":"Under Yellowstone sits a supervolcano so vast that an eruption would reshape a whole continent.","stat":"1","statLabel":"SUPERVOLCANO"},
-    {"year":"SPACE","title":"Beyond Earth","device":"globe3d","text":"Volcanoes exist on other worlds too, and Mars holds the largest volcano known anywhere in the solar system."},
-    {"year":"?","title":"Your Turn","device":"online","text":"The ground beneath you is alive with heat and pressure. Would you live next to an active volcano?"}
-  ]
+    {
+      "year": "1350",
+      "title": "Pressure Cooker",
+      "device": "jump3d",
+      "text": "Earth holds around thirteen hundred active volcanoes, each one a window into the molten heat deep below our feet.",
+      "hook": "EARTH IS A PRESSURE COOKER",
+      "stat": "1350",
+      "statLabel": "ACTIVE VOLCANES",
+      "photo_query": "volcano eruption night"
+    },
+    {
+      "year": "5400",
+      "title": "Molten Core",
+      "device": "online",
+      "text": "The center of the Earth is hotter than the surface of the sun, reaching around five thousand four hundred degrees.",
+      "stat": "5400°C",
+      "statLabel": "CORE HEAT",
+      "photo_query": "earth core molten illustration"
+    },
+    {
+      "year": "1200",
+      "title": "Lava",
+      "device": "citynight",
+      "text": "Fresh lava can reach twelve hundred degrees, hot enough to melt rock and set trees ablaze on contact.",
+      "stat": "1200°C",
+      "statLabel": "LAVA HEAT",
+      "photo_query": "lava flow closeup"
+    },
+    {
+      "year": "1815",
+      "title": "Year Without Summer",
+      "device": "graph",
+      "text": "One eruption in eighteen fifteen threw so much ash into the sky that the next year had no summer at all.",
+      "photo_query": "volcanic ash cloud"
+    },
+    {
+      "year": "ASH",
+      "title": "Ash Clouds",
+      "device": "network3d",
+      "text": "Volcanic ash can circle the globe for months, blocking sunlight and changing weather thousands of miles away.",
+      "stat": "MONTHS",
+      "statLabel": "ASH IN SKY",
+      "photo_query": "yellowstone geyser"
+    },
+    {
+      "year": "WYO",
+      "title": "Supervolcano",
+      "device": "topdown",
+      "text": "Under Yellowstone sits a supervolcano so vast that an eruption would reshape a whole continent.",
+      "stat": "1",
+      "statLabel": "SUPERVOLCANO",
+      "photo_query": "volcano aerial crater"
+    },
+    {
+      "year": "SPACE",
+      "title": "Beyond Earth",
+      "device": "globe3d",
+      "text": "Volcanoes exist on other worlds too, and Mars holds the largest volcano known anywhere in the solar system.",
+      "photo_query": "volcano night glow"
+    },
+    {
+      "year": "?",
+      "title": "Your Turn",
+      "device": "online",
+      "text": "The ground beneath you is alive with heat and pressure. Would you live next to an active volcano?",
+      "photo_query": "mountain eruption smoke"
+    }
+  ],
+  "theme": "magma_core"
 }

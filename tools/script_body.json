@@ -3,13 +3,73 @@
   "rate": "+8%",
   "pitch": "+0Hz",
   "scenes": [
-    {"year":"37T","title":"Your Cells","device":"network3d","text":"Your body holds around thirty seven trillion cells, each one a tiny living factory working for you.","hook":"37 TRILLION CELLS WORK FOR YOU","stat":"37T","statLabel":"CELLS IN YOU"},
-    {"year":"60K","title":"Heartbeats","device":"bars3d","text":"Your heart beats about sixty thousand times a day, pumping blood without ever asking for a break.","stat":"60K","statLabel":"BEATS A DAY"},
-    {"year":"100K","title":"Hair","device":"graph","text":"You lose about one hundred strands of hair every single day, and grow nearly all of them back." ,"stat":"100","statLabel":"HAIRS A DAY"},
-    {"year":"206","title":"Bones","device":"network","text":"Babies start with around three hundred bones. Adults have two hundred and six after some fuse together.","stat":"206","statLabel":"ADULT BONES"},
-    {"year":"2DAY","title":"New Skin","device":"packets","text":"Your skin completely renews itself about every two weeks, replacing the outer layer you see today."},
-    {"year":"7Y","title":"Change","device":"web3d","text":"Most cells in your body are replaced every few years. You are not the same person you were."},
-    {"year":"1%","title":"Water","device":"globe3d","text":"You are mostly water. Lose just two percent of it and your focus and mood start to drop.","stat":"2%","statLabel":"FOCUS DROPS"},
-    {"year":"?","title":"Your Turn","device":"online","text":"Your body is a miracle you live inside every day. Which fact surprised you the most today?"}
-  ]
+    {
+      "year": "37T",
+      "title": "Your Cells",
+      "device": "network3d",
+      "text": "Your body holds around thirty seven trillion cells, each one a tiny living factory working for you.",
+      "hook": "37 TRILLION CELLS WORK FOR YOU",
+      "stat": "37T",
+      "statLabel": "CELLS IN YOU",
+      "photo_query": "human cells microscope"
+    },
+    {
+      "year": "60K",
+      "title": "Heartbeats",
+      "device": "bars3d",
+      "text": "Your heart beats about sixty thousand times a day, pumping blood without ever asking for a break.",
+      "stat": "60K",
+      "statLabel": "BEATS A DAY",
+      "photo_query": "heart anatomy"
+    },
+    {
+      "year": "100K",
+      "title": "Hair",
+      "device": "graph",
+      "text": "You lose about one hundred strands of hair every single day, and grow nearly all of them back.",
+      "stat": "100",
+      "statLabel": "HAIRS A DAY",
+      "photo_query": "human hair macro"
+    },
+    {
+      "year": "206",
+      "title": "Bones",
+      "device": "network",
+      "text": "Babies start with around three hundred bones. Adults have two hundred and six after some fuse together.",
+      "stat": "206",
+      "statLabel": "ADULT BONES",
+      "photo_query": "human skeleton xray"
+    },
+    {
+      "year": "2DAY",
+      "title": "New Skin",
+      "device": "packets",
+      "text": "Your skin completely renews itself about every two weeks, replacing the outer layer you see today.",
+      "photo_query": "human skin macro"
+    },
+    {
+      "year": "7Y",
+      "title": "Change",
+      "device": "web3d",
+      "text": "Most cells in your body are replaced every few years. You are not the same person you were.",
+      "photo_query": "dna helix"
+    },
+    {
+      "year": "1%",
+      "title": "Water",
+      "device": "globe3d",
+      "text": "You are mostly water. Lose just two percent of it and your focus and mood start to drop.",
+      "stat": "2%",
+      "statLabel": "FOCUS DROPS",
+      "photo_query": "water drop human silhouette"
+    },
+    {
+      "year": "?",
+      "title": "Your Turn",
+      "device": "online",
+      "text": "Your body is a miracle you live inside every day. Which fact surprised you the most today?",
+      "photo_query": "human body silhouette"
+    }
+  ],
+  "theme": "living_machine"
 }

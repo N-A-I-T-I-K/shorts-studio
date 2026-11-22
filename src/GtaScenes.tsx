@@ -1,5 +1,4 @@
 import React from 'react';
-import * as THREE from 'three';
 import {ThreeCanvas} from '@remotion/three';
 import {Easing, interpolate, random, useCurrentFrame} from 'remotion';
 
@@ -11,7 +10,6 @@ type V3 = [number, number, number];
 
 const prog = (f: number, start: number, dur: number) =>
   interpolate(f, [start, start + dur], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.out(Easing.cubic)});
-const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
 const mod = (a: number, m: number) => ((a % m) + m) % m;
 const NEON = ['#f0abfc', '#22d3ee', '#fde047', '#fb7185', '#a3e635'];
 

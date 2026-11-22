@@ -3,13 +3,69 @@
   "rate": "+8%",
   "pitch": "+0Hz",
   "scenes": [
-    {"year":"1M","title":"Super Senses","device":"online","text":"Animals sense things you cannot. Some hear, see, or smell the world in ways beyond human imagination.","hook":"ANIMALS SEE WHAT YOU CANNOT","stat":"1M+","statLabel":"SPECIES ON EARTH"},
-    {"year":"ECHO","title":"Dolphins","device":"network3d","text":"Dolphins navigate by sound, bouncing clicks off objects to see shapes in complete darkness.","stat":"SONAR","statLabel":"NATURAL ECHO"},
-    {"year":"UV","title":"Bees","device":"web3d","text":"Bees see ultraviolet light, revealing bright secret landing patterns on flowers that are completely invisible to your eyes."},
-    {"year":"HEAT","title":"Snakes","device":"graph","text":"Some snakes detect body heat in total darkness, hunting by sensing warmth instead of sight."},
-    {"year":"8ARM","title":"Octopus","device":"packets3d","text":"An octopus has three hearts and eight arms that can think and act almost on their own.","stat":"3","statLabel":"HEARTS"},
-    {"year":"SLOW","title":"Sloths","device":"compact","text":"Sloths move so slowly that algae actually grows across their fur, turning each one into a tiny slow moving garden."},
-    {"year":"IMM","title":"Tardigrade","device":"jump3d","text":"Tardigrades can survive freezing, boiling, and even the vacuum of space, then wake up again."},
-    {"year":"?","title":"Your Turn","device":"online","text":"Nature invented better technology than we did. Which animal superpower would you want for yourself?"}
-  ]
+    {
+      "year": "1M",
+      "title": "Super Senses",
+      "device": "online",
+      "text": "Animals sense things you cannot. Some hear, see, or smell the world in ways beyond human imagination.",
+      "hook": "ANIMALS SEE WHAT YOU CANNOT",
+      "stat": "1M+",
+      "statLabel": "SPECIES ON EARTH",
+      "photo_query": "wildlife diversity jungle"
+    },
+    {
+      "year": "ECHO",
+      "title": "Dolphins",
+      "device": "network3d",
+      "text": "Dolphins navigate by sound, bouncing clicks off objects to see shapes in complete darkness.",
+      "stat": "SONAR",
+      "statLabel": "NATURAL ECHO",
+      "photo_query": "dolphin underwater"
+    },
+    {
+      "year": "UV",
+      "title": "Bees",
+      "device": "web3d",
+      "text": "Bees see ultraviolet light, revealing bright secret landing patterns on flowers that are completely invisible to your eyes.",
+      "photo_query": "bee on flower macro"
+    },
+    {
+      "year": "HEAT",
+      "title": "Snakes",
+      "device": "graph",
+      "text": "Some snakes detect body heat in total darkness, hunting by sensing warmth instead of sight.",
+      "photo_query": "snake closeup"
+    },
+    {
+      "year": "8ARM",
+      "title": "Octopus",
+      "device": "packets3d",
+      "text": "An octopus has three hearts and eight arms that can think and act almost on their own.",
+      "stat": "3",
+      "statLabel": "HEARTS",
+      "photo_query": "octopus underwater"
+    },
+    {
+      "year": "SLOW",
+      "title": "Sloths",
+      "device": "compact",
+      "text": "Sloths move so slowly that algae actually grows across their fur, turning each one into a tiny slow moving garden.",
+      "photo_query": "sloth on tree"
+    },
+    {
+      "year": "IMM",
+      "title": "Tardigrade",
+      "device": "jump3d",
+      "text": "Tardigrades can survive freezing, boiling, and even the vacuum of space, then wake up again.",
+      "photo_query": "tardigrade microscope"
+    },
+    {
+      "year": "?",
+      "title": "Your Turn",
+      "device": "online",
+      "text": "Nature invented better technology than we did. Which animal superpower would you want for yourself?",
+      "photo_query": "animal eyes macro"
+    }
+  ],
+  "theme": "wild_sensorium"
 }

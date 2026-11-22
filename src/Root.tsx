@@ -37,7 +37,7 @@ export const RemotionRoot: React.FC = () => (
         const data = await fetch(staticFile('story.json')).then((r) => r.json());
         return {
           durationInFrames: Math.round(data.totalSec * FPS),
-          props: {...props, scenes: data.scenes, music: data.music ?? null, sfx: data.sfx ?? null, sfxPack: data.sfxPack ?? null},
+          props: {...props, scenes: data.scenes, music: data.music ?? null, sfx: data.sfx ?? null, sfxPack: data.sfxPack ?? null, theme: data.theme ?? null},
         };
       }}
     />

@@ -11,7 +11,7 @@
       "hook": "15 million Model Ts",
       "stat": "15M",
       "statLabel": "MODEL Ts BUILT",
-      "photo_query": "Ford Model T 1920s"
+      "photo_query": "ford model t 1920s"
     },
     {
       "year": "1969",
@@ -39,7 +39,7 @@
       "title": "The World Wide Web",
       "device": "web3d",
       "text": "In 1991, Tim Berners-Lee opened the first website. The web made the internet easy for everyone.",
-      "photo_query": "CERN laboratory Geneva"
+      "photo_query": "cern geneva laboratory"
     },
     {
       "year": "2004",
@@ -64,5 +64,6 @@
       "statLabel": "PEOPLE ONLINE",
       "photo_query": "earth from space night lights"
     }
-  ]
+  ],
+  "theme": "web_dawn"
 }
