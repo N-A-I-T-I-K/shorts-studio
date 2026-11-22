@@ -15,7 +15,7 @@ import {CAR_TYPES, Vehicle} from './Vehicle';
 import {NET_TYPES, NetVisual} from './NetVisuals';
 import {NET3D_TYPES, Visual3D} from './Scene3D';
 import {GTA_TYPES, VisualGta} from './GtaScenes';
-import {DataRain, Flash, GridBG, Ring, Road, SpeedLines, Sweep, Vignette} from './VFX';
+import {CinematicBars, DataRain, Flash, GridBG, Ring, Road, Scanlines, SpeedLines, Sweep, Vignette} from './VFX';
 import {ThemeBG} from './ThemeBG';
 import {CardFrame, Mascot, Sparkles, ThemeBadge} from './MotionKit';
 import {getTheme, Theme} from './themes';
@@ -75,6 +75,29 @@ const FlowBackground: React.FC<{
   );
 };
 
+/** Quick light streak that punctuates each new date. */
+const ChapterKick: React.FC<{lf: number; theme: Theme}> = ({lf, theme}) => {
+  const x = interpolate(lf, [2, 30], [-400, 1480], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const op = interpolate(lf, [2, 12, 30], [0, 0.95, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  return (
+    <AbsoluteFill style={{pointerEvents: 'none', overflow: 'hidden'}}>
+      <div
+        style={{
+          position: 'absolute',
+          top: 462,
+          left: x,
+          width: 1100,
+          height: 5,
+          background: `linear-gradient(90deg, transparent, ${theme.accent}, ${theme.secondary}, transparent)`,
+          boxShadow: `0 0 45px ${theme.accent}`,
+          opacity: op,
+          transform: 'rotate(-2deg)',
+        }}
+      />
+    </AbsoluteFill>
+  );
+};
+
 /** A single scene's content. It fades in/out instead of sliding the whole frame away. */
 const FlowScene: React.FC<{
   scene: Scene;
@@ -96,6 +119,7 @@ const FlowScene: React.FC<{
   // The picture rises in right after the date, in time with the story.
   const visualOp = interpolate(lf, [dateEnd - 4, dateEnd + 16], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   const visualY = interpolate(lf, [dateEnd - 4, dateEnd + 20], [90, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const breathe = 1 + Math.sin(lf / 22) * 0.018; // keeps the picture alive between beats
   const isCar = CAR_TYPES.includes(scene.device);
   const isNet3 = NET3D_TYPES.includes(scene.device);
   const isGta = GTA_TYPES.includes(scene.device);
@@ -103,6 +127,7 @@ const FlowScene: React.FC<{
 
   return (
     <AbsoluteFill style={{opacity: op}}>
+      <ChapterKick lf={lf} theme={theme} />
       <div
         style={{
           position: 'absolute',
@@ -144,7 +169,7 @@ const FlowScene: React.FC<{
           display: 'flex',
           justifyContent: 'center',
           opacity: visualOp,
-          transform: `translateY(${visualY}px) scale(0.85)`,
+          transform: `translateY(${visualY}px) scale(${0.85 * breathe})`,
         }}
       >
         {isGta ? (
@@ -162,8 +187,8 @@ const FlowScene: React.FC<{
 
       {scene.stat ? (
         <>
-          <CardFrame lf={lf} theme={theme} />
-          <Sparkles lf={lf} theme={theme} />
+          <CardFrame lf={lf} theme={theme} at={statAt} />
+          <Sparkles lf={lf} theme={theme} at={statAt} />
           <Stat text={scene.stat} label={scene.statLabel} lf={lf} accent={theme.accent} glow={theme.glow} font={theme.font} at={statAt} />
         </>
       ) : null}
@@ -273,14 +298,21 @@ export const StoryFlow: React.FC<StoryProps> = ({scenes, music, sfx, sfxPack, na
       <ThemeBadge lf={f} theme={theme} />
       <FlowTimeline f={f} total={total} scenes={scenes} theme={theme} starts={starts} />
       <Sweep lf={f} />
+      <Scanlines />
       <Vignette />
       <Ring lf={f} />
       <Flash lf={f} />
+      <CinematicBars lf={f} />
 
       <Captions words={allWords} accent={theme.accent} font={theme.font} />
 
       {narration ? <Audio src={staticFile(narration)} /> : null}
-      {sfx ? <Audio src={staticFile(sfx)} volume={0.35} /> : null}
+      {sfx ? <Audio src={staticFile(sfx)} volume={0.3} /> : null}
+      {sfx ? starts.slice(1).map((s, i) => (
+        <Sequence key={`whoosh${i}`} from={Math.max(0, s - 4)}>
+          <Audio src={staticFile(sfx)} volume={0.55} />
+        </Sequence>
+      )) : null}
       {music ? (
         <Audio
           src={staticFile(music)}

@@ -129,8 +129,10 @@ export const ThemeBadge: React.FC<{lf: number; theme: Theme}> = ({lf, theme}) =>
 };
 
 /** Glass card frame used behind the big stat. */
-export const CardFrame: React.FC<{lf: number; theme: Theme}> = ({lf, theme}) => {
-  const sp = useEnter(lf, theme, 30);
+export const CardFrame: React.FC<{lf: number; theme: Theme; at?: number}> = ({lf, theme, at = 34}) => {
+  const sp = useEnter(lf, theme, at);
+  // Leave with the stat text instead of hanging around on an empty screen.
+  const out = interpolate(lf, [at + 62, at + 76], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   const skin = theme.card % 3;
   const base: React.CSSProperties = {
     position: 'absolute',
@@ -139,7 +141,7 @@ export const CardFrame: React.FC<{lf: number; theme: Theme}> = ({lf, theme}) => 
     left: 130,
     top: 795,
     background: 'rgba(4,6,18,0.62)',
-    opacity: sp,
+    opacity: sp * out,
     transform: `scale(${0.65 + 0.35 * sp})`,
     pointerEvents: 'none',
   };
@@ -159,15 +161,15 @@ export const CardFrame: React.FC<{lf: number; theme: Theme}> = ({lf, theme}) => 
       {[
         [130, 795], [868, 795], [130, 1092], [868, 1092],
       ].map(([x, y], i) => (
-        <div key={i} style={{position: 'absolute', left: x - 10, top: y - 10, width: 34, height: 34, borderTop: `6px solid ${theme.accent}`, borderLeft: i % 2 ? 'none' : `6px solid ${theme.accent}`, borderRight: i % 2 ? `6px solid ${theme.accent}` : 'none', borderBottom: i > 1 ? `6px solid ${theme.accent}` : 'none', opacity: sp}} />
+        <div key={i} style={{position: 'absolute', left: x - 10, top: y - 10, width: 34, height: 34, borderTop: `6px solid ${theme.accent}`, borderLeft: i % 2 ? 'none' : `6px solid ${theme.accent}`, borderRight: i % 2 ? `6px solid ${theme.accent}` : 'none', borderBottom: i > 1 ? `6px solid ${theme.accent}` : 'none', opacity: sp * out}} />
       ))}
     </>
   );
 };
 
 /** Small particle burst for the stat hit. */
-export const Sparkles: React.FC<{lf: number; theme: Theme}> = ({lf, theme}) => {
-  const g = lf - 34;
+export const Sparkles: React.FC<{lf: number; theme: Theme; at?: number}> = ({lf, theme, at = 34}) => {
+  const g = lf - at;
   if (g < 0 || g > 36) return null;
   const out = interpolate(g, [0, 36], [1, 0], {extrapolateRight: 'clamp'});
   return (
