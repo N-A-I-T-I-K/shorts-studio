@@ -1,5 +1,6 @@
 """Downloads free, openly licensed photos from Openverse for scenes that have a "photo_query".
 Only licences that allow commercial use and changes without share-alike: CC0, public domain mark, CC BY.
+Each scene gets several distinct photos that crossfade during narration.
 Usage: python tools\\fetch_assets.py tools\\script_xxx.json"""
 import json, os, sys, time, urllib.parse, urllib.request
 
@@ -12,6 +13,7 @@ os.makedirs(asset_dir, exist_ok=True)
 os.makedirs("out", exist_ok=True)
 HEADERS = {"User-Agent": "ShortsStudio/1.0 (personal video project)"}
 LICENSES = "cc0,pdm,by"
+PER_SCENE = 3
 
 
 def fetch(url, binary=False):
@@ -22,7 +24,9 @@ def fetch(url, binary=False):
 
 
 def credit_line(res):
-    text = res.get("attribution") or "{} by {} ({})".format(res.get("title", "Untitled"), res.get("creator", "unknown"), str(res.get("license", "")).upper())
+    text = res.get("attribution") or "{} by {} ({})".format(
+        res.get("title", "Untitled"), res.get("creator", "unknown"),
+        str(res.get("license", "")).upper())
     return "{} | {}".format(text, res.get("foreign_landing_url", ""))
 
 
@@ -30,43 +34,48 @@ for i, sc in enumerate(scenes):
     q = sc.get("photo_query")
     if not q:
         continue
-    dest = f"{asset_dir}/photo{i}.jpg"
-    if os.path.exists(dest):
-        print(f"scene {i + 1}: photo already there, skipping")
+    if os.path.exists(f"{asset_dir}/photo{i}_{PER_SCENE - 1}.jpg"):
+        print(f"scene {i + 1}: photos already there, skipping")
         continue
-    params = urllib.parse.urlencode({"q": q, "license": LICENSES, "page_size": 8})
+    params = urllib.parse.urlencode({"q": q, "license": LICENSES, "page_size": 20})
     try:
         data = fetch("https://api.openverse.org/v1/images/?" + params)
     except Exception as e:
         print(f"scene {i + 1}: search failed ({e})")
         continue
-    saved = False
+    seen, saved = set(), 0
     for res in data.get("results", []):
+        if saved >= PER_SCENE:
+            break
         link = res.get("thumbnail") or res.get("url")
-        if not link:
+        if not link or link in seen:
             continue
+        seen.add(link)
         try:
             img = fetch(link, True)
         except Exception:
             continue
         if len(img) < 5000:
             continue
-        with open(dest, "wb") as f:
+        with open(f"{asset_dir}/photo{i}_{saved}.jpg", "wb") as f:
             f.write(img)
-        with open(f"{asset_dir}/photo{i}.txt", "w", encoding="utf8") as f:
+        with open(f"{asset_dir}/photo{i}_{saved}.txt", "w", encoding="utf8") as f:
             f.write(credit_line(res))
-        saved = True
-        print(f"scene {i + 1}: saved photo for '{q}'")
-        break
-    if not saved:
-        print(f"scene {i + 1}: no usable photo found for '{q}'")
+        if saved == 0:
+            with open(f"{asset_dir}/photo{i}.jpg", "wb") as f:
+                f.write(img)
+            with open(f"{asset_dir}/photo{i}.txt", "w", encoding="utf8") as f:
+                f.write(credit_line(res))
+        saved += 1
+    print(f"scene {i + 1}: saved {saved} photo(s) for '{q}'")
     time.sleep(1.0)
 
 lines = []
 for i in range(len(scenes)):
-    t = f"{asset_dir}/photo{i}.txt"
-    if os.path.exists(t):
-        lines.append(f"Scene {i + 1}: " + open(t, encoding="utf8").read())
+    for j in range(PER_SCENE):
+        t = f"{asset_dir}/photo{i}_{j}.txt"
+        if os.path.exists(t):
+            lines.append(f"Scene {i + 1}, photo {j + 1}: " + open(t, encoding="utf8").read())
 with open("out/CREDITS.txt", "w", encoding="utf8") as f:
     f.write("Photos from Openverse (openly licensed). Paste this in your video description:\n\n" + "\n".join(lines) + "\n")
 print("Credits written to out\\CREDITS.txt (", len(lines), "photos )")

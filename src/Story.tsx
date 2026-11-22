@@ -32,6 +32,10 @@ export type Scene = {
   audio?: string;
   words: Word[];
   photo?: string | null;
+  photos?: string[];
+  photoCues?: Array<{from: number; to: number}>;
+  dateSec?: number;
+  statSec?: number;
   hook?: string | null;
   stat?: string | null;
   statLabel?: string | null;

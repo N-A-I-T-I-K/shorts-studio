@@ -108,7 +108,28 @@
      "end": 4.757
     }
    ],
-   "photo": "assets/rocket_fire/photo0.jpg"
+   "photo": "assets/rocket_fire/photo0_0.jpg",
+   "photos": [
+    "assets/rocket_fire/photo0_0.jpg",
+    "assets/rocket_fire/photo0_1.jpg",
+    "assets/rocket_fire/photo0_2.jpg"
+   ],
+   "dateSec": 0.301,
+   "statSec": 1.91,
+   "photoCues": [
+    {
+     "from": 0.104,
+     "to": 1.91
+    },
+    {
+     "from": 1.91,
+     "to": 3.576
+    },
+    {
+     "from": 3.588,
+     "to": 5.139
+    }
+   ]
   },
   {
    "year": "1961",
@@ -207,7 +228,28 @@
      "end": 12.234
     }
    ],
-   "photo": "assets/rocket_fire/photo1.jpg"
+   "photo": "assets/rocket_fire/photo1_0.jpg",
+   "photos": [
+    "assets/rocket_fire/photo1_0.jpg",
+    "assets/rocket_fire/photo1_1.jpg",
+    "assets/rocket_fire/photo1_2.jpg"
+   ],
+   "dateSec": 6.146,
+   "statSec": 7.234,
+   "photoCues": [
+    {
+     "from": 5.139,
+     "to": 7.627
+    },
+    {
+     "from": 7.639,
+     "to": 9.954
+    },
+    {
+     "from": 9.954,
+     "to": 12.593
+    }
+   ]
   },
   {
    "year": "1969",
@@ -301,7 +343,28 @@
      "end": 19.109
     }
    ],
-   "photo": "assets/rocket_fire/photo2.jpg"
+   "photo": "assets/rocket_fire/photo2_0.jpg",
+   "photos": [
+    "assets/rocket_fire/photo2_0.jpg",
+    "assets/rocket_fire/photo2_1.jpg",
+    "assets/rocket_fire/photo2_2.jpg"
+   ],
+   "dateSec": 13.6,
+   "statSec": 15.15,
+   "photoCues": [
+    {
+     "from": 12.593,
+     "to": 15.544
+    },
+    {
+     "from": 15.637,
+     "to": 17.187
+    },
+    {
+     "from": 17.569,
+     "to": 19.479
+    }
+   ]
   },
   {
    "year": "1981",
@@ -395,7 +458,28 @@
      "end": 25.451
     }
    ],
-   "photo": "assets/rocket_fire/photo3.jpg"
+   "photo": "assets/rocket_fire/photo3_0.jpg",
+   "photos": [
+    "assets/rocket_fire/photo3_0.jpg",
+    "assets/rocket_fire/photo3_1.jpg",
+    "assets/rocket_fire/photo3_2.jpg"
+   ],
+   "dateSec": 20.336,
+   "statSec": 21.482,
+   "photoCues": [
+    {
+     "from": 19.479,
+     "to": 21.713
+    },
+    {
+     "from": 21.713,
+     "to": 23.681
+    },
+    {
+     "from": 23.692,
+     "to": 25.822
+    }
+   ]
   },
   {
    "year": "2008",
@@ -484,7 +568,28 @@
      "end": 32.245
     }
    ],
-   "photo": "assets/rocket_fire/photo4.jpg"
+   "photo": "assets/rocket_fire/photo4_0.jpg",
+   "photos": [
+    "assets/rocket_fire/photo4_0.jpg",
+    "assets/rocket_fire/photo4_1.jpg",
+    "assets/rocket_fire/photo4_2.jpg"
+   ],
+   "dateSec": 26.655,
+   "statSec": 31.308,
+   "photoCues": [
+    {
+     "from": 25.822,
+     "to": 28.021
+    },
+    {
+     "from": 28.021,
+     "to": 29.722
+    },
+    {
+     "from": 30.093,
+     "to": 32.616
+    }
+   ]
   },
   {
    "year": "2015",
@@ -583,7 +688,28 @@
      "end": 39.178
     }
    ],
-   "photo": "assets/rocket_fire/photo5.jpg"
+   "photo": "assets/rocket_fire/photo5_0.jpg",
+   "photos": [
+    "assets/rocket_fire/photo5_0.jpg",
+    "assets/rocket_fire/photo5_1.jpg",
+    "assets/rocket_fire/photo5_2.jpg"
+   ],
+   "dateSec": 33.657,
+   "statSec": 38.414,
+   "photoCues": [
+    {
+     "from": 32.616,
+     "to": 35.116
+    },
+    {
+     "from": 35.127,
+     "to": 37.257
+    },
+    {
+     "from": 37.269,
+     "to": 39.549
+    }
+   ]
   },
   {
    "year": "2022",
@@ -672,7 +798,23 @@
      "end": 46.262
     }
    ],
-   "photo": "assets/rocket_fire/photo6.jpg"
+   "photo": "assets/rocket_fire/photo6_0.jpg",
+   "photos": [
+    "assets/rocket_fire/photo6_0.jpg",
+    "assets/rocket_fire/photo6_1.jpg"
+   ],
+   "dateSec": 40.336,
+   "statSec": 41.1,
+   "photoCues": [
+    {
+     "from": 39.549,
+     "to": 42.685
+    },
+    {
+     "from": 42.685,
+     "to": 46.655
+    }
+   ]
   },
   {
    "year": "NEXT",
@@ -766,7 +908,28 @@
      "end": 52.292
     }
    ],
-   "photo": "assets/rocket_fire/photo7.jpg"
+   "photo": "assets/rocket_fire/photo7_0.jpg",
+   "photos": [
+    "assets/rocket_fire/photo7_0.jpg",
+    "assets/rocket_fire/photo7_1.jpg",
+    "assets/rocket_fire/photo7_2.jpg"
+   ],
+   "dateSec": 46.817,
+   "statSec": 51.852,
+   "photoCues": [
+    {
+     "from": 46.655,
+     "to": 48.553
+    },
+    {
+     "from": 48.553,
+     "to": 50.868
+    },
+    {
+     "from": 51.238,
+     "to": 52.632
+    }
+   ]
   }
  ]
 }

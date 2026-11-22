@@ -27,8 +27,10 @@ const FlowBackground: React.FC<{
   total: number;
   scenes: Scene[];
   starts: number[];
+  ends: number[];
+  fps: number;
   theme: Theme;
-}> = ({f, total, scenes, starts, theme}) => {
+}> = ({f, total, scenes, starts, ends, fps, theme}) => {
   const [c1, c2] = theme.palette[0];
   const angle = 140 + (f / Math.max(1, total)) * 70;
   const glowX = 540 + Math.sin(f / 190) * 380;
@@ -47,27 +49,36 @@ const FlowBackground: React.FC<{
           pointerEvents: 'none',
         }}
       />
-      {scenes.map((sc, i) => {
-        if (!sc.photo) return null;
-        const center = (starts[i] + (starts[i + 1] ?? total)) / 2;
-        const span = Math.max(1, ((starts[i + 1] ?? total) - starts[i]) * 0.78);
-        const op = interpolate(Math.abs(f - center), [0, span], [theme.photoOpacity, 0], {
-          extrapolateRight: 'clamp',
+      {scenes.flatMap((sc, i) => {
+        const photos = sc.photos?.length ? sc.photos : sc.photo ? [sc.photo] : [];
+        const cues = sc.photoCues ?? [];
+        return photos.map((path, j) => {
+          // Each photo owns a stretch of the narration; neighbours overlap for a smooth blend.
+          const cue = cues[j];
+          const s = cue ? cue.from * fps : starts[i] + ((ends[i] - starts[i]) * j) / photos.length;
+          const e = cue ? cue.to * fps : starts[i] + ((ends[i] - starts[i]) * (j + 1)) / photos.length;
+          const F = 15;
+          const op = Math.min(
+            interpolate(f, [s - F, s + F], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}),
+            interpolate(f, [e - F, e + F], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})
+          ) * theme.photoOpacity;
+          if (op <= 0.002) return null;
+          const zoom = 1.04 + ((f - s) / Math.max(1, e - s)) * 0.09;
+          return (
+            <Img
+              key={`${i}-${j}`}
+              src={staticFile(path)}
+              style={{
+                position: 'absolute',
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                opacity: op,
+                transform: `scale(${zoom})`,
+              }}
+            />
+          );
         });
-        return (
-          <Img
-            key={i}
-            src={staticFile(sc.photo)}
-            style={{
-              position: 'absolute',
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              opacity: op,
-              transform: `scale(${1.06 + (f / total) * 0.1})`,
-            }}
-          />
-        );
       })}
       <AbsoluteFill style={{background: `linear-gradient(180deg, ${theme.photoTint}55, ${theme.photoTint}cc)`}} />
       <ThemeBG seed={theme.bgStyle * 31} variant={theme.bgStyle} accent={theme.accent} lf={f} />
@@ -264,31 +275,35 @@ export const StoryFlow: React.FC<StoryProps> = ({scenes, music, sfx, sfxPack, na
   const theme = getTheme(themeId);
   const total = durationInFrames / fps;
   const starts = scenes.map((s) => Math.round(s.start * fps));
+  const ends = scenes.map((s, i) => (i < scenes.length - 1 ? starts[i + 1] : durationInFrames));
 
   const allWords = scenes.flatMap((s) => s.words ?? []);
 
   return (
     <AbsoluteFill style={{background: '#000'}}>
-      <FlowBackground f={f} total={total} scenes={scenes} starts={starts} theme={theme} />
+      <FlowBackground f={f} total={total} scenes={scenes} starts={starts} ends={ends} fps={fps} theme={theme} />
 
       {scenes.map((sc, i) => {
         const from = starts[i];
-        const to = i < scenes.length - 1 ? starts[i + 1] : durationInFrames;
-        // Narrator says the date first; hold the date card for that word, then clear it.
+        const to = ends[i];
+        const durF = Math.max(1, to - from);
+        // Every cue comes from the real spoken word timings in story.json.
         const first = (sc.words ?? [])[0];
-        const raw = first ? (first.end - sc.start) * fps + 8 : 30;
-        const dateEnd = Math.round(Math.max(22, Math.min(44, raw)));
+        const dateRaw = ((sc.dateSec ?? first?.end ?? sc.start + 0.4) - sc.start) * fps + 8;
+        const dateEnd = Math.round(Math.max(18, Math.min(44, dateRaw)));
+        const statRaw = ((sc.statSec ?? sc.start + sc.dur * 0.55) - sc.start) * fps;
+        const statAt = Math.round(Math.max(dateEnd + 4, Math.min(durF - 22, statRaw)));
         return (
           <Sequence key={i} from={from} durationInFrames={Math.max(1, to - from)}>
             <FlowScene
               scene={sc}
               index={i}
               lf={f - from}
-              durF={Math.max(1, to - from)}
+              durF={durF}
               theme={theme}
               total={total}
               dateEnd={dateEnd}
-              statAt={dateEnd + 8}
+              statAt={statAt}
             />
           </Sequence>
         );

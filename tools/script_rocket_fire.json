@@ -12,6 +12,7 @@
       "hook": "ONE FLAME CHANGED EVERYTHING",
       "stat": "1957",
       "statLabel": "FIRST SPARK",
+      "statWord": "flame",
       "photo_query": "rocket launch fire night"
     },
     {
@@ -21,6 +22,7 @@
       "text": "1961. Then came the first human. Gagarin squeezed into a metal ball and vanished above the sky.",
       "stat": "1",
       "statLabel": "HUMAN IN ORBIT",
+      "statWord": "first",
       "photo_query": "spacecraft orbit earth"
     },
     {
@@ -30,6 +32,7 @@
       "text": "1969. Eight years later, three astronauts aimed for the Moon. Half the planet held its breath.",
       "stat": "3",
       "statLabel": "ASTRONAUTS",
+      "statWord": "three",
       "photo_query": "apollo moon landing"
     },
     {
@@ -39,6 +42,7 @@
       "text": "1981. But those rockets burned away and died. So engineers built one that could fly back.",
       "stat": "2 MIN",
       "statLabel": "BOOSTER BURN",
+      "statWord": "burned",
       "photo_query": "space shuttle booster launch"
     },
     {
@@ -48,6 +52,7 @@
       "text": "2008. Then a company nobody believed in did the impossible. Private metal finally reached orbit.",
       "stat": "2008",
       "statLabel": "FIRST PRIVATE",
+      "statWord": "reached",
       "photo_query": "falcon 9 rocket launch"
     },
     {
@@ -57,6 +62,7 @@
       "text": "2015. And then the impossible happened twice. A booster fell from the sky and stood back up.",
       "stat": "2015",
       "statLabel": "FIRST LANDING",
+      "statWord": "stood",
       "photo_query": "rocket booster landing"
     },
     {
@@ -66,6 +72,7 @@
       "text": "2022. Now the tallest machine ever built screams toward the stars, chasing a record untouched.",
       "stat": "TALLEST",
       "statLabel": "EVER BUILT",
+      "statWord": "tallest",
       "photo_query": "starship rocket launch"
     },
     {
@@ -75,6 +82,7 @@
       "text": "From one fragile spark to machines that fly themselves home. Which launch will you be watching?",
       "stat": "NEXT",
       "statLabel": "YOUR LAUNCH",
+      "statWord": "watching",
       "photo_query": "starfield deep space"
     }
   ],
