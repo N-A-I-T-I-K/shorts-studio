@@ -24,7 +24,7 @@ jobs:
         run: npm ci
 
       - name: Build story
-        run: python tools\build_story.py tools\script_${{ github.event.inputs.video_name || 'rocket_fire' }}.json
+        run: python tools/build_story.py tools/script_${{ github.event.inputs.video_name || 'rocket_fire' }}.json
 
       - name: Render Story
         run: npx remotion render Story out/${{ github.event.inputs.video_name || 'rocket_fire' }}.mp4 --gl=swangle --concurrency=4
