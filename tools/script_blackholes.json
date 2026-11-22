@@ -1,0 +1,15 @@
+{
+  "voice": "en-US-GuyNeural",
+  "rate": "+8%",
+  "pitch": "+0Hz",
+  "scenes": [
+    {"year":"∞","title":"Cosmic Trap","device":"online","text":"A black hole is not empty. It is gravity so strong that not even light can escape its pull.","hook":"NOT EVEN LIGHT CAN ESCAPE","stat":"∞","statLabel":"GRAVITY TRAP"},
+    {"year":"1916","title":"Predicted","device":"graph","text":"Einstein predicted them with math a century ago. Nobody believed such things could really exist.","stat":"1916","statLabel":"PREDICTED"},
+    {"year":"2019","title":"First Photo","device":"globe3d","text":"In twenty nineteen, the first image showed a glowing ring around a shadow, proving the math right.","stat":"1ST","statLabel":"PHOTO EVER"},
+    {"year":"4M","title":"Our Galaxy","device":"network3d","text":"A supermassive black hole sits at the center of our galaxy, quietly holding billions of stars." ,"stat":"4M","statLabel":"SUNS MASS"},
+    {"year":"TIME","title":"Time Bends","device":"jump3d","text":"Near a black hole, time slows down. An hour there could be years for everyone back on Earth."},
+    {"year":"SPIN","title":"Spaghettify","device":"web3d","text":"Fall in feet first and gravity stretches you into a long thin strand before you reach the center."},
+    {"year":"INFO","title":"Information","device":"packets3d","text":"Physics still argues about what happens to information swallowed by a black hole. The debate is alive."},
+    {"year":"?","title":"Your Question","device":"online","text":"The universe keeps its strangest secrets in the dark. What would you ask a black hole?"}
+  ]
+}

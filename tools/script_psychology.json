@@ -1,0 +1,15 @@
+{
+  "voice": "en-US-GuyNeural",
+  "rate": "+8%",
+  "pitch": "+0Hz",
+  "scenes": [
+    {"year":"1%","title":"Hidden Mind","device":"web3d","text":"Your brain hides most of what it decides from you. Ninety five percent of behavior runs on autopilot.","hook":"95% OF YOUR BRAIN IS ON AUTOPILOT","stat":"95%","statLabel":"ON AUTOPILOT"},
+    {"year":"7","title":"Magic Number","device":"bars3d","text":"You can hold about seven things in working memory at once. That is why phone numbers are short.","stat":"7","statLabel":"ITEMS AT ONCE"},
+    {"year":"20S","title":"Quick Judge","device":"social3d","text":"People form a first impression in a fraction of a second, before you even finish speaking.","stat":"0.1S","statLabel":"FIRST IMPRESSION"},
+    {"year":"WHY","title":"We Forget","device":"graph","text":"Forgetting is not failure. Your brain deletes noise so the useful stuff stays sharp and ready."},
+    {"year":"3AM","title":"Best Ideas","device":"citynight","text":"Your best ideas arrive when you stop focusing. Daydreaming lets distant thoughts connect in new ways."},
+    {"year":"1+1","title":"Social Proof","device":"social","text":"When unsure, you copy the crowd. That is why a busy restaurant feels safer than an empty one.","stat":"1","statLabel":"COPY THE CROWD"},
+    {"year":"NOW","title":"Rewire","device":"network3d","text":"Every repeated thought strengthens a path in your brain. You can literally rewire yourself by practicing."},
+    {"year":"?","title":"Your Turn","device":"online","text":"Your mind is more flexible than you think. Which habit would you rewire first, starting today?"}
+  ]
+}

@@ -11,14 +11,16 @@ jobs:
       max-parallel: 20
       matrix:
         script:
-          - script
-          - script_cars
-          - script_cpu
-          - script_demo
-          - script_gta
-          - script_internet
-          - script_internet3d
-          - script_rocket_fire
+          - script_ocean
+          - script_psychology
+          - script_blackholes
+          - script_body
+          - script_ai
+          - script_money
+          - script_time
+          - script_animals
+          - script_food
+          - script_weather
     steps:
       - uses: actions/checkout@v4
 
