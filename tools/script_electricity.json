@@ -1,0 +1,15 @@
+{
+  "voice": "en-US-GuyNeural",
+  "rate": "+8%",
+  "pitch": "+0Hz",
+  "scenes": [
+    {"year":"LIGHT","title":"Invisible Force","device":"online","text":"Electricity moves through wires at close to the speed of light, lighting your home the instant you flip a switch.","hook":"ELECTRICITY POWERS EVERYTHING","stat":"300,000","statLabel":"KM PER SECOND"},
+    {"year":"1800","title":"First Battery","device":"bars3d","text":"The first real battery was invented around eighteen hundred, and it changed the world in ways nobody expected.","stat":"1800","statLabel":"FIRST BATTERY"},
+    {"year":"BODY","title":"You Are Wired","device":"network3d","text":"Your nerves run on electricity too, sending signals through your body faster than you can blink.","stat":"100 M/S","statLabel":"NERVE SPEED"},
+    {"year":"EEL","title":"Living Battery","device":"web3d","text":"The electric eel can deliver a shock of several hundred volts, stunning prey with its own body.","stat":"600V","statLabel":"EEL SHOCK"},
+    {"year":"STATIC","title":"Tiny Shocks","device":"graph","text":"That small shock from a doorknob is static electricity, built up by your feet rubbing against the floor."},
+    {"year":"GRID","title":"Hidden Network","device":"topdown","text":"A vast invisible grid carries power across whole countries, balancing supply and demand every second of the day."},
+    {"year":"FUTURE","title":"Clean Power","device":"globe3d","text":"The future runs on cleaner electricity from sun and wind, stored in batteries that keep getting cheaper."},
+    {"year":"?","title":"Your Turn","device":"online","text":"Modern life would stop without this invisible force. What is one thing you could not live without?"}
+  ]
+}

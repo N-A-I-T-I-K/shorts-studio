@@ -1,0 +1,15 @@
+{
+  "voice": "en-US-GuyNeural",
+  "rate": "+8%",
+  "pitch": "+0Hz",
+  "scenes": [
+    {"year":"BRAIN","title":"Good Medicine","device":"network3d","text":"Laughter lights up your brain and releases feel good chemicals, lowering stress in a matter of seconds.","hook":"LAUGHTER IS FREE MEDICINE","stat":"STRESS DOWN","statLabel":"IN SECONDS"},
+    {"year":"CONTAG","title":"Highly Contagious","device":"social3d","text":"Laughter spreads through a group faster than almost anything, which is why one giggle sets off a whole room."},
+    {"year":"BABY","title":"Before Words","device":"web3d","text":"Babies start laughing months before they can talk, long before they understand what a joke even is."},
+    {"year":"ANIMAL","title":"Not Just Human","device":"packets3d","text":"Some animals make sound like laughter during play, and rats have been heard chirping when they are tickled."},
+    {"year":"HEAL","title":"Body Benefit","device":"graph","text":"A good laugh relaxes your muscles, boosts your mood, and can even ease pain for a little while."},
+    {"year":"SMILE","title":"Fake It","device":"bars3d","text":"Even forcing a smile can trick your brain into feeling better, because your face and mood are deeply linked."},
+    {"year":"BOND","title":"Social Glue","device":"online","text":"Sharing a laugh builds trust and brings people closer, which is why it is such a powerful social tool."},
+    {"year":"?","title":"Your Turn","device":"online","text":"Laughter costs nothing and gives so much. What is the last thing that made you truly laugh out loud?"}
+  ]
+}

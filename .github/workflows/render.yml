@@ -11,16 +11,16 @@ jobs:
       max-parallel: 20
       matrix:
         script:
-          - script_ocean
-          - script_psychology
-          - script_blackholes
-          - script_body
-          - script_ai
-          - script_money
-          - script_time
-          - script_animals
-          - script_food
-          - script_weather
+          - script_sleep
+          - script_mars
+          - script_volcanoes
+          - script_dinosaurs
+          - script_music
+          - script_color
+          - script_germs
+          - script_electricity
+          - script_trees
+          - script_laughter
     steps:
       - uses: actions/checkout@v4
 

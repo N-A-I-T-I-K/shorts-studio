@@ -1,0 +1,15 @@
+{
+  "voice": "en-US-GuyNeural",
+  "rate": "+8%",
+  "pitch": "+0Hz",
+  "scenes": [
+    {"year":"39T","title":"Invisible World","device":"network3d","text":"Your body is home to trillions of microbes, and they are so small that you carry a whole unseen universe.","hook":"YOU ARE OUTNUMBERED BY MICROBES","stat":"39T","statLabel":"MICROBES IN YOU"},
+    {"year":"MOST","title":"Helpful Ones","device":"network","text":"Most of these microbes are harmless or even helpful, helping you digest food and train your immune system."},
+    {"year":"GUT","title":"Second Brain","device":"web3d","text":"Your gut holds millions of nerves and trillions of bacteria, which is why people call it your second brain."},
+    {"year":"VIRUS","title":"Not The Same","device":"graph","text":"Antibiotics kill bacteria but do nothing against viruses, which is why the wrong medicine will not help a cold."},
+    {"year":"WASH","title":"Simple Defense","device":"packets3d","text":"Washing your hands with soap breaks apart many viruses and bacteria, one of the simplest defenses we have."},
+    {"year":"FEVER","title":"Body Defense","device":"bars3d","text":"A fever is not the enemy. Your body raises its temperature to make it harder for germs to survive.","stat":"1°C","statLabel":"RAISED TEMP"},
+    {"year":"NEW","title":"Always Changing","device":"online","text":"Your microbiome changes with what you eat and where you live, and scientists are still discovering what it all means."},
+    {"year":"?","title":"Your Turn","device":"online","text":"You are never truly alone, even when you are by yourself. What is one habit you use to stay healthy?"}
+  ]
+}

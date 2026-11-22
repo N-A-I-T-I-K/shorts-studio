@@ -1,6 +1,6 @@
-import json, glob, os
-new = ['ocean','psychology','blackholes','body','ai','money','time','animals','food','weather']
-for name in new:
+import json
+names = ['sleep','mars','volcanoes','dinosaurs','music','color','germs','electricity','trees','laughter']
+for name in names:
     f = f'tools/script_{name}.json'
     d = json.load(open(f, encoding='utf8'))
     w = sum(len(s['text'].split()) for s in d['scenes'])

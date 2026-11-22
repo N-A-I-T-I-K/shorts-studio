@@ -1,0 +1,15 @@
+{
+  "voice": "en-US-GuyNeural",
+  "rate": "+8%",
+  "pitch": "+0Hz",
+  "scenes": [
+    {"year":"5000","title":"Old Survivors","device":"network3d","text":"Some trees have been alive for thousands of years, standing through empires rising and falling around them.","hook":"TREES CAN LIVE 5000 YEARS","stat":"5000","statLabel":"YEARS OLD"},
+    {"year":"AIR","title":"Clean The Air","device":"globe3d","text":"Trees pull carbon from the air and release fresh oxygen, quietly cleaning the planet every single day."},
+    {"year":"WEB","title":"Forest Internet","device":"network","text":"Scientists have found that trees can share nutrients through underground fungal networks linking their roots.","stat":"1 WEB","statLabel":"UNDERGROUND NETWORK"},
+    {"year":"HOME","title":"Living Cities","device":"web3d","text":"A single large tree can be home to thousands of insects, birds, and other creatures all at once."},
+    {"year":"DEEP","title":"Deep Roots","device":"jump3d","text":"Roots can grow far deeper than the tree is tall, anchoring it against storms and searching for water."},
+    {"year":"SHADE","title":"Cooler Cities","device":"citynight","text":"Streets lined with trees stay noticeably cooler in summer, cutting heat and shading everyone below."},
+    {"year":"RAIN","title":"Make Rain","device":"online","text":"Forests release so much water vapor that they help create their own rain, keeping whole regions green."},
+    {"year":"?","title":"Your Turn","device":"online","text":"Trees quietly hold the world together. If you could plant one tree, where would you put it?"}
+  ]
+}

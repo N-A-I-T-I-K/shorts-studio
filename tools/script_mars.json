@@ -1,0 +1,15 @@
+{
+  "voice": "en-US-GuyNeural",
+  "rate": "+8%",
+  "pitch": "+0Hz",
+  "scenes": [
+    {"year":"24H","title":"Another World","device":"globe3d","text":"Mars is another world where a day lasts twenty four hours and thirty seven minutes, almost exactly like ours.","hook":"THERE IS A PLANET NEXT DOOR","stat":"24H 37M","statLabel":"ONE MARS DAY"},
+    {"year":"HALF","title":"Smaller Earth","device":"bars3d","text":"Mars is about half the size of Earth, with gravity only a third as strong, so you could jump three times higher.","stat":"1/3","statLabel":"EARTH GRAVITY"},
+    {"year":"22KM","title":"Giant Volcano","device":"jump3d","text":"Mars holds the tallest volcano in the solar system, rising twenty two kilometers, nearly three times Mount Everest.","stat":"22KM","statLabel":"TALLEST VOLCANO"},
+    {"year":"2012","title":"Robots Land","device":"network3d","text":"Robots have been driving across the red planet for over a decade, sending back pictures from a place no human has seen."},
+    {"year":"7MO","title":"Long Trip","device":"web3d","text":"It takes about seven months to reach Mars, and the distance between the two planets changes every single day.","stat":"7 MONTHS","statLabel":"ONE WAY TRIP"},
+    {"year":"2","title":"Tiny Moons","device":"online","text":"Mars has two small moons, and one is slowly spiraling in and will eventually break apart.","stat":"2","statLabel":"TINY MOONS"},
+    {"year":"RED","title":"Why Red","device":"graph","text":"The planet looks red because its soil is full of iron oxide, the same rust you see on an old nail."},
+    {"year":"?","title":"Your Turn","device":"online","text":"Mars could be our second home one day. Would you go if you had the chance, even with no way back?"}
+  ]
+}

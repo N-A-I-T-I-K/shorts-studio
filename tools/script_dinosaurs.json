@@ -1,0 +1,15 @@
+{
+  "voice": "en-US-GuyNeural",
+  "rate": "+8%",
+  "pitch": "+0Hz",
+  "scenes": [
+    {"year":"230M","title":"Ancient Rule","device":"jump3d","text":"Dinosaurs ruled the Earth for over a hundred and sixty million years, long before humans ever walked here.","hook":"DINOSAURS RULED FOR 160 MILLION YEARS","stat":"160M","statLabel":"YEARS IN POWER"},
+    {"year":"66M","title":"The Impact","device":"online","text":"Sixty six million years ago, an asteroid struck Earth and wiped out almost every dinosaur in a short time.","stat":"66M","statLabel":"YEARS AGO"},
+    {"year":"10KM","title":"Sky Blocked","device":"globe3d","text":"The impact kicked up so much dust that sunlight vanished for months, and the food chain collapsed.","stat":"MONTHS","statLabel":"NO SUNLIGHT"},
+    {"year":"BIRD","title":"Still Alive","device":"web3d","text":"But the dinosaurs never fully disappeared. Modern birds are living dinosaurs, descended from feathered ancestors."},
+    {"year":"FEATH","title":"Feathers First","device":"network3d","text":"Feathers came before flight, evolved for warmth and display long before any dinosaur ever took to the sky."},
+    {"year":"CHICK","title":"Small Giants","device":"graph","text":"Some dinosaurs were no bigger than a chicken, while others grew longer than a bus and heavier than a truck."},
+    {"year":"FOSSIL","title":"Every Continent","device":"topdown","text":"Fossils have been found on every continent, proving these animals once walked the entire planet."},
+    {"year":"?","title":"Your Turn","device":"online","text":"The dinosaurs are still here, just smaller and feathered. Which dinosaur would you want to see alive?"}
+  ]
+}

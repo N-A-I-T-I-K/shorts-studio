@@ -1,0 +1,15 @@
+{
+  "voice": "en-US-GuyNeural",
+  "rate": "+8%",
+  "pitch": "+0Hz",
+  "scenes": [
+    {"year":"1M","title":"Built By Brain","device":"web3d","text":"Color is not really out there in the world. Your brain builds it from the light that reaches your eyes.","hook":"COLORS DO NOT EXIST","stat":"1M","statLabel":"SHADES YOU SEE"},
+    {"year":"WHITE","title":"Hidden Spectrum","device":"graph","text":"White light is actually every color mixed together, which a prism can split into a rainbow in an instant."},
+    {"year":"BLUE","title":"Sky Trick","device":"globe3d","text":"The sky is blue because air scatters blue light more than other colors, filling the daytime with that shade."},
+    {"year":"8%","title":"Color Blind","device":"bars3d","text":"About eight percent of men see colors differently, and a single photo can look completely different to two people.","stat":"8%","statLabel":"OF MEN"},
+    {"year":"2015","title":"The Dress","device":"social3d","text":"A simple photo once split the internet in two, with half seeing blue and gold and half seeing white and pink."},
+    {"year":"MANTIS","title":"More Colors","device":"network3d","text":"A mantis shrimp has far more color receptors than you, seeing a world of shades your eyes cannot imagine.","stat":"12+","statLabel":"COLOR RECEPTORS"},
+    {"year":"WORD","title":"Names Matter","device":"online","text":"The words you know change the colors you notice, and learning a new color name sharpens your eye to it."},
+    {"year":"?","title":"Your Turn","device":"online","text":"Color is a story your brain tells you. What is your favorite color, and do you trust what you see?"}
+  ]
+}
