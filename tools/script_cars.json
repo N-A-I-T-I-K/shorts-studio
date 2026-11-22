@@ -1,0 +1,18 @@
+[
+  {"year": "1886", "title": "The first car", "device": "benz",
+   "text": "In 1886, Karl Benz built the first practical petrol car. It had three wheels and went about sixteen kilometres an hour."},
+  {"year": "1908", "title": "Cars for everyone", "device": "modelt",
+   "text": "In 1908, Ford launched the Model T. Later, the assembly line made cars cheap enough for ordinary families."},
+  {"year": "1950s", "title": "Style era", "device": "fins",
+   "text": "The nineteen fifties brought chrome, big tail fins, and cars that were all about style."},
+  {"year": "1970s", "title": "Fuel crisis", "device": "compact",
+   "text": "In the nineteen seventies, an oil crisis made people want smaller cars that used less fuel."},
+  {"year": "1997", "title": "The first hybrid", "device": "hybrid",
+   "text": "In 1997, the Toyota Prius arrived in Japan. It was the first mass produced hybrid car."},
+  {"year": "2008", "title": "Electric gets fast", "device": "ev",
+   "text": "In 2008, the Tesla Roadster showed the world that electric cars could be fast."},
+  {"year": "2020s", "title": "Cars with brains", "device": "suv",
+   "text": "Today, cars get software updates, driver assist features, and cameras all around."},
+  {"year": "NEXT", "title": "What is coming?", "device": "future",
+   "text": "And the future? Self driving cars, maybe even flying taxis. Which car would you drive? Tell me in the comments."}
+]

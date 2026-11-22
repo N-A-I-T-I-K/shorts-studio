@@ -1,0 +1,62 @@
+{
+  "voice": "en-US-GuyNeural",
+  "rate": "+8%",
+  "pitch": "+0Hz",
+  "scenes": [
+    {
+      "year": "2026",
+      "title": "Day one",
+      "device": "gta_vi",
+      "stat": "$3.79B",
+      "statLabel": "IN ONE DAY",
+      "hook": "GTA 6 made $3.8 billion in one day",
+      "text": "Two days ago, GTA 6 launched, and its publisher says it made three point eight billion dollars on day one. Here is how it all started."
+    },
+    {
+      "year": "1997",
+      "title": "The beginning",
+      "device": "gta3",
+      "text": "In 1997, a Scottish studio called DMA Design released the first GTA. Top down, with simple graphics."
+    },
+    {
+      "year": "2001",
+      "title": "Jumping into 3D",
+      "device": "gta3",
+      "text": "In 2001, GTA 3 jumped into full 3D, and created an open world design that many games copy today."
+    },
+    {
+      "year": "2002",
+      "title": "Neon and states",
+      "device": "gta_vc",
+      "text": "Vice City brought neon Miami in 2002. San Andreas followed in 2004 with an entire state to explore."
+    },
+    {
+      "year": "2008",
+      "title": "A darker city",
+      "device": "gta_iv",
+      "text": "In 2008, GTA 4 brought a darker, more realistic Liberty City, and broke sales records."
+    },
+    {
+      "year": "2013",
+      "title": "GTA 5",
+      "device": "gta_v",
+      "stat": "$800M",
+      "statLabel": "ON DAY ONE",
+      "text": "In 2013, GTA 5 earned eight hundred million dollars on day one, and a billion in three days."
+    },
+    {
+      "year": "200M",
+      "title": "Still selling",
+      "device": "gta_v",
+      "stat": "200M+",
+      "statLabel": "COPIES SOLD",
+      "text": "With GTA Online, it kept selling for over a decade, passing two hundred million copies."
+    },
+    {
+      "year": "NOW",
+      "title": "GTA 6 is here",
+      "device": "gta_vi",
+      "text": "Now GTA 6 has smashed that record, with three point seven nine billion dollars, the publisher says. Which GTA was your favourite? Comment below."
+    }
+  ]
+}

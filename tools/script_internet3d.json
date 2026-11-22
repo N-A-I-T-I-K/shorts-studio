@@ -1,0 +1,59 @@
+[
+ {
+  "year": "1969",
+  "title": "The first message",
+  "device": "network3d",
+  "text": "The internet almost died after two letters. In 1969, scientists sent the first message between two computers, and the network crashed.",
+  "hook": "The internet almost died after 2 letters",
+  "photo_query": "vintage mainframe computer 1960s"
+ },
+ {
+  "year": "1971",
+  "title": "The first email",
+  "device": "email3d",
+  "text": "In 1971, Ray Tomlinson sent the first network email, and chose the at sign for addresses.",
+  "photo_query": "old computer terminal 1970s"
+ },
+ {
+  "year": "1983",
+  "title": "Birth of the internet",
+  "device": "packets3d",
+  "text": "In 1983, ARPANET adopted a shared language called TCP IP. Many call this the birth of the internet.",
+  "photo_query": "network cables server room"
+ },
+ {
+  "year": "1991",
+  "title": "The World Wide Web",
+  "device": "web3d",
+  "text": "In 1991, Tim Berners-Lee opened the first website to the public. The web made the internet easy for everyone.",
+  "photo_query": "CERN laboratory Geneva"
+ },
+ {
+  "year": "6B",
+  "title": "People online",
+  "device": "bars3d",
+  "text": "In 2005, about one billion people were online. By 2025, six billion. Almost three quarters of the world.",
+  "photo_query": "data center servers"
+ },
+ {
+  "year": "2004",
+  "title": "Social media",
+  "device": "social3d",
+  "text": "Then social media took off. Facebook in 2004, YouTube in 2005, and Twitter in 2006.",
+  "photo_query": "people using laptops cafe"
+ },
+ {
+  "year": "2007",
+  "title": "Internet in your pocket",
+  "device": "phone3d",
+  "text": "In 2007, the iPhone put the internet in every pocket. Apps and streaming followed.",
+  "photo_query": "person holding smartphone"
+ },
+ {
+  "year": "NOW",
+  "title": "What comes next?",
+  "device": "globe3d",
+  "text": "Today, satellites and AI are changing it again. What comes next? Tell me in the comments.",
+  "photo_query": "earth from space night lights"
+ }
+]

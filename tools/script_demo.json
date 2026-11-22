@@ -1,0 +1,68 @@
+{
+  "voice": "en-US-GuyNeural",
+  "rate": "+12%",
+  "pitch": "+0Hz",
+  "scenes": [
+    {
+      "year": "1908",
+      "title": "Cars for everyone",
+      "device": "modelt",
+      "text": "In 1908, Ford launched the Model T. By 1927, over fifteen million were built, changing travel forever.",
+      "hook": "15 million Model Ts",
+      "stat": "15M",
+      "statLabel": "MODEL Ts BUILT",
+      "photo_query": "Ford Model T 1920s"
+    },
+    {
+      "year": "1969",
+      "title": "The first message",
+      "device": "network3d",
+      "text": "In 1969, scientists sent the first message between two computers. ARPANET crashed after two letters: L O.",
+      "photo_query": "vintage mainframe computer 1960s"
+    },
+    {
+      "year": "1971",
+      "title": "The first email",
+      "device": "email3d",
+      "text": "In 1971, Ray Tomlinson sent the first network email, and picked the at sign for addresses.",
+      "photo_query": "old computer terminal 1970s"
+    },
+    {
+      "year": "1973",
+      "title": "First handheld call",
+      "device": "brick",
+      "text": "In 1973, Martin Cooper made the first handheld phone call. His phone weighed a kilogram.",
+      "photo_query": "early mobile phone 1970s"
+    },
+    {
+      "year": "1991",
+      "title": "The World Wide Web",
+      "device": "web3d",
+      "text": "In 1991, Tim Berners-Lee opened the first website. The web made the internet easy for everyone.",
+      "photo_query": "CERN laboratory Geneva"
+    },
+    {
+      "year": "2004",
+      "title": "Social media",
+      "device": "social3d",
+      "text": "Then social media took off. Facebook arrived in 2004, YouTube in 2005, and Twitter in 2006. Suddenly, everyone had an audience.",
+      "photo_query": "people using laptops cafe"
+    },
+    {
+      "year": "2007",
+      "title": "Internet in your pocket",
+      "device": "phone3d",
+      "text": "In 2007, the iPhone put the internet in every pocket. Apps and streaming followed quickly.",
+      "photo_query": "person holding smartphone"
+    },
+    {
+      "year": "NOW",
+      "title": "What comes next?",
+      "device": "globe3d",
+      "text": "Today, satellites and AI are changing everything. Six billion people are online. What comes next?",
+      "stat": "6B",
+      "statLabel": "PEOPLE ONLINE",
+      "photo_query": "earth from space night lights"
+    }
+  ]
+}

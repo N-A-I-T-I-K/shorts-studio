@@ -1,0 +1,72 @@
+{
+  "voice": "en-US-GuyNeural",
+  "rate": "+10%",
+  "pitch": "+0Hz",
+  "scenes": [
+    {
+      "year": "NOW",
+      "title": "One Fire",
+      "device": "online",
+      "text": "What if I told you one fireball started the entire space age?",
+      "hook": "ONE FIREBALL STARTED EVERYTHING",
+      "stat": "1957",
+      "statLabel": "FIRST SPARK"
+    },
+    {
+      "year": "1961",
+      "title": "Human Fire",
+      "device": "jump3d",
+      "text": "One man rode a rocket above Earth. One orbit. One story.",
+      "stat": "1",
+      "statLabel": "HUMAN IN ORBIT"
+    },
+    {
+      "year": "1969",
+      "title": "Moon Fire",
+      "device": "online",
+      "text": "Fire that carried three people to the Moon and back. Eight days of fire.",
+      "stat": "8 DAYS",
+      "statLabel": "MOON ROUND TRIP"
+    },
+    {
+      "year": "1981",
+      "title": "Reusable Fire",
+      "device": "bars3d",
+      "text": "Fire that returned. Two boosters burned, then fell away, over and over.",
+      "stat": "2 MIN",
+      "statLabel": "BOOSTER BURN"
+    },
+    {
+      "year": "2008",
+      "title": "Private Fire",
+      "device": "network3d",
+      "text": "Fire that broke free. Small rocket reached orbit for the first time without a government.",
+      "stat": "2008",
+      "statLabel": "PRIVATE ORBIT"
+    },
+    {
+      "year": "2015",
+      "title": "Fire Comes Home",
+      "device": "topdown",
+      "text": "Booster that landed on its own fire. The rocket that came back.",
+      "stat": "2015",
+      "statLabel": "FIRST LANDING"
+    },
+    {
+      "year": "2022",
+      "title": "Biggest Fire",
+      "device": "bars3d",
+      "text": "The tallest rocket ever, on the biggest fire ever built. Still being tested.",
+      "stat": "TALLEST",
+      "statLabel": "ROCKET EVER"
+    },
+    {
+      "year": "NEXT",
+      "title": "Your Fire",
+      "device": "online",
+      "text": "From one metal sphere to rockets that fly themselves home. Which launch will you watch next?",
+      "stat": "NEXT",
+      "statLabel": "YOUR LAUNCH"
+    }
+  ]
+}
