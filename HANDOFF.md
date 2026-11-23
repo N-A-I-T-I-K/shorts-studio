@@ -188,6 +188,13 @@ User reported an 8-minute run, "stood back up" spoken twice, and photos visible 
 3. **Repeated phrase:** `build_story.py` now drops byte-identical consecutive audio chunks (edge-tts resend after a network retry). Also rephrased "stood back up" → "stood tall again". No repeated words in the generated word list.
 4. Current build: 48.22s / 1,447 frames / 130 words / 23 photos, all 8 stat hits exact, shard cover exact.
 
+## Real shard bug found — fixed at this commit
+Run 7 timings proved each of the 4 render jobs ran `fetch_assets.py` (5s / 110s / 7s / 31s) and `build_story.py` separately. That means **4 different TTS narrations and 4 different photo sets** were generated, then spliced — which is exactly why the voice changed, scenes jumped, and photos appeared only briefly. It was never an opacity problem.
+Fix: new `prepare` job builds TTS + photos **once**, uploads `public/` as `prepared-public`; the 4 render jobs download that artifact, render their frame range, and merge. No build step remains in a shard. Base `render.yml` untouched.
+
+## Production plan changed by user
+Drop the "10 videos/day" idea. Make **2 videos, quality first**. No scripts deleted; batch tooling stays available but is not the focus.
+
 ## Open thread — pick this up first
 1. Run **Render Shorts (Sharded)** once on the new commit and check the joins at ~13s / ~26s / ~39s. User reported the previous run's joins were perfect and total wall time ~4 min.
 2. Download `script_rocket_fire-sharded`, watch the loop seam and end card, listen for audio glitches.

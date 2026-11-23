@@ -1,8 +1,12 @@
 name: Render Shorts (Sharded)
 
-# EXPERIMENT - splits ONE video into 4 frame ranges, renders each on its own
-# free runner, then stitches with ffmpeg. The base workflow (render.yml) is
-# untouched. To roll back completely, just delete this file.
+# EXPERIMENT - ONE build, then 4 frame ranges rendered on separate runners and
+# stitched with ffmpeg. The base workflow (render.yml) is untouched.
+# To roll back completely, just delete this file.
+#
+# IMPORTANT: the TTS voice, word timings and photos must be generated exactly
+# once. If each shard builds its own story, the four parts have different
+# narration and images and the joined video visibly changes every part.
 
 on:
   workflow_dispatch:
@@ -23,12 +27,8 @@ env:
   SHARDS: '4'
 
 jobs:
-  render:
+  prepare:
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: true
-      matrix:
-        part: [0, 1, 2, 3]
     steps:
       - uses: actions/checkout@v4
 
@@ -49,6 +49,49 @@ jobs:
 
       - name: Build story
         run: python tools/build_story.py tools/${{ env.SCRIPT }}.json
+
+      - name: Check prepared story
+        run: |
+          python - <<'PY'
+          import json
+          d = json.load(open('public/story.json'))
+          print('PREPARED totalSec:', d['totalSec'])
+          print('PREPARED photos:', sum(len(s.get('photos', [])) for s in d['scenes']))
+          print('PREPARED narration:', d['narration'])
+          PY
+
+      - name: Share one build with all shards
+        uses: actions/upload-artifact@v4
+        with:
+          name: prepared-public
+          path: public/
+          retention-days: 1
+          if-no-files-found: error
+
+  render:
+    needs: prepare
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        part: [0, 1, 2, 3]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download the single prepared build
+        uses: actions/download-artifact@v4
+        with:
+          name: prepared-public
+          path: public
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
 
       - name: Compute frame range for part ${{ matrix.part }}
         id: range
