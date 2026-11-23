@@ -145,7 +145,7 @@ All commits pushed to `main` and `master`. Checks after **every** step: `tsc --n
 
 Sharded workflow remains separately testable: delete `.github/workflows/render_sharded.yml` to roll back. Base `render.yml` untouched.
 
-## Second sprint — 20 more additions, complete at `0bc9179` + tooling commit
+## Second sprint — 20 more additions, complete at `1ab905e`
 Checks after each batch: `tsc --noEmit` clean; build 1,552 frames / 130 words / 23 photos; all 8 `statSec` hits exact; shard cover exact.
 
 **Visual / motion (StoryFlow.tsx)**
