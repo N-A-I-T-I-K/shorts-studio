@@ -382,7 +382,11 @@ export const StoryFlow: React.FC<StoryProps> = ({scenes, music, sfx, sfxPack, na
   const closing = current === scenes.length - 1
     ? interpolate(f, [lastStart, lastStart + 150], [0.05, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})
     : 0;
-  const camScale = 1 + Math.max(energy * 0.04, closing) + beat * 0.004;
+  // The first 26 frames snap in from a slight push: the feed's first 1.5s feel alive.
+  const openingRamp = interpolate(f, [0, 26], [0.08, 0], {
+    extrapolateLeft: 'clamp', extrapolateRight: 'clamp',
+  });
+  const camScale = 1 + Math.max(energy * 0.04, closing, openingRamp) + beat * 0.004;
   const camX = shock > 0 ? Math.sin(f * 1.9) * shock * 4 : 0;
   const camY = shock > 0 ? Math.cos(f * 2.4) * shock * 3 : 0;
   const camera: React.CSSProperties = {
@@ -426,6 +430,9 @@ export const StoryFlow: React.FC<StoryProps> = ({scenes, music, sfx, sfxPack, na
       <Mascot lf={f} theme={theme} energy={energy} shock={shock} />
       <HeroObject f={f} theme={theme} hero={hero ?? undefined} />
       <BeatGlow f={f} theme={theme} />
+      {energy > 0 ? (
+        <AbsoluteFill style={{background: '#fff', opacity: energy * 0.1, pointerEvents: 'none'}} />
+      ) : null}
       <ThemeBadge lf={f} theme={theme} />
       <FlowTimeline f={f} total={total} scenes={scenes} theme={theme} starts={starts} />
       <Sweep lf={f} />
