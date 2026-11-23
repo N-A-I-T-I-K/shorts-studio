@@ -35,11 +35,16 @@ NUMWORDS = {
 PUNCT = '.,!?;:"()'
 
 
-def duration(path):
-    out = subprocess.check_output(
-        ["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", path]
-    )
-    return float(out.decode().strip())
+def duration(path, words=None):
+    try:
+        out = subprocess.check_output(
+            ["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", path]
+        )
+        return float(out.decode().strip())
+    except (FileNotFoundError, subprocess.CalledProcessError, ValueError):
+        # Sharded render runners have no ffprobe. WordBoundary offsets give the
+        # end of spoken audio; add the small tail the mixer leaves after it.
+        return round((words[-1]["end"] if words else 0.0) + 0.35, 3)
 
 
 async def make_narration(voice):
@@ -103,7 +108,7 @@ async def main():
         print(f"voice {VOICE} failed ({e}); using en-US-GuyNeural instead")
         words = await make_narration("en-US-GuyNeural")
 
-    total = duration(NARRATION)
+    total = duration(NARRATION, words)
     out = []
     wi = 0
     for i, sc in enumerate(scenes):
