@@ -318,8 +318,25 @@ export const StoryFlow: React.FC<StoryProps> = ({scenes, music, sfx, sfxPack, na
     ? interpolate(f, [statF + 6, statF + 18, statF + 52], [0, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})
     : 0;
 
+  // Beat-driven camera: push in on numbers, shake on the twist, ease back on the final question.
+  // Scale never drops below 1, so no black edges appear at the joins.
+  const beat = beatPulse(f, fps);
+  const lastStart = starts[scenes.length - 1] ?? 0;
+  const closing = current === scenes.length - 1
+    ? interpolate(f, [lastStart, lastStart + 150], [0.05, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})
+    : 0;
+  const camScale = 1 + Math.max(energy * 0.04, closing) + beat * 0.004;
+  const camX = shock > 0 ? Math.sin(f * 1.9) * shock * 4 : 0;
+  const camY = shock > 0 ? Math.cos(f * 2.4) * shock * 3 : 0;
+  const camera: React.CSSProperties = {
+    position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
+    transform: `translate(${camX}px, ${camY}px) scale(${camScale})`,
+    transformOrigin: '50% 50%',
+  };
+
   return (
     <AbsoluteFill style={{background: '#000'}}>
+      <div style={camera}>
       <FlowBackground f={f} total={total} scenes={scenes} starts={starts} ends={ends} fps={fps} theme={theme} />
 
       {scenes.map((sc, i) => {
@@ -360,6 +377,7 @@ export const StoryFlow: React.FC<StoryProps> = ({scenes, music, sfx, sfxPack, na
       <Ring lf={f} />
       <Flash lf={f} />
       <CinematicBars lf={f} />
+      </div>
 
       <Captions words={allWords} accent={theme.accent} font={theme.font} karaoke />
 
