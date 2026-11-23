@@ -132,18 +132,29 @@ Decision: keep GitHub as base; the win is sharding, not platform switching. Lamb
 - All 8 `statSec` hits exact: `flame, first, three, burned, reached, stood, tallest, watching`.
 - YAML of `render_sharded.yml` parses; frame ranges cover exactly 1,579 frames.
 
+## Engine sprint — complete at `4b3e42c`
+All commits pushed to `main` and `master`. Checks after **every** step: `tsc --noEmit` clean; build still 52.63s / 1,579 frames / 129 words / 23 photos; all 8 `statSec` hits exact.
+1. `6fee004` Karaoke captions — one spoken word at a time, neon pop, no blur (cloud-fast). `StoryFlow` only; `Short`/`Story` unchanged.
+2. `52b6a05` Beat-driven camera — push-in on stat, shake on `mood: shock`, pull-back on the closing question, scale never below 1 (safe at shard joins).
+3. `a0db2bb` Sound design — date ticks, count-up pops, riser into the twist. Uses existing SFX, no new assets.
+4. `b92640f` Loop bridge — final 0.5s becomes the exact frame-0 gradient; captions fade, so Shorts wraps without a cut.
+5. `520cb02` End card — "COMMENT YOUR GUESS" + "NEXT VIDEO →" in the last 1.4s.
+6. `c7ab388` Chapter counter `01 / 08` on the timeline; viral research table added below.
+7. `bc4d2d4` Opening snap-in zoom (first 26 frames) + 10% white flash on every stat hit.
+8. `4b3e42c` `tools/make_meta.py` — generates title, description, pinned comment from any script. Output `out/meta_<topic>.txt` (gitignored, local only).
+
+Sharded workflow remains separately testable: delete `.github/workflows/render_sharded.yml` to roll back. Base `render.yml` untouched.
+
 ## Open thread — pick this up first
-1. User is running the **sharded workflow test**. Ask for the four `PART n RENDER SECONDS` lines and the final artifact before changing anything.
-2. Listen at the joins for audio glitches. If broken → silent parts + single muxed audio track.
-3. If sharding works, optionally test concurrency 2 vs 4, then apply timing to the base workflow.
+1. Run **Render Shorts (Sharded)** once on the new commit and check the joins at ~13s / ~26s / ~39s. User reported the previous run's joins were perfect and total wall time ~4 min.
+2. Download `script_rocket_fire-sharded`, watch the loop seam and end card, listen for audio glitches.
+3. If clean, optionally test concurrency 2 vs 4, then apply timing to the base workflow.
 4. Do **not** switch to Remotion Lambda yet.
 
-## Not yet done (offered, not chosen)
-1. Karaoke captions (single spoken word instead of 3-word chunks).
-2. Beat-driven camera (push-in on number, shake on climax, pull-back on question).
-3. Sound design layer (riser before 2015 landing, date ticks, count-up ticks).
-4. Upgrade the other 27 scripts to new arc + `statWord` + 3 `photo_query` before bulk rendering.
-5. Refresh docs after any engine change (`ENGINE.md`, this file).
+## Not yet done
+1. Upgrade the other 27 scripts to new arc + `statWord` + 3 `photo_query` before bulk rendering.
+2. Apply the new engine to the other scripts (they currently use the older `Story` composition).
+3. Refresh `ENGINE.md` with the new components if needed.
 
 ## Conventions / constraints
 - Only touch `src/` when the user explicitly asks for engine work. They have approved all changes above, but ask first for new ones.
