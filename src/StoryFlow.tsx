@@ -388,6 +388,30 @@ export const StoryFlow: React.FC<StoryProps> = ({scenes, music, sfx, sfxPack, na
           <Audio src={staticFile(sfx)} volume={0.55} />
         </Sequence>
       )) : null}
+
+      {/* Sound design layer: soft date ticks, count-up pops, and a riser into the twist. */}
+      {starts.map((s, i) => (
+        <Sequence key={`dateTick${i}`} from={s}>
+          <Audio src={staticFile('click.mp3')} volume={0.28} />
+        </Sequence>
+      ))}
+      {scenes.flatMap((scene, i) => {
+        if (!scene.statSec) return [];
+        const at = starts[i] + Math.round((scene.statSec - scene.start) * fps);
+        return [0, 7, 14].map((d, k) => (
+          <Sequence key={`countPop${i}-${k}`} from={at + d}>
+            <Audio src={staticFile('pop.mp3')} volume={0.16 + k * 0.07} />
+          </Sequence>
+        ));
+      })}
+      {sc?.mood === 'shock' ? (
+        <Sequence from={Math.max(0, statF - 24)}>
+          <Audio
+            src={staticFile('whoosh.mp3')}
+            volume={(fr) => interpolate(fr, [0, 24], [0.08, 0.5], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}
+          />
+        </Sequence>
+      ) : null}
       {music ? (
         <Audio
           src={staticFile(music)}
