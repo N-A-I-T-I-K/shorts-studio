@@ -447,6 +447,8 @@ export const StoryFlow: React.FC<StoryProps> = ({scenes, music, sfx, sfxPack, na
   const ends = scenes.map((s, i) => (i < scenes.length - 1 ? starts[i + 1] : durationInFrames));
 
   const allWords = scenes.flatMap((s) => s.words ?? []);
+  // Sidechain: dip the music under each big stat so the number lands cleanly.
+  const duckAt = scenes.map((s) => s.statSec).filter((v): v is number => typeof v === 'number');
 
   // The mascot reacts to the story beat and to twist scenes flagged in the script.
   const current = starts.reduce((acc, s, i) => (f >= s ? i : acc), 0);
@@ -574,15 +576,26 @@ export const StoryFlow: React.FC<StoryProps> = ({scenes, music, sfx, sfxPack, na
           />
         </Sequence>
       ) : null}
+      <Sequence from={Math.max(0, durationInFrames - 18)}>
+        <Audio
+          src={staticFile('whoosh.mp3')}
+          volume={(fr) => interpolate(fr, [0, 18], [0.05, 0.35], {
+            extrapolateLeft: 'clamp', extrapolateRight: 'clamp',
+          })}
+        />
+      </Sequence>
       {music ? (
         <Audio
           src={staticFile(music)}
-          volume={(fr) =>
-            interpolate(fr, [0, 30, durationInFrames - 45, durationInFrames], [0, 0.11, 0.11, 0], {
+          volume={(fr) => {
+            const base = interpolate(fr, [0, 30, durationInFrames - 45, durationInFrames], [0, 0.11, 0.11, 0], {
               extrapolateLeft: 'clamp',
               extrapolateRight: 'clamp',
-            })
-          }
+            });
+            const t = fr / fps;
+            const duck = duckAt.some((st) => t >= st && t <= st + 0.4) ? 0.55 : 1;
+            return base * duck;
+          }}
         />
       ) : null}
     </AbsoluteFill>
