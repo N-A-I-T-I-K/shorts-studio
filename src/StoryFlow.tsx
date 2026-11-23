@@ -84,6 +84,7 @@ const FlowBackground: React.FC<{
                 width: '100%',
                 height: '100%',
                 objectFit: 'cover',
+                zIndex: 1,
                 opacity: op,
                 transform: `translateX(${pan}px) scale(${zoom}) rotate(${tilt}deg)`,
               }}
@@ -467,6 +468,7 @@ export const StoryFlow: React.FC<StoryProps> = ({scenes, music, sfx, sfxPack, na
     <AbsoluteFill style={{background: '#000'}}>
       <div style={camera}>
       <FlowBackground f={f} total={total} scenes={scenes} starts={starts} ends={ends} fps={fps} theme={theme} />
+      <div style={{position: 'absolute', inset: 0, zIndex: 2}}>
       {scenes.map((sc, i) => {
         const from = starts[i];
         const to = ends[i];
@@ -512,6 +514,7 @@ export const StoryFlow: React.FC<StoryProps> = ({scenes, music, sfx, sfxPack, na
       <Ring lf={f} />
       <Flash lf={f} />
       <CinematicBars lf={f} />
+      </div>
       </div>
 
       <div
