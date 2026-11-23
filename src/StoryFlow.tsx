@@ -361,7 +361,7 @@ export const StoryFlow: React.FC<StoryProps> = ({scenes, music, sfx, sfxPack, na
       <Flash lf={f} />
       <CinematicBars lf={f} />
 
-      <Captions words={allWords} accent={theme.accent} font={theme.font} />
+      <Captions words={allWords} accent={theme.accent} font={theme.font} karaoke />
 
       {narration ? <Audio src={staticFile(narration)} /> : null}
       {sfx ? <Audio src={staticFile(sfx)} volume={0.3} /> : null}
