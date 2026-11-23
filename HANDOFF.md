@@ -181,6 +181,13 @@ User reported: background photos looked missing, voice changed partway, and new 
 3. Removed the new pop-ins: giant ghost year, shock RGB jitter, shock chromatic glitch, and the particle layer that reset every 8s. Kept the smooth eased crossfades, parallax/tilt, corner frame, beat waveform, underline sweep and beat vignette.
 4. Current build: 48.12s / 1,444 frames / 130 words / 23 photos; all 8 stat hits exact; shard ranges `0-360`, `361-721`, `722-1082`, `1083-1443`.
 
+## Second feedback fix — CI reliability
+User reported an 8-minute run, "stood back up" spoken twice, and photos visible only for 1-2s.
+1. **8 min cause (run 6):** merge `Install ffmpeg` took 231s (`apt-get update` on a slow mirror) and `Build story` took 75-91s in some jobs (TTS retries). Run 5 took 274s total with the same code — it is runner flakiness, not render cost. Fixed by removing `apt-get update`, adding a 150s timeout, and falling back to a pip-bundled ffmpeg (`imageio-ffmpeg`) with a `FF` env var used by stitch + verify.
+2. **Photos vanish:** fresh CI checkouts had empty `public/assets` and Openverse returns nothing for most narrow queries. `fetch_assets.py` now fills any missing slot with a deterministic Picsum photo (verified 126 KB downloaded), so all 8 scenes always have 3 crossfading images. Credits include Picsum.
+3. **Repeated phrase:** `build_story.py` now drops byte-identical consecutive audio chunks (edge-tts resend after a network retry). Also rephrased "stood back up" → "stood tall again". No repeated words in the generated word list.
+4. Current build: 48.22s / 1,447 frames / 130 words / 23 photos, all 8 stat hits exact, shard cover exact.
+
 ## Open thread — pick this up first
 1. Run **Render Shorts (Sharded)** once on the new commit and check the joins at ~13s / ~26s / ~39s. User reported the previous run's joins were perfect and total wall time ~4 min.
 2. Download `script_rocket_fire-sharded`, watch the loop seam and end card, listen for audio glitches.

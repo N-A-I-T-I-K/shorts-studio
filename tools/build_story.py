@@ -52,10 +52,17 @@ async def make_narration(voice):
     full = " ".join(sc["text"].strip() for sc in scenes)
     comm = edge_tts.Communicate(full, voice, rate=RATE, pitch=PITCH, boundary="WordBoundary")
     words = []
+    prev_chunk = None
     with open(NARRATION, "wb") as f:
         async for ch in comm.stream():
             if ch["type"] == "audio":
-                f.write(ch["data"])
+                data = ch["data"]
+                # edge-tts can resend a chunk after a network retry. Writing it
+                # twice makes a phrase sound repeated in the final video.
+                if data == prev_chunk:
+                    continue
+                prev_chunk = data
+                f.write(data)
             elif ch["type"] == "WordBoundary":
                 s = ch["offset"] / 1e7
                 words.append({

@@ -94,10 +94,19 @@ jobs:
     steps:
       - name: Install ffmpeg
         run: |
-          if ! command -v ffmpeg >/dev/null 2>&1; then
-            sudo apt-get update && sudo apt-get install -y --no-install-recommends ffmpeg
+          if command -v ffmpeg >/dev/null 2>&1; then
+            ffmpeg -version | head -1
+            exit 0
           fi
-          ffmpeg -version | head -1
+          # apt-get update is what stalls for minutes on some runners. The
+          # package index is already present, so install directly and fall back
+          # to a bundled ffmpeg wheel if apt is unavailable.
+          if ! timeout 150 sudo apt-get install -y --no-install-recommends ffmpeg; then
+            echo "apt failed - using bundled ffmpeg from pip"
+            pip install --quiet imageio-ffmpeg
+            echo "FF=$(python -c 'import imageio_ffmpeg; print(imageio_ffmpeg.get_ffmpeg_exe())')" >> "$GITHUB_ENV"
+          fi
+          ${FF:-ffmpeg} -version | head -1
 
       - name: Download all parts
         uses: actions/download-artifact@v4
@@ -113,7 +122,7 @@ jobs:
           for i in 0 1 2 3; do echo "file 'parts/part_${i}.mp4'" >> list.txt; done
           cat list.txt
           t0=$(date +%s)
-          ffmpeg -y -f concat -safe 0 -i list.txt \
+          ${FF:-ffmpeg} -y -f concat -safe 0 -i list.txt \
             -c:v libx264 -preset veryfast -crf 18 \
             -c:a aac -b:a 192k -movflags +faststart \
             out/${SCRIPT}_sharded.mp4
@@ -123,7 +132,7 @@ jobs:
         run: |
           ls -la out/
           test -s out/${SCRIPT}_sharded.mp4
-          ffprobe -v error -show_entries format=duration,size -of default=nw=1 out/${SCRIPT}_sharded.mp4
+          ${FF:-ffmpeg} -v error -i out/${SCRIPT}_sharded.mp4 -f null - 2>&1 | head -5
 
       - name: Upload final video
         uses: actions/upload-artifact@v4
