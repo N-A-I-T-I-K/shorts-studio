@@ -86,6 +86,7 @@ jobs:
           name: part-${{ matrix.part }}
           path: out/part_${{ matrix.part }}.mp4
           retention-days: 1
+          if-no-files-found: error
 
   merge:
     needs: render
@@ -120,11 +121,13 @@ jobs:
 
       - name: Verify output
         run: |
+          ls -la out/
           test -s out/${SCRIPT}_sharded.mp4
           ffprobe -v error -show_entries format=duration,size -of default=nw=1 out/${SCRIPT}_sharded.mp4
 
       - name: Upload final video
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.SCRIPT }}-sharded
-          path: out/${SCRIPT}_sharded.mp4
+          name: script_rocket_fire-sharded
+          path: out/script_rocket_fire_sharded.mp4
+          if-no-files-found: error
