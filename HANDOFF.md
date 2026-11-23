@@ -156,3 +156,21 @@ Decision: keep GitHub as base; the win is sharding, not platform switching. Lamb
 ## Local workspace state (not pushed)
 - `public/voice/scene*.mp3` and `narration.mp3` show as modified from a local `build_story.py` run; harmless — GitHub regenerates them.
 - Many untracked local files exist (`public/assets/`, `public/clip.mp4`, `voice_samples/`, `skills/`, `.agents/`, etc.). Do not delete or commit them.
+
+---
+
+## Viral Shorts research — top 10 (Nov 2026)
+Sources: Metricool 2026 YouTube Study (799,718 videos / 71,177 accounts; Shorts views +127%), Later "10 Proven Tips", Sprout Social. Only engine-relevant items are implemented; posting/analytics ones are channel-side.
+
+| # | What makes Shorts spread | Status in this engine |
+|---|---|---|
+| 1 | Hook in the **first 1.5s** — 61% of views come from the swipe feed; no logo, no greeting | ✓ hook card + impact hit on frame 0 |
+| 2 | **Seamless loop** — last frame flows into the first; YouTube rewards watch-time-to-length ratio | → adding loop bridge |
+| 3 | **Bold high-contrast captions** — 69% watch muted in public | ✓ karaoke single-word captions |
+| 4 | Short runtime — avg view 15.6s, sharp drop-off after 45s | ⚠ story is 52.6s; hook front-loaded, data moments keep pace |
+| 5 | On-screen text carries the point with sound off | ✓ date card, stat, title all burned in |
+| 6 | Beat-synced motion + SFX hits | ✓ pulses, camera push/shake, ticks, pops, riser |
+| 7 | Pattern interrupt every ~2s | ✓ 23 crossfading photos, 4 chapter transitions |
+| 8 | **Pinned-comment question** — engagement down 62.6%; replies pause the loop | → adding end prompt |
+| 9 | Related-video tease — Short feeds the long-form/channel | → adding "NEXT" tag at the end |
+| 10 | Consistent series identity + "you are here" progress | ✓ theme badge, mascot, timeline → adding chapter counter |

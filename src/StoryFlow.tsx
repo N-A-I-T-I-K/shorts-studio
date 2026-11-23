@@ -303,6 +303,18 @@ const FlowTimeline: React.FC<{f: number; total: number; scenes: Scene[]; theme: 
           </div>
         );
       })}
+      <div
+        style={{
+          position: 'absolute', right: 44, top: 42,
+          fontSize: 26, fontWeight: 900, color: '#fff', letterSpacing: 2,
+          textShadow: '0 2px 0 #000',
+          opacity: interpolate(f, [0, 14], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}),
+        }}
+      >
+        {String(index + 1).padStart(2, '0')}
+        <span style={{color: theme.accent}}> / </span>
+        {String(scenes.length).padStart(2, '0')}
+      </div>
     </div>
   );
 };
