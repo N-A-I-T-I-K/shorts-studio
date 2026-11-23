@@ -145,6 +145,35 @@ All commits pushed to `main` and `master`. Checks after **every** step: `tsc --n
 
 Sharded workflow remains separately testable: delete `.github/workflows/render_sharded.yml` to roll back. Base `render.yml` untouched.
 
+## Second sprint — 20 more additions, complete at `0bc9179` + tooling commit
+Checks after each batch: `tsc --noEmit` clean; build 1,552 frames / 130 words / 23 photos; all 8 `statSec` hits exact; shard cover exact.
+
+**Visual / motion (StoryFlow.tsx)**
+1. Photos drift sideways slowly, alternating direction per scene.
+2. Photos get a tiny Ken Burns tilt.
+3. Photo crossfades now ease in/out instead of linear.
+4. Floating embers via the existing `Particles` component (18, looped).
+5. Quick RGB chromatic glitch at the start of every `mood: shock` twist.
+6. Beat-reactive vignette (subtle opacity pulse).
+7. Date text jitters on shock scenes.
+8. Accent underline sweeps under the date/title.
+9. Persistent animated corner frame — recurring series signature.
+10. Giant translucent ghost year drifting behind the visuals.
+11. 12-bar beat waveform in the lower-left.
+12. Music ducks 45% for 0.4s on every stat hit (sidechain).
+13. Rising whoosh into the loop seam.
+
+**Tooling / project**
+14. `tools/check_story.py` — validates device names, word count, 8 scenes, `statWord`, year/title length, ending question. Use `--all`.
+15. `tools/make_meta.py` — added thumbnail text (≤5 words) and `--all`.
+16. `tools/template_script.json` — safe template (not `script_*`, so never rendered).
+17. `tools/check_shards.py` — verifies shard frame ranges exactly cover story.json.
+18. `tools/build_all.py` — validate + build every script, saving `public/story_<topic>.json`.
+19. `SHORTS_CHECKLIST.md` — pre-publish and after-publish checklist from the viral research.
+20. Script text tightened to 130 words so it passes the new validator; regenerated story is 51.74s / 1,552 frames.
+
+Current shard ranges (51.74s story): `0-387`, `388-775`, `776-1163`, `1164-1551`. They are computed dynamically, so they update automatically with any script change.
+
 ## Open thread — pick this up first
 1. Run **Render Shorts (Sharded)** once on the new commit and check the joins at ~13s / ~26s / ~39s. User reported the previous run's joins were perfect and total wall time ~4 min.
 2. Download `script_rocket_fire-sharded`, watch the loop seam and end card, listen for audio glitches.

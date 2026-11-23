@@ -1,0 +1,19 @@
+{
+  "_comment": "Template only. Copy to tools/script_<topic>.json before building. This file is deliberately NOT named script_* so it is never rendered.",
+  "voice": "en-US-AndrewNeural",
+  "rate": "+8%",
+  "pitch": "+0Hz",
+  "music": "music_hype.mp3",
+  "hero": "rocket",
+  "theme": "ember_ascent",
+  "scenes": [
+    {"year": "NOW", "title": "Big Claim", "device": "online", "text": "Open with the single most surprising fact in the whole story, in about fifteen words.", "hook": "ONE FACT CHANGES EVERYTHING", "stat": "1957", "statLabel": "FIRST SPARK", "statWord": "fact", "photo_query": "dramatic night sky"},
+    {"year": "1961", "title": "Second Beat", "device": "jump3d", "text": "Add the first linking sentence that carries the listener forward to the next moment.", "stat": "1", "statLabel": "FIRST", "statWord": "first", "photo_query": "historical moment"},
+    {"year": "1969", "title": "Third Beat", "device": "globe3d", "text": "Keep the chain going with a concrete number the narrator can say naturally.", "stat": "3", "statLabel": "THREE", "statWord": "three", "photo_query": "wide landscape"},
+    {"year": "1981", "title": "The Turn", "device": "bars3d", "text": "Introduce the problem or the thing that everyone thought could not be done.", "stat": "2 MIN", "statLabel": "TURNING POINT", "statWord": "turn", "photo_query": "engineering detail"},
+    {"year": "2008", "title": "The Surprise", "device": "network3d", "text": "Deliver the twist: something unexpected finally worked against the odds.", "stat": "2008", "statLabel": "BREAKTHROUGH", "statWord": "worked", "mood": "shock", "photo_query": "breakthrough moment"},
+    {"year": "2015", "title": "The Climax", "device": "topdown", "text": "Peak of the story: describe the moment that changed the record forever.", "stat": "2015", "statLabel": "RECORD", "statWord": "record", "mood": "shock", "photo_query": "record breaking"},
+    {"year": "2022", "title": "The Scale", "device": "citynight", "text": "Show how big it became, with one clean number the viewer can remember.", "stat": "BIGGEST", "statLabel": "EVER", "statWord": "biggest", "photo_query": "city lights night"},
+    {"year": "NEXT", "title": "Your Turn", "device": "online", "text": "Wrap the arc in one line and ask the viewer a question they will want to answer?", "stat": "NEXT", "statLabel": "YOUR ANSWER", "statWord": "answer", "photo_query": "stars night sky"}
+  ]
+}
