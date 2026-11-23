@@ -35,6 +35,11 @@ const FlowBackground: React.FC<{
   const angle = 140 + (f / Math.max(1, total)) * 70;
   const glowX = 540 + Math.sin(f / 190) * 380;
   const glowY = 900 + Math.cos(f / 240) * 420;
+  // Loop seam: the last half-second becomes the exact gradient used on frame 0,
+  // so when Shorts wraps the video there is no visible cut.
+  const loopOp = interpolate(f, [total - 15, total - 1], [0, 1], {
+    extrapolateLeft: 'clamp', extrapolateRight: 'clamp',
+  });
   return (
     <AbsoluteFill style={{background: `linear-gradient(${angle}deg, ${c1}, ${c2})`}}>
       <div
@@ -82,6 +87,9 @@ const FlowBackground: React.FC<{
       })}
       <AbsoluteFill style={{background: `linear-gradient(180deg, ${theme.photoTint}55, ${theme.photoTint}cc)`}} />
       <ThemeBG seed={theme.bgStyle * 31} variant={theme.bgStyle} accent={theme.accent} lf={f} />
+      {loopOp > 0 ? (
+        <AbsoluteFill style={{background: `linear-gradient(140deg, ${c1}, ${c2})`, opacity: loopOp}} />
+      ) : null}
     </AbsoluteFill>
   );
 };
@@ -379,7 +387,16 @@ export const StoryFlow: React.FC<StoryProps> = ({scenes, music, sfx, sfxPack, na
       <CinematicBars lf={f} />
       </div>
 
-      <Captions words={allWords} accent={theme.accent} font={theme.font} karaoke />
+      <div
+        style={{
+          position: 'absolute', inset: 0,
+          opacity: interpolate(f, [durationInFrames - 15, durationInFrames - 1], [1, 0], {
+            extrapolateLeft: 'clamp', extrapolateRight: 'clamp',
+          }),
+        }}
+      >
+        <Captions words={allWords} accent={theme.accent} font={theme.font} karaoke />
+      </div>
 
       {narration ? <Audio src={staticFile(narration)} /> : null}
       {sfx ? <Audio src={staticFile(sfx)} volume={0.3} /> : null}
