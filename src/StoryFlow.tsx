@@ -2,6 +2,7 @@ import React from 'react';
 import {
   AbsoluteFill,
   Audio,
+  Easing,
   Img,
   Sequence,
   interpolate,
@@ -15,7 +16,7 @@ import {CAR_TYPES, Vehicle} from './Vehicle';
 import {NET_TYPES, NetVisual} from './NetVisuals';
 import {NET3D_TYPES, Visual3D} from './Scene3D';
 import {GTA_TYPES, VisualGta} from './GtaScenes';
-import {CinematicBars, DataRain, Flash, GridBG, Ring, Road, Scanlines, SpeedLines, Sweep, Vignette} from './VFX';
+import {ChromaticAberration, CinematicBars, DataRain, Flash, GridBG, Particles, Ring, Road, Scanlines, SpeedLines, Sweep, Vignette} from './VFX';
 import {ThemeBG} from './ThemeBG';
 import {BeatGlow, CardFrame, DataMoment, HeroObject, Mascot, Sparkles, ThemeBadge, beatPulse} from './MotionKit';
 import {getTheme, Theme} from './themes';
@@ -63,12 +64,17 @@ const FlowBackground: React.FC<{
           const s = cue ? cue.from * fps : starts[i] + ((ends[i] - starts[i]) * j) / photos.length;
           const e = cue ? cue.to * fps : starts[i] + ((ends[i] - starts[i]) * (j + 1)) / photos.length;
           const F = 15;
+          const smooth = {extrapolateLeft: 'clamp' as const, extrapolateRight: 'clamp' as const, easing: Easing.inOut(Easing.ease)};
           const op = Math.min(
-            interpolate(f, [s - F, s + F], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}),
-            interpolate(f, [e - F, e + F], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})
+            interpolate(f, [s - F, s + F], [0, 1], smooth),
+            interpolate(f, [e - F, e + F], [1, 0], smooth)
           ) * theme.photoOpacity;
           if (op <= 0.002) return null;
-          const zoom = 1.04 + ((f - s) / Math.max(1, e - s)) * 0.09;
+          const progress = (f - s) / Math.max(1, e - s);
+          const zoom = 1.04 + progress * 0.09;
+          // Alternating slow horizontal drift + a tiny tilt makes still photos feel filmed.
+          const pan = (i % 2 ? -1 : 1) * progress * 26;
+          const tilt = ((i + j) % 3 - 1) * progress * 1.2;
           return (
             <Img
               key={`${i}-${j}`}
@@ -79,7 +85,7 @@ const FlowBackground: React.FC<{
                 height: '100%',
                 objectFit: 'cover',
                 opacity: op,
-                transform: `scale(${zoom})`,
+                transform: `translateX(${pan}px) scale(${zoom}) rotate(${tilt}deg)`,
               }}
             />
           );
@@ -164,6 +170,14 @@ const FlowScene: React.FC<{
   // The date is announced, then it clears the screen so the visual can breathe.
   const dateOp = interpolate(lf, [dateEnd, dateEnd + 12], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   const datePop = interpolate(lf, [0, 9], [0.62, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  // Twist scenes get a quick RGB jitter on the date; the underline sweeps as it lands.
+  const jitterAmt = scene.mood === 'shock'
+    ? interpolate(lf, [statAt, statAt + 8, statAt + 48], [0, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})
+    : 0;
+  const jitter = Math.sin(lf * 1.7) * 5 * jitterAmt;
+  const sweep = interpolate(lf, [dateEnd - 4, dateEnd + 22], [0, 1], {
+    extrapolateLeft: 'clamp', extrapolateRight: 'clamp',
+  });
   // The picture rises in right after the date, in time with the story.
   const visualOp = interpolate(lf, [dateEnd - 4, dateEnd + 16], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   const visualY = interpolate(lf, [dateEnd - 4, dateEnd + 20], [90, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
@@ -175,6 +189,18 @@ const FlowScene: React.FC<{
 
   return (
     <AbsoluteFill style={{opacity: op}}>
+      <div
+        style={{
+          position: 'absolute', top: 300, left: 0, right: 0,
+          textAlign: 'center', fontFamily: theme.font, fontWeight: 900,
+          fontSize: 520, lineHeight: '520px', color: theme.accent,
+          opacity: 0.045, whiteSpace: 'nowrap',
+          transform: `translateY(${lf * 0.3}px) scale(1.15)`,
+          pointerEvents: 'none',
+        }}
+      >
+        {scene.year}
+      </div>
       <ChapterTransition lf={lf} theme={theme} kind={index} />
       <div
         style={{
@@ -186,7 +212,7 @@ const FlowScene: React.FC<{
           fontFamily: theme.font,
           color: '#fff',
           opacity: dateOp,
-          transform: `scale(${datePop})`,
+          transform: `translateX(${jitter}px) scale(${datePop})`,
         }}
       >
         <div
@@ -202,6 +228,15 @@ const FlowScene: React.FC<{
           {scene.year}
         </div>
         <KineticTitle text={scene.title} lf={lf} accent={theme.accent} font={theme.font} />
+        <div
+          style={{
+            position: 'absolute', left: '50%', top: 386, width: 460, height: 6,
+            marginLeft: -230, borderRadius: 3, background: theme.accent,
+            boxShadow: `0 0 26px ${theme.accent}`,
+            opacity: dateOp * 0.85,
+            transform: `scaleX(${sweep})`,
+          }}
+        />
       </div>
 
       {isNet ? <GridBG lf={lf} /> : null}
@@ -319,6 +354,53 @@ const FlowTimeline: React.FC<{f: number; total: number; scenes: Scene[]; theme: 
   );
 };
 
+/** Thin animated corner frame — a cheap recurring series signature. */
+const CornerFrame: React.FC<{f: number; theme: Theme}> = ({f, theme}) => {
+  const {fps} = useVideoConfig();
+  const p = beatPulse(f, fps);
+  const op = interpolate(f, [0, 20], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}) * (0.28 + p * 0.3);
+  const arm = 78;
+  const edge = 34;
+  const corners: React.CSSProperties[] = [
+    {left: edge, top: edge, borderTop: '5px solid', borderLeft: '5px solid'},
+    {right: edge, top: edge, borderTop: '5px solid', borderRight: '5px solid'},
+    {left: edge, bottom: edge, borderBottom: '5px solid', borderLeft: '5px solid'},
+    {right: edge, bottom: edge, borderBottom: '5px solid', borderRight: '5px solid'},
+  ];
+  return (
+    <AbsoluteFill style={{pointerEvents: 'none', opacity: op}}>
+      {corners.map((c, i) => (
+        <div key={i} style={{position: 'absolute', width: arm, height: arm, borderColor: theme.accent, ...c}} />
+      ))}
+    </AbsoluteFill>
+  );
+};
+
+/** Small beat waveform in the lower-left corner: a visual cue that the track is alive. */
+const BeatWave: React.FC<{f: number; theme: Theme}> = ({f, theme}) => {
+  const {fps} = useVideoConfig();
+  const p = beatPulse(f, fps);
+  return (
+    <AbsoluteFill style={{pointerEvents: 'none'}}>
+      {Array.from({length: 12}).map((_, i) => {
+        const h = 8 + (14 + Math.abs(Math.sin(f / 7 + i * 0.7)) * 34) * (0.35 + p * 0.65);
+        return (
+          <div
+            key={i}
+            style={{
+              position: 'absolute', left: 38 + i * 13, bottom: 330,
+              width: 7, height: h, borderRadius: 4,
+              background: i % 3 === 0 ? theme.secondary : theme.accent,
+              opacity: 0.4 + p * 0.45,
+              transformOrigin: 'bottom',
+            }}
+          />
+        );
+      })}
+    </AbsoluteFill>
+  );
+};
+
 /** Last-second engagement card: a reply prompt plus a tease into the next video. */
 const EndPrompt: React.FC<{f: number; totalF: number; theme: Theme}> = ({f, totalF, theme}) => {
   const lf = f - (totalF - 44);
@@ -399,6 +481,8 @@ export const StoryFlow: React.FC<StoryProps> = ({scenes, music, sfx, sfxPack, na
     <AbsoluteFill style={{background: '#000'}}>
       <div style={camera}>
       <FlowBackground f={f} total={total} scenes={scenes} starts={starts} ends={ends} fps={fps} theme={theme} />
+      <Particles lf={f % (fps * 8)} seed={7} color={theme.accent} count={18} />
+      {shock > 0 && f - statF < 12 ? <ChromaticAberration lf={f - statF} /> : null}
 
       {scenes.map((sc, i) => {
         const from = starts[i];
@@ -434,10 +518,14 @@ export const StoryFlow: React.FC<StoryProps> = ({scenes, music, sfx, sfxPack, na
         <AbsoluteFill style={{background: '#fff', opacity: energy * 0.1, pointerEvents: 'none'}} />
       ) : null}
       <ThemeBadge lf={f} theme={theme} />
+      <CornerFrame f={f} theme={theme} />
+      <BeatWave f={f} theme={theme} />
       <FlowTimeline f={f} total={total} scenes={scenes} theme={theme} starts={starts} />
       <Sweep lf={f} />
       <Scanlines />
-      <Vignette />
+      <div style={{position: 'absolute', inset: 0, opacity: 0.8 + beat * 0.2}}>
+        <Vignette />
+      </div>
       <Ring lf={f} />
       <Flash lf={f} />
       <CinematicBars lf={f} />
