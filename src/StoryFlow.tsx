@@ -307,6 +307,43 @@ const FlowTimeline: React.FC<{f: number; total: number; scenes: Scene[]; theme: 
   );
 };
 
+/** Last-second engagement card: a reply prompt plus a tease into the next video. */
+const EndPrompt: React.FC<{f: number; totalF: number; theme: Theme}> = ({f, totalF, theme}) => {
+  const lf = f - (totalF - 44);
+  if (lf < 0) return null;
+  const enter = interpolate(lf, [0, 12], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const loopOut = interpolate(f, [totalF - 15, totalF - 1], [1, 0], {
+    extrapolateLeft: 'clamp', extrapolateRight: 'clamp',
+  });
+  const op = enter * loopOut;
+  const y = interpolate(lf, [0, 12], [34, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  return (
+    <AbsoluteFill style={{pointerEvents: 'none', fontFamily: theme.font}}>
+      <div
+        style={{
+          position: 'absolute', top: '86.5%', left: 0, right: 0,
+          display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 14,
+          opacity: op, transform: `translateY(${y}px)`,
+        }}
+      >
+        <div
+          style={{
+            padding: '14px 40px', borderRadius: 20,
+            background: '#000c', border: `4px solid ${theme.accent}`,
+            fontSize: 40, fontWeight: 900, letterSpacing: 2, color: '#fff',
+            textShadow: '0 3px 0 #000', boxShadow: `0 0 34px ${theme.accent}55`,
+          }}
+        >
+          COMMENT YOUR GUESS
+        </div>
+        <div style={{fontSize: 26, fontWeight: 800, color: theme.accent, letterSpacing: 3, textShadow: '0 2px 0 #000'}}>
+          NEXT VIDEO&nbsp; →
+        </div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
 export const StoryFlow: React.FC<StoryProps> = ({scenes, music, sfx, sfxPack, narration, theme: themeId, hero}) => {
   const {fps, durationInFrames} = useVideoConfig();
   const f = useCurrentFrame();
@@ -397,6 +434,7 @@ export const StoryFlow: React.FC<StoryProps> = ({scenes, music, sfx, sfxPack, na
       >
         <Captions words={allWords} accent={theme.accent} font={theme.font} karaoke />
       </div>
+      <EndPrompt f={f} totalF={durationInFrames} theme={theme} />
 
       {narration ? <Audio src={staticFile(narration)} /> : null}
       {sfx ? <Audio src={staticFile(sfx)} volume={0.3} /> : null}
