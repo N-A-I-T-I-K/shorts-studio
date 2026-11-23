@@ -1,36 +1,54 @@
 # Render speed test on Kaggle
 
-`tools/kaggle_render.ipynb` is a ready-to-upload notebook. It installs Node 20 + all dependencies, clones this repo, builds the sample clip and prints a timing table for every step (including the render), then shows the finished video.
+Two ways to run it. **Method A is the reliable one.**
 
-## Steps
+## Method A — paste one script into one cell (recommended)
 
-1. Go to https://www.kaggle.com/code → **New Notebook** → **Python**.
-2. Right sidebar: turn **Internet: On**. (GPU is optional — see note below.)
-3. In the Kaggle file browser, upload `tools/kaggle_render.ipynb` from this folder, or paste its cells into the new notebook.
-4. Run all cells (**Run All**).
-5. The last cell prints a table like:
+1. Kaggle → **New Notebook** → **Python**.
+2. Right sidebar: turn **Internet: On**.
+3. Open `tools/kaggle_render.py` from this folder in a text editor, copy **all** of it.
+4. Paste into the single empty code cell.
+5. **Run** (Shift+Enter).
 
-| step | seconds |
-|---|---|
-| install Node 20 | 8.2 |
-| pip edge-tts | 6.4 |
-| clone repo | 1.1 |
-| npm ci | 24.7 |
-| fetch photos | 31.0 |
-| build story | 12.5 |
-| render c=4 | 214.3 |
+It prints a timing table for every step, then shows the video with a download link.
 
-and shows the video plus a download link.
+## Method B — use the .ipynb as an actual notebook
 
-## Useful switches (setup cell)
+Do **not** paste the `.ipynb` text into a cell — that causes `NameError: name 'null' is not defined` because JSON `null` isn't Python.
+
+Instead:
+1. Kaggle → **New Notebook** → **Python**.
+2. Create the notebook, then use **File → Import Notebook** (or upload `tools/kaggle_render.ipynb` through the Kaggle file browser as a notebook file, not as text).
+3. Run all cells.
+
+If Method B is awkward, just use Method A — it does exactly the same thing.
+
+## Switches (top of the script / setup cell)
 
 - `SCRIPT = 'script_rocket_fire'` — point to any `tools/script_*.json`.
 - `CONCURRENCIES = [2, 4, 8]` — renders 3 times and reports which is fastest.
-- Change `--gl=swangle` to `--gl=angle` in the render cell to try the GPU path.
+- Change `--gl=swangle` to `--gl=angle` in the render command to try the GPU path.
+
+## Example output
+
+```
+========================================
+SPEED SUMMARY
+========================================
+install Node 20           8.2s
+install ffmpeg           14.1s
+pip edge-tts              6.4s
+clone repo                1.1s
+npm ci                   24.7s
+fetch photos             31.0s
+build story              12.5s
+render c=4              214.3s
+TOTAL                   312.3s
+```
 
 ## Notes
 
-- **GPU doesn't help with `--gl=swangle`** — that's Chrome's software renderer. Kaggle's free T4 will only matter with `--gl=angle`, and headless ANGLE inside a Kaggle container may need extra setup. Start with swangle for a clean comparison against GitHub Actions.
+- **GPU doesn't help with `--gl=swangle`** — that's Chrome's software renderer. Kaggle's free T4 only matters with `--gl=angle`, and headless ANGLE in a Kaggle container may need extra setup. Keep `swangle` for a clean comparison against GitHub Actions first.
 - **Internet must be on** for the Node download, `git clone`, `pip`, `npm ci` and Openverse photos.
-- Everything is written under `/kaggle/working/shorts-studio/out/` and is downloadable from the Kaggle output panel.
-- Kaggle session limit is several hours, enough for a few renders.
+- Everything is written under `/kaggle/working/shorts-studio/out/` and is downloadable from Kaggle's output panel.
+- The script clones the **pushed** GitHub version, so local uncommitted changes won't appear in the Kaggle run.
