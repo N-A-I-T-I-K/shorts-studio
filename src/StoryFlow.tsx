@@ -17,7 +17,7 @@ import {NET3D_TYPES, Visual3D} from './Scene3D';
 import {GTA_TYPES, VisualGta} from './GtaScenes';
 import {CinematicBars, DataRain, Flash, GridBG, Ring, Road, Scanlines, SpeedLines, Sweep, Vignette} from './VFX';
 import {ThemeBG} from './ThemeBG';
-import {CardFrame, Mascot, Sparkles, ThemeBadge} from './MotionKit';
+import {BeatGlow, CardFrame, DataMoment, HeroObject, Mascot, Sparkles, ThemeBadge, beatPulse} from './MotionKit';
 import {getTheme, Theme} from './themes';
 import {Hook, KineticTitle, Scene, Stat, StoryProps} from './Story';
 
@@ -86,25 +86,53 @@ const FlowBackground: React.FC<{
   );
 };
 
-/** Quick light streak that punctuates each new date. */
-const ChapterKick: React.FC<{lf: number; theme: Theme}> = ({lf, theme}) => {
-  const x = interpolate(lf, [2, 30], [-400, 1480], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
-  const op = interpolate(lf, [2, 12, 30], [0, 0.95, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+/** Four different chapter transitions, rotated one per scene. Cheap DOM + gradients only. */
+const ChapterTransition: React.FC<{lf: number; theme: Theme; kind: number}> = ({lf, theme, kind}) => {
+  if (lf > 30) return null;
+  const a = theme.accent;
+  const c = theme.secondary;
+  const k = ((kind % 4) + 4) % 4;
+
+  if (k === 0) { // glitch cut
+    const op = interpolate(lf, [0, 5, 22], [0.9, 0.7, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+    return (
+      <AbsoluteFill style={{pointerEvents: 'none', overflow: 'hidden', opacity: op}}>
+        {[220, 520, 820, 1180].map((y, i) => (
+          <div
+            key={i}
+            style={{
+              position: 'absolute', left: (Math.floor(lf / 3) % 2 ? 1 : -1) * (8 + i * 6),
+              top: y, width: 1080, height: 12 + i * 4,
+              background: i % 2 ? `${c}aa` : `${a}cc`,
+            }}
+          />
+        ))}
+      </AbsoluteFill>
+    );
+  }
+  if (k === 1) { // whip-pan with streak
+    const x = interpolate(lf, [2, 30], [-400, 1480], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+    const op = interpolate(lf, [2, 12, 30], [0, 0.95, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+    return (
+      <AbsoluteFill style={{pointerEvents: 'none', overflow: 'hidden', transform: `skewX(${interpolate(lf, [0, 30], [8, -8])}deg)`}}>
+        <div style={{position: 'absolute', top: 462, left: x, width: 1100, height: 6, background: `linear-gradient(90deg, transparent, ${a}, ${c}, transparent)`, boxShadow: `0 0 45px ${a}`, opacity: op, transform: 'rotate(-2deg)'}} />
+      </AbsoluteFill>
+    );
+  }
+  if (k === 2) { // zoom-through ring
+    const s = interpolate(lf, [0, 26], [0.1, 2.6], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+    const op = interpolate(lf, [0, 8, 26], [0, 0.85, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+    return (
+      <AbsoluteFill style={{pointerEvents: 'none', overflow: 'hidden'}}>
+        <div style={{position: 'absolute', left: 540 - 320 * s, top: 900 - 320 * s, width: 640 * s, height: 640 * s, borderRadius: '50%', border: `18px solid ${a}`, opacity: op}} />
+      </AbsoluteFill>
+    );
+  }
+  // light-leak flash
+  const op = interpolate(lf, [0, 6, 26], [0, 0.75, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   return (
     <AbsoluteFill style={{pointerEvents: 'none', overflow: 'hidden'}}>
-      <div
-        style={{
-          position: 'absolute',
-          top: 462,
-          left: x,
-          width: 1100,
-          height: 5,
-          background: `linear-gradient(90deg, transparent, ${theme.accent}, ${theme.secondary}, transparent)`,
-          boxShadow: `0 0 45px ${theme.accent}`,
-          opacity: op,
-          transform: 'rotate(-2deg)',
-        }}
-      />
+      <div style={{position: 'absolute', inset: 0, background: `linear-gradient(115deg, ${c}88, ${a}55 35%, transparent 70%)`, opacity: op}} />
     </AbsoluteFill>
   );
 };
@@ -114,12 +142,13 @@ const FlowScene: React.FC<{
   scene: Scene;
   index: number;
   lf: number;
+  f: number;
   durF: number;
   theme: Theme;
   total: number;
   dateEnd: number;
   statAt: number;
-}> = ({scene, index, lf, durF, theme, total, dateEnd, statAt}) => {
+}> = ({scene, index, lf, f, durF, theme, total, dateEnd, statAt}) => {
   const fadeIn = interpolate(lf, [0, 12], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   const fadeOut = interpolate(lf, [durF - 14, durF], [1, 0.15], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   const op = Math.min(fadeIn, fadeOut);
@@ -130,7 +159,7 @@ const FlowScene: React.FC<{
   // The picture rises in right after the date, in time with the story.
   const visualOp = interpolate(lf, [dateEnd - 4, dateEnd + 16], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   const visualY = interpolate(lf, [dateEnd - 4, dateEnd + 20], [90, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
-  const breathe = 1 + Math.sin(lf / 22) * 0.018; // keeps the picture alive between beats
+  const breathe = 1 + Math.sin(lf / 22) * 0.018 + beatPulse(f, 30) * 0.02; // alive on the music beat
   const isCar = CAR_TYPES.includes(scene.device);
   const isNet3 = NET3D_TYPES.includes(scene.device);
   const isGta = GTA_TYPES.includes(scene.device);
@@ -138,7 +167,7 @@ const FlowScene: React.FC<{
 
   return (
     <AbsoluteFill style={{opacity: op}}>
-      <ChapterKick lf={lf} theme={theme} />
+      <ChapterTransition lf={lf} theme={theme} kind={index} />
       <div
         style={{
           position: 'absolute',
@@ -201,6 +230,7 @@ const FlowScene: React.FC<{
           <CardFrame lf={lf} theme={theme} at={statAt} />
           <Sparkles lf={lf} theme={theme} at={statAt} />
           <Stat text={scene.stat} label={scene.statLabel} lf={lf} accent={theme.accent} glow={theme.glow} font={theme.font} at={statAt} />
+          <DataMoment lf={lf} at={statAt} theme={theme} kind={index} />
         </>
       ) : null}
       {index === 0 && scene.hook ? <Hook text={scene.hook} lf={lf} accent={theme.accent} font={theme.font} /> : null}
@@ -269,7 +299,7 @@ const FlowTimeline: React.FC<{f: number; total: number; scenes: Scene[]; theme: 
   );
 };
 
-export const StoryFlow: React.FC<StoryProps> = ({scenes, music, sfx, sfxPack, narration, theme: themeId}) => {
+export const StoryFlow: React.FC<StoryProps> = ({scenes, music, sfx, sfxPack, narration, theme: themeId, hero}) => {
   const {fps, durationInFrames} = useVideoConfig();
   const f = useCurrentFrame();
   const theme = getTheme(themeId);
@@ -278,6 +308,15 @@ export const StoryFlow: React.FC<StoryProps> = ({scenes, music, sfx, sfxPack, na
   const ends = scenes.map((s, i) => (i < scenes.length - 1 ? starts[i + 1] : durationInFrames));
 
   const allWords = scenes.flatMap((s) => s.words ?? []);
+
+  // The mascot reacts to the story beat and to twist scenes flagged in the script.
+  const current = starts.reduce((acc, s, i) => (f >= s ? i : acc), 0);
+  const sc = scenes[current];
+  const statF = sc ? starts[current] + Math.round(((sc.statSec ?? sc.start) - sc.start) * fps) : -1;
+  const energy = interpolate(f, [statF, statF + 6, statF + 24], [0, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const shock = sc?.mood === 'shock'
+    ? interpolate(f, [statF + 6, statF + 18, statF + 52], [0, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})
+    : 0;
 
   return (
     <AbsoluteFill style={{background: '#000'}}>
@@ -299,6 +338,7 @@ export const StoryFlow: React.FC<StoryProps> = ({scenes, music, sfx, sfxPack, na
               scene={sc}
               index={i}
               lf={f - from}
+              f={f}
               durF={durF}
               theme={theme}
               total={total}
@@ -309,7 +349,9 @@ export const StoryFlow: React.FC<StoryProps> = ({scenes, music, sfx, sfxPack, na
         );
       })}
 
-      <Mascot lf={f} theme={theme} />
+      <Mascot lf={f} theme={theme} energy={energy} shock={shock} />
+      <HeroObject f={f} theme={theme} hero={hero ?? undefined} />
+      <BeatGlow f={f} theme={theme} />
       <ThemeBadge lf={f} theme={theme} />
       <FlowTimeline f={f} total={total} scenes={scenes} theme={theme} starts={starts} />
       <Sweep lf={f} />

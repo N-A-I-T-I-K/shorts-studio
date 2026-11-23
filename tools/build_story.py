@@ -164,7 +164,7 @@ async def main():
     print("photos found:", sum(len(s["photos"]) for s in out), "across", sum(1 for s in out if s["photos"]), "scenes")
     json.dump(
         {"totalSec": round(total, 2), "theme": THEME, "music": music, "sfx": sfx,
-         "sfxPack": pack, "narration": "voice/narration.mp3", "scenes": out},
+         "sfxPack": pack, "narration": "voice/narration.mp3", "hero": opts.get("hero"), "scenes": out},
         open("public/story.json", "w", encoding="utf8"),
         ensure_ascii=False,
         indent=1,

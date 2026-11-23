@@ -36,13 +36,14 @@ export type Scene = {
   photoCues?: Array<{from: number; to: number}>;
   dateSec?: number;
   statSec?: number;
+  mood?: string;
   hook?: string | null;
   stat?: string | null;
   statLabel?: string | null;
 };
 
 export type SfxPack = {impact?: string | null; pop?: string | null; click?: string | null};
-export type StoryProps = {scenes: Scene[]; music?: string | null; sfx?: string | null; sfxPack?: SfxPack | null; theme?: string | null; narration?: string | null};
+export type StoryProps = {scenes: Scene[]; music?: string | null; sfx?: string | null; sfxPack?: SfxPack | null; theme?: string | null; narration?: string | null; hero?: string | null};
 
 const T = 12; // transition length in frames
 

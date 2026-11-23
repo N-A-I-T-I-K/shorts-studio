@@ -3,6 +3,7 @@
   "rate": "+8%",
   "pitch": "+0Hz",
   "music": "music_hype.mp3",
+  "hero": "rocket",
   "scenes": [
     {
       "year": "NOW",
@@ -53,6 +54,7 @@
       "stat": "2008",
       "statLabel": "FIRST PRIVATE",
       "statWord": "reached",
+      "mood": "shock",
       "photo_query": "falcon 9 rocket launch"
     },
     {
@@ -63,6 +65,7 @@
       "stat": "2015",
       "statLabel": "FIRST LANDING",
       "statWord": "stood",
+      "mood": "shock",
       "photo_query": "rocket booster landing"
     },
     {

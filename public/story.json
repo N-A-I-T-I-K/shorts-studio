@@ -9,6 +9,7 @@
   "click": "click.mp3"
  },
  "narration": "voice/narration.mp3",
+ "hero": "rocket",
  "scenes": [
   {
    "year": "NOW",
@@ -488,6 +489,7 @@
    "text": "2008. Then a company nobody believed in did the impossible. Private metal finally reached orbit.",
    "stat": "2008",
    "statLabel": "FIRST PRIVATE",
+   "mood": "shock",
    "photo_query": "falcon 9 rocket launch",
    "start": 25.822,
    "dur": 6.794,
@@ -598,6 +600,7 @@
    "text": "2015. And then the impossible happened twice. A booster fell from the sky and stood back up.",
    "stat": "2015",
    "statLabel": "FIRST LANDING",
+   "mood": "shock",
    "photo_query": "rocket booster landing",
    "start": 32.616,
    "dur": 6.933,
