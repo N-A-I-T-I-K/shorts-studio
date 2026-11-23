@@ -1,0 +1,126 @@
+name: Render Shorts (Sharded)
+
+# EXPERIMENT - splits ONE video into 4 frame ranges, renders each on its own
+# free runner, then stitches with ffmpeg. The base workflow (render.yml) is
+# untouched. To roll back completely, just delete this file.
+
+on:
+  workflow_dispatch:
+    inputs:
+      concurrency:
+        description: 'Remotion --concurrency per job'
+        required: false
+        default: '4'
+        type: choice
+        options:
+          - '2'
+          - '4'
+          - '8'
+
+env:
+  SCRIPT: script_rocket_fire
+  FPS: '30'
+  SHARDS: '4'
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        part: [0, 1, 2, 3]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Python deps
+        run: pip install edge-tts
+
+      - name: Install ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Fetch background images
+        run: python tools/fetch_assets.py tools/${{ env.SCRIPT }}.json
+
+      - name: Build story
+        run: python tools/build_story.py tools/${{ env.SCRIPT }}.json
+
+      - name: Compute frame range for part ${{ matrix.part }}
+        id: range
+        env:
+          PART: ${{ matrix.part }}
+        run: |
+          python - <<'PY'
+          import json, os
+          total = round(json.load(open('public/story.json'))['totalSec'] * int(os.environ['FPS']))
+          shards = int(os.environ['SHARDS'])
+          i = int(os.environ['PART'])
+          start = total * i // shards
+          end = total * (i + 1) // shards - 1
+          print(f'part {i}: frames {start}-{end} (of 0-{total-1}, total {total})')
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+              f.write(f'start={start}\n')
+              f.write(f'end={end}\n')
+          PY
+
+      - name: Render part ${{ matrix.part }}
+        env:
+          CONCURRENCY: ${{ inputs.concurrency }}
+        run: |
+          t0=$(date +%s)
+          npx remotion render StoryFlow out/part_${{ matrix.part }}.mp4 \
+            --frames=${{ steps.range.outputs.start }}-${{ steps.range.outputs.end }} \
+            --gl=swangle --concurrency=${CONCURRENCY} --log=error
+          dt=$(( $(date +%s) - t0 ))
+          echo "PART ${{ matrix.part }} RENDER SECONDS: ${dt}"
+          echo "RENDER_SECONDS=${dt}" >> "$GITHUB_ENV"
+
+      - name: Upload part ${{ matrix.part }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: part-${{ matrix.part }}
+          path: out/part_${{ matrix.part }}.mp4
+          retention-days: 1
+
+  merge:
+    needs: render
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download all parts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: part-*
+          merge-multiple: true
+          path: parts
+
+      - name: Stitch parts
+        run: |
+          mkdir -p out
+          : > list.txt
+          for i in 0 1 2 3; do echo "file 'parts/part_${i}.mp4'" >> list.txt; done
+          cat list.txt
+          t0=$(date +%s)
+          ffmpeg -y -f concat -safe 0 -i list.txt \
+            -c:v libx264 -preset veryfast -crf 18 \
+            -c:a aac -b:a 192k -movflags +faststart \
+            out/${SCRIPT}_sharded.mp4
+          echo "STITCH SECONDS: $(( $(date +%s) - t0 ))"
+
+      - name: Verify output
+        run: |
+          test -s out/${SCRIPT}_sharded.mp4
+          ffprobe -v error -show_entries format=duration,size -of default=nw=1 out/${SCRIPT}_sharded.mp4
+
+      - name: Upload final video
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.SCRIPT }}-sharded
+          path: out/${SCRIPT}_sharded.mp4
