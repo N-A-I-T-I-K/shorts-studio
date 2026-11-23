@@ -174,6 +174,13 @@ Checks after each batch: `tsc --noEmit` clean; build 1,552 frames / 130 words / 
 
 Current shard ranges (51.74s story): `0-387`, `388-775`, `776-1163`, `1164-1551`. They are computed dynamically, so they update automatically with any script change.
 
+## Feedback fix — `StoryFlow` continuity
+User reported: background photos looked missing, voice changed partway, and new pop-in effects broke the continuous feel.
+1. Photos restored: effective opacity `theme.photoOpacity + 0.3` (cap 0.92), tint lightened from `55/cc` to `33/99`. 23 photos still present.
+2. Voice locked: `en-US-AndrewNeural` instead of `...MultilingualNeural` (multilingual can switch accent mid-script). `build_story.py` now retries the same voice before the Guy fallback.
+3. Removed the new pop-ins: giant ghost year, shock RGB jitter, shock chromatic glitch, and the particle layer that reset every 8s. Kept the smooth eased crossfades, parallax/tilt, corner frame, beat waveform, underline sweep and beat vignette.
+4. Current build: 48.12s / 1,444 frames / 130 words / 23 photos; all 8 stat hits exact; shard ranges `0-360`, `361-721`, `722-1082`, `1083-1443`.
+
 ## Open thread — pick this up first
 1. Run **Render Shorts (Sharded)** once on the new commit and check the joins at ~13s / ~26s / ~39s. User reported the previous run's joins were perfect and total wall time ~4 min.
 2. Download `script_rocket_fire-sharded`, watch the loop seam and end card, listen for audio glitches.

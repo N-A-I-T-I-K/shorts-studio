@@ -102,11 +102,20 @@ def auto_stat_word(words, stat):
 
 
 async def main():
-    try:
-        words = await make_narration(VOICE)
-    except Exception as e:
-        print(f"voice {VOICE} failed ({e}); using en-US-GuyNeural instead")
-        words = await make_narration("en-US-GuyNeural")
+    # Retry the same voice first. A Multilingual Neural voice can switch accent
+    # mid-script, and an immediate Guy fallback would sound like a different
+    # narrator halfway through the video.
+    last_error = None
+    for attempt_voice in (VOICE, VOICE, "en-US-GuyNeural"):
+        try:
+            words = await make_narration(attempt_voice)
+            if attempt_voice != VOICE:
+                print(f"warning: voice fell back to {attempt_voice}")
+            break
+        except Exception as e:
+            last_error = e
+    else:
+        raise RuntimeError(f"all TTS attempts failed: {last_error}")
 
     total = duration(NARRATION, words)
     out = []

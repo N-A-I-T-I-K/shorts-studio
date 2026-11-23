@@ -16,7 +16,7 @@ import {CAR_TYPES, Vehicle} from './Vehicle';
 import {NET_TYPES, NetVisual} from './NetVisuals';
 import {NET3D_TYPES, Visual3D} from './Scene3D';
 import {GTA_TYPES, VisualGta} from './GtaScenes';
-import {ChromaticAberration, CinematicBars, DataRain, Flash, GridBG, Particles, Ring, Road, Scanlines, SpeedLines, Sweep, Vignette} from './VFX';
+import {CinematicBars, DataRain, Flash, GridBG, Ring, Road, Scanlines, SpeedLines, Sweep, Vignette} from './VFX';
 import {ThemeBG} from './ThemeBG';
 import {BeatGlow, CardFrame, DataMoment, HeroObject, Mascot, Sparkles, ThemeBadge, beatPulse} from './MotionKit';
 import {getTheme, Theme} from './themes';
@@ -68,7 +68,7 @@ const FlowBackground: React.FC<{
           const op = Math.min(
             interpolate(f, [s - F, s + F], [0, 1], smooth),
             interpolate(f, [e - F, e + F], [1, 0], smooth)
-          ) * theme.photoOpacity;
+          ) * Math.min(0.92, theme.photoOpacity + 0.3);
           if (op <= 0.002) return null;
           const progress = (f - s) / Math.max(1, e - s);
           const zoom = 1.04 + progress * 0.09;
@@ -91,7 +91,7 @@ const FlowBackground: React.FC<{
           );
         });
       })}
-      <AbsoluteFill style={{background: `linear-gradient(180deg, ${theme.photoTint}55, ${theme.photoTint}cc)`}} />
+      <AbsoluteFill style={{background: `linear-gradient(180deg, ${theme.photoTint}33, ${theme.photoTint}99)`}} />
       <ThemeBG seed={theme.bgStyle * 31} variant={theme.bgStyle} accent={theme.accent} lf={f} />
       {loopOp > 0 ? (
         <AbsoluteFill style={{background: `linear-gradient(140deg, ${c1}, ${c2})`, opacity: loopOp}} />
@@ -170,11 +170,7 @@ const FlowScene: React.FC<{
   // The date is announced, then it clears the screen so the visual can breathe.
   const dateOp = interpolate(lf, [dateEnd, dateEnd + 12], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   const datePop = interpolate(lf, [0, 9], [0.62, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
-  // Twist scenes get a quick RGB jitter on the date; the underline sweeps as it lands.
-  const jitterAmt = scene.mood === 'shock'
-    ? interpolate(lf, [statAt, statAt + 8, statAt + 48], [0, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})
-    : 0;
-  const jitter = Math.sin(lf * 1.7) * 5 * jitterAmt;
+  // Simple, steady transitions: no per-scene jitter or pop-in.
   const sweep = interpolate(lf, [dateEnd - 4, dateEnd + 22], [0, 1], {
     extrapolateLeft: 'clamp', extrapolateRight: 'clamp',
   });
@@ -189,18 +185,6 @@ const FlowScene: React.FC<{
 
   return (
     <AbsoluteFill style={{opacity: op}}>
-      <div
-        style={{
-          position: 'absolute', top: 300, left: 0, right: 0,
-          textAlign: 'center', fontFamily: theme.font, fontWeight: 900,
-          fontSize: 520, lineHeight: '520px', color: theme.accent,
-          opacity: 0.045, whiteSpace: 'nowrap',
-          transform: `translateY(${lf * 0.3}px) scale(1.15)`,
-          pointerEvents: 'none',
-        }}
-      >
-        {scene.year}
-      </div>
       <ChapterTransition lf={lf} theme={theme} kind={index} />
       <div
         style={{
@@ -212,7 +196,7 @@ const FlowScene: React.FC<{
           fontFamily: theme.font,
           color: '#fff',
           opacity: dateOp,
-          transform: `translateX(${jitter}px) scale(${datePop})`,
+          transform: `scale(${datePop})`,
         }}
       >
         <div
@@ -483,9 +467,6 @@ export const StoryFlow: React.FC<StoryProps> = ({scenes, music, sfx, sfxPack, na
     <AbsoluteFill style={{background: '#000'}}>
       <div style={camera}>
       <FlowBackground f={f} total={total} scenes={scenes} starts={starts} ends={ends} fps={fps} theme={theme} />
-      <Particles lf={f % (fps * 8)} seed={7} color={theme.accent} count={18} />
-      {shock > 0 && f - statF < 12 ? <ChromaticAberration lf={f - statF} /> : null}
-
       {scenes.map((sc, i) => {
         const from = starts[i];
         const to = ends[i];
